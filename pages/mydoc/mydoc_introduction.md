@@ -9,6 +9,13 @@ folder: mydoc
 
 Пробую приспособить сайт к своим нуждам
 
+```pascal
+begin
+  var a := ReadInteger;
+  Print(a);
+end.
+```
+
 ## Survey of features
 
 Some of the more prominent features of this theme include the following:
