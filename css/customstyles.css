@@ -6,6 +6,10 @@ pre code {
     font-size: 14px;
 }
 
+pre.highlight {
+    background-color: #f5f5f5;
+}
+
 div.highlight {
     background-color: #f5f5f5;
 }
