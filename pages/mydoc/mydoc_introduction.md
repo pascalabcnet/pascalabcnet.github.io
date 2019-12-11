@@ -8,7 +8,6 @@ folder: mydoc
 ## Обзор
 
 Пробую приспособить сайт к своим нуждам
-
 ```delphi
 begin
   var a := ReadInteger;
@@ -17,6 +16,7 @@ begin
     Print(2);
 end.
 ```
+Продолжение текста
 
 ## Survey of features
 
