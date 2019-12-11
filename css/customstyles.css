@@ -2,6 +2,10 @@ body {
     font-size:15px;
 }
 
+pre code {
+    font-size: 14px;
+}
+
 .bs-callout {
     padding: 20px;
     margin: 20px 0;
