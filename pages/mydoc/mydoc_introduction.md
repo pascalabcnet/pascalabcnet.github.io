@@ -18,9 +18,8 @@ begin
 end.
 ```
 
-{% highlight Pascal %} 
-begin
-  var a := ReadInteger;
+{% highlight Pascal %}begin
+  var (a,b) := ReadInteger2;
   Print(a);
   if a < 0 then
     if b > 0 then 
