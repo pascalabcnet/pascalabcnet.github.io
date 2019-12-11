@@ -9,10 +9,12 @@ folder: mydoc
 
 Пробую приспособить сайт к своим нуждам
 
-```pascal
+```delphi
 begin
   var a := ReadInteger;
   Print(a);
+  if a<0 then
+    Print(2);
 end.
 ```
 
