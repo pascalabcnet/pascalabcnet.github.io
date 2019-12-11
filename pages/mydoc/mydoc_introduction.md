@@ -27,27 +27,6 @@ end.
 end.
 {% endhighlight %}
 
-{% highlight Pascal %}begin
-```  var (a,b) := ReadInteger2;
-  Print(a);
-  if a < 0 then
-    if b > 0 then 
-      Print(2);
-end.
-```
-{% endhighlight %}
-
-```
-{% highlight Pascal %}begin
-  var (a,b) := ReadInteger2;
-  Print(a);
-  if a < 0 then
-    if b > 0 then 
-      Print(2);
-end.
-{% endhighlight %}
-```
-
 Продолжение текста
 
 ## Survey of features
