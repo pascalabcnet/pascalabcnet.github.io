@@ -1935,7 +1935,7 @@ pre {
 
 pre code {
     padding: 0;
-    font-size: inherit;
+    font-size: 14px;
     color: inherit;
     white-space: pre-wrap;
     background-color: transparent;
