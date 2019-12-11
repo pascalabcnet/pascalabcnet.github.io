@@ -8,7 +8,7 @@ folder: mydoc
 ## Обзор
 
 Пробую приспособить сайт к своим нуждам
-```delphi
+```pascal
 begin
   var a := ReadInteger;
   Print(a);
