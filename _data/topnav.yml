@@ -12,7 +12,7 @@ topnav:
 topnav_dropdowns:
 - title: Topnav dropdowns
   folders:
-    - title: PascalABC.NET Help
+    - title: Ресурсы
       folderitems:
         - title: PascalABC.NET форум
           external_url: http://forum.mmcs.sfedu.ru/c/pascalabcnet
