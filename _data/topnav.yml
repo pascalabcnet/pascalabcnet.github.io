@@ -18,7 +18,7 @@ topnav_dropdowns:
           external_url: http://forum.mmcs.sfedu.ru/c/pascalabcnet
         - title: PascalABC.NET описание языка
           external_url: http://pascalabc.net/downloads/pabcnethelp/index.htm
-    - title: Примеры шаблонов страниц
+    - title: Старое
       folderitems:
         - title: Пример 1
           url: /mydoc_introduction.html
