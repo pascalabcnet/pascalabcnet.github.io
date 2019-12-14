@@ -12,7 +12,7 @@ site_title: PascalABC.NET Docs
 company_name: PascalABCNET Team
 # this appears in the footer
 
-github_editme_path: https://github.com/pascalabcnet/pascalabcnet.github.io/blob/master/
+github_editme_path: pascalabcnet/pascalabcnet.github.io/blob/master/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 # gitlab_editme_path: https://github.com/pascalabcnet/pascalabcnet.github.io/blob/master/
