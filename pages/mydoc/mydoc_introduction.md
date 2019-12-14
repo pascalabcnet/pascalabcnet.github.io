@@ -7,7 +7,11 @@ folder: mydoc
 
 ## Обзор
 
-Пробую приспособить сайт к своим нуждам
+PascalABC.NET – это система программирования и язык Pascal нового поколения для платформы Microsoft .NET. Язык PascalABC.NET содержит все основные элементы современных языков программирования: модули, классы, перегрузку операций, интерфейсы, исключения, обобщенные классы, сборку мусора, лямбда-выражения. 
+
+Система PascalABC.NET включает в себя также простую интегрированную среду, ориентированную на эффективное обучение современному программированию
+
+
 ```pascal
 begin
   var a := ReadInteger;
@@ -18,19 +22,17 @@ begin
 end.
 ```
 
-Продолжение текста
+## Примеры программ
 
-## Survey of features
-
-Some of the more prominent features of this theme include the following:
-
-* Bootstrap framework
-* [Navgoco multi-level sidebar](http://www.komposta.net/article/navgoco) for table of contents
-* Ability to specify different sidebars for different products
-* Top navigation bar with drop-down menus
-* Notes, tips, and warning information notes
-* Tags for alternative navigation
-* Advanced landing page layouts from the [Modern Business theme](http://startbootstrap.com/template-overviews/modern-business/).
+```pascal
+begin
+  var (a,b) := ReadInteger2;
+  var min := a;
+  if b < min then
+    min := b;
+  Print(min);    
+end.
+```
 
 ## Getting started
 
