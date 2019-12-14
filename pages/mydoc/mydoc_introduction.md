@@ -11,17 +11,6 @@ PascalABC.NET – это система программирования и яз
 
 Система PascalABC.NET включает в себя также простую интегрированную среду, ориентированную на эффективное обучение современному программированию
 
-
-```pascal
-begin
-  var a := ReadInteger;
-  Print(a);
-  if a < 0 then
-    if b > 0 then 
-      Print(2);
-end.
-```
-
 ## Примеры программ
 
 ```pascal
@@ -34,8 +23,8 @@ begin
 end.
 ```
 
-## Getting started
+## Приступая к работе
 
-To get started, see [Getting Started][index].
+Чтобы приступить к работе, см. [Getting Started][index].
 
 {% include links.html %}
