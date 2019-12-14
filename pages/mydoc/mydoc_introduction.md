@@ -23,8 +23,4 @@ begin
 end.
 ```
 
-## Приступая к работе
-
-Чтобы приступить к работе, см. [Getting Started][index].
-
 {% include links.html %}
