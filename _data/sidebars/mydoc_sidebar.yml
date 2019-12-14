@@ -23,14 +23,10 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Приступая к работе
-      url: /index.html
-      output: web, pdf
-      type: homepage
-
     - title: Введение 
       url: /mydoc_introduction.html
       output: web, pdf
+      type: homepage
 
     - title: Поддерживаемые особенности
       url: /mydoc_supported_features.html
