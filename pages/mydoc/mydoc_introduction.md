@@ -2,6 +2,7 @@
 title: Введение
 sidebar: mydoc_sidebar
 permalink: mydoc_introduction.html
+toc: false
 folder: mydoc
 ---
 
