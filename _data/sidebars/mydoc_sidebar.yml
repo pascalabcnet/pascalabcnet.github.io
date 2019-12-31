@@ -23,13 +23,13 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: О PascalABC.NET 
+    - title: О языке PascalABC.NET 
       url: /index.html
       output: web, pdf
       type: homepage
 
-    - title: Поддерживаемые особенности
-      url: /mydoc_supported_features.html
+    - title: О сайте
+      url: /mydoc_about_site.html
       output: web, pdf
 
     - title: About the theme author
