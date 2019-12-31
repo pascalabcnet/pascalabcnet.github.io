@@ -44,6 +44,22 @@ entries:
       url: /mydoc_release_notes_3_5.html
       output: web, pdf
 
+  - title: Программы и алгоритмы
+    output: web, pdf
+    folderitems:
+
+    - title: Начинающим 
+      url: /progr_beginners.html
+      output: web, pdf
+
+    - title: Студентам 
+      url: /progr_students.html
+      output: web, pdf
+
+    - title: Особенности языка
+      url: /progr_lang_features.html
+      output: web, pdf
+
   - title: Formatting
     output: web, pdf
 
@@ -91,18 +107,6 @@ entries:
     - title: Workflow maps
       url: /mydoc_workflow_maps.html
       output: web, pdf
-
-  - title: Handling reviews
-    output: web, pdf
-
-    folderitems:
-    - title: Commenting on files
-      url: /mydoc_commenting_on_files.html
-      output: web, pdf
-
-#    - title: Git collaboration
-#      url: /mydoc_git_collaboration
-#      output: web, pdf
 
   - title: Publishing
     output: web, pdf
