@@ -32,16 +32,16 @@ entries:
       url: /mydoc_about_site.html
       output: web, pdf
 
-  - title: Release Notes
+  - title: Версии PascalABC.NET
     output: web, pdf
     folderitems:
 
-    - title: 6.0 Release notes
-      url: /mydoc_release_notes_60.html
+    - title: Примечания к релизу 3.5.1 
+      url: /mydoc_release_notes_3_5_1.html
       output: web, pdf
 
-    - title: 5.0 Release notes
-      url: /mydoc_release_notes_50.html
+    - title: Примечания к релизу 3.5
+      url: /mydoc_release_notes_3_5.html
       output: web, pdf
 
   - title: Formatting
