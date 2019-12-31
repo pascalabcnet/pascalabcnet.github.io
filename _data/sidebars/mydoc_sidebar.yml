@@ -36,11 +36,11 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Примечания к релизу 3.5.1 
+    - title: Примечания к версии 3.5.1 
       url: /mydoc_release_notes_3_5_1.html
       output: web, pdf
 
-    - title: Примечания к релизу 3.5
+    - title: Примечания к версии 3.5
       url: /mydoc_release_notes_3_5.html
       output: web, pdf
 
