@@ -14,5 +14,3 @@ folder: mydoc
 ## О сайте
 
 Данный сайт содержит примеры программ на PascalABC.NET различной сложности.
-
-{% include links.html %}
