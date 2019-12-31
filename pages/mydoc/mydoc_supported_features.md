@@ -8,6 +8,7 @@ summary: "If you're not sure whether Jekyll and this theme will support your req
 published: true
 sidebar: mydoc_sidebar
 permalink: mydoc_supported_features.html
+toc: false
 folder: mydoc
 ---
 
