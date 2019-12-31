@@ -1,7 +1,8 @@
 ---
 title: "О PascalABC.NET"
+tags: 
+  - about
 keywords: PascalABC программирование
-tags: [about]
 sidebar: mydoc_sidebar
 toc: false
 permalink: index.html
