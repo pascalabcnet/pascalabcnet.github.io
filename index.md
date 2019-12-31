@@ -8,8 +8,6 @@ toc: false
 permalink: index.html
 ---
 
-## О языке программирования PascalABC.NET
-
 PascalABC.NET – это система программирования и язык Pascal нового поколения для платформы Microsoft .NET.
 
 PascalABC.NET - язык с простым и логичным синтаксисом, хорошо понятным начинающим программистам.
