@@ -1,9 +1,9 @@
 ---
-title: Программы и алгоритмы для начинающих
+title: РџСЂРѕРіСЂР°РјРјС‹ Рё Р°Р»РіРѕСЂРёС‚РјС‹ РґР»СЏ РЅР°С‡РёРЅР°СЋС‰РёС…
 keywords: beginners, examples, programs, algorithms
 last_updated: 31.12.19
 tags: [getting_started]
-summary: "Здесь приведены примеры программ и алгоритмов начального уровня"
+summary: "Р—РґРµСЃСЊ РїСЂРёРІРµРґРµРЅС‹ РїСЂРёРјРµСЂС‹ РїСЂРѕРіСЂР°РјРј Рё Р°Р»РіРѕСЂРёС‚РјРѕРІ РЅР°С‡Р°Р»СЊРЅРѕРіРѕ СѓСЂРѕРІРЅСЏ"
 sidebar: mydoc_sidebar
 permalink: progr_beginners.html
 folder: mydoc
