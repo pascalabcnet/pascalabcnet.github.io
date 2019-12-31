@@ -7,6 +7,7 @@ summary: "Contact me for any support issues."
 sidebar: mydoc_sidebar
 permalink: mydoc_support.html
 folder: mydoc
+tok: false
 topnav: topnav
 ---
 
