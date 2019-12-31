@@ -24,7 +24,7 @@ entries:
     folderitems:
 
     - title: О PascalABC.NET 
-      url: /../index.html
+      url: /index.html
       output: web, pdf
       type: homepage
 
