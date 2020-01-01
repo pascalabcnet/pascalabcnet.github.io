@@ -275,7 +275,7 @@ end;
 ### Определение простоты числа
 
 **Задача.** Является ли число n>1 простым?
-``pascal
+```pascal
 var IsPrime := True;
 for var i:=2 to Round(Sqrt(n)) do
   if n mod i = 0 then
