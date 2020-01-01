@@ -21,7 +21,6 @@ begin
     c += 1;
 end;
 ```
-
 ### C помощью ReadSeqInteger и foreach
 ```pascal
 var sq := ReadSeqInteger(n);
@@ -30,7 +29,6 @@ foreach var x in sq do
   if x mod 2 <> 0 then
     c += 1;
 ```
-
 ### Защита от неверного ввода. Сокращенное вычисление логических выражений
 ```pascal
 var i: integer;
@@ -43,7 +41,6 @@ repeat
   Print('Введите i (>0):');
 until TryRead(i) and (i>0);
 ```
-
 ### Табулирование функции f(x) на [a,b] в точках, разбивающих [a,b] на n частей
 ```pascal
 Assert(n>0);
@@ -55,14 +52,13 @@ begin
   x += h;
 end;
 ```
-
-### Решение,использующее while.Погрешность округления и вычислительная погрешность
+### Решение, использующее while. Погрешность округления и вычислительная погрешность
 ```pascal
 var h := (b-a)/n;
 var x := a;
 while x <= b+h/2 do
 begin
-  Println($'{x,5:f2} {sin(x),9:f4}');
+  Println($'{x,5:f2} {Sin(x),9:f4}');
   x += h;
 end;
 ```
@@ -197,9 +193,11 @@ Print(a,Sqrt(x));
 var (a,b) := (1.0,real.MaxValue);
 while Abs(b - a) >= eps do
   (b,a) := (a, (a + x / a) / 2);
-Поиск значения
-14. Есть ли среди введенных число k?
-var Exists := False;
+```
+## Поиск значения
+
+### 14. Есть ли среди введенных число k?
+```pascalvar Exists := False;
 loop n do
 begin
   var x := ReadInteger;
@@ -207,7 +205,6 @@ begin
     Exists := True;
 end;
 ```
-
 ### 14a. То же с использованием break
 ```pascal
 var Exists := False;
