@@ -91,7 +91,7 @@ h4[id],
 h5[id],
 h6[id],
 dt[id]{
-padding-top: 60px;
+padding-top: 50px;
 margin-top: -40px
 }
 
@@ -773,7 +773,7 @@ pre, table code {
 }
 
 pre {
-    margin: 25px 0px;
+    margin: 15px 0px;
 }
 
 #json-box-container pre {
