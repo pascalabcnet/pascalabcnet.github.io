@@ -12,7 +12,7 @@ folder: mydoc
 # Алгоритмы и программы с использованием циклов
 
 ### Сколько нечетных среди n введенных
-```pas
+```pascal
 var c := 0;
 loop n do
 begin
@@ -21,18 +21,16 @@ begin
     c += 1;
 end;
 ```
-
 ### C помощью ReadSeqInteger и foreach
-```pas
+```pascal
 var sq := ReadSeqInteger(n);
 var c := 0;
 foreach var x in sq do
   if x mod 2 <> 0 then
     c += 1;
 ```
-
 ### Защита от неверного ввода. Сокращенное вычисление логических выражений
-```pas
+```pascal
 var i: integer;
 Print('Введите i (>0):');
 while not TryRead(i) or not (i>0) do
@@ -43,9 +41,8 @@ repeat
   Print('Введите i (>0):');
 until TryRead(i) and (i>0);
 ```
-
 ### Табулирование функции f(x) на [a,b] в точках, разбивающих [a,b] на n частей
-```pas
+```pascal
 Assert(n>0);
 var h := (b-a)/n;
 var x := a;
@@ -55,26 +52,25 @@ begin
   x += h;
 end;
 ```
-
-### Решение,использующее while.Погрешность округления и вычислительная погрешность
-```pas
+### Решение, использующее while. Погрешность округления и вычислительная погрешность
+```pascal
 var h := (b-a)/n;
 var x := a;
 while x <= b+h/2 do
 begin
-  Println($'{x,5:f2} {sin(x),9:f4}');
+  Println($'{x,5:f2} {Sin(x),9:f4}');
   x += h;
 end;
 ```
 
 ### 6б. Последовательность точек PartitionPoints
-```pas
+```pascal
 foreach var x in PartitionPoints(a,b,n) do
   Println(x,f(x));
 ```
 
 ### 7. Вывод n первых чисел Фибоначчи
-```pas
+```pascal
 Assert(n>1);
 var (a,b) := (1,1);
 Print(a,b);
@@ -88,7 +84,7 @@ end;
 ```
 
 ### 7а. С помощью множественного присваивания
-```pas
+```pascal
 var (a,b) := (1,1);
 Print(a,b);
 loop n-2 do
@@ -99,7 +95,7 @@ end;
 ```
 
 ### 8. Найти НОД(a,b), используя алгоритм Евклида: НОД(a,b) = НОД(b,a mod b); НОД(a,0) = a
-```pas
+```pascal
 var (a,b) := ReadInteger2;
 repeat
   var c := a mod b;
@@ -110,7 +106,7 @@ Print(a);
 ```
 
 ### 8а. С помощью множественного присваивания
-```pas
+```pascal
 var (a,b) := ReadInteger2;
 repeat
   (a,b) := (b,a mod b);
@@ -118,7 +114,7 @@ until b=0;
 ```
 
 ### 9. Найти сумму цифр целого положительного числа m
-```pas
+```pascal
 var m := ReadInteger;
 var s := 0;
 while m>0 do
@@ -126,8 +122,11 @@ begin
   s += m mod 10;
   m := m div 10;
 end;
-Максимумы и минимумы
-10. Найти max из введенных чисел
+```
+
+## Максимумы и минимумы
+### 10. Найти max из введенных чисел
+```pascal
 var x := ReadReal;
 var max := x;
 loop n-1 do
@@ -139,7 +138,7 @@ end;
 ```
 
 ### 10a. C помощью ReadSeqReal и foreach 
-```pas
+```pascal
 var max := real.MinValue;
 foreach var x in ReadSeqReal(n) do
   if max < x then
@@ -147,7 +146,7 @@ foreach var x in ReadSeqReal(n) do
 ```
 
 ### 11. Найти минимальный x, удовлетворяющий условию p(x)
-```pas
+```pascal
 var min := real.MaxValue;
 loop n do
 begin
@@ -162,7 +161,7 @@ if min = real.MaxValue then
 ## Суммирование рядов и нахождение предела последовательности
 
 ### 12. Вычислить  
-```pas
+```pascal
 Read(a, n);
 var x := a;
 var s := x;
@@ -173,10 +172,9 @@ begin
 end;
 ```
 
-### 13. Вычислить lim┬(n→∞)⁡〖a_n=√x  .   〗
-a_1=1,a_(n+1)=1/2 (a_n+x/a_n )   
+### 13. Вычислить lim┬(n→∞)⁡〖a_n=√x  .   〗a_1=1,a_(n+1)=1/2 (a_n+x/a_n )   
 
-```pas
+```pascal
 Assert(x>=0);
 var x := ReadReal;
 var eps := 1e-10;
@@ -191,13 +189,15 @@ Print(a,Sqrt(x));
 ```
 
 ### 13а. С помощью множественного :=
-```pas
+```pascal
 var (a,b) := (1.0,real.MaxValue);
 while Abs(b - a) >= eps do
   (b,a) := (a, (a + x / a) / 2);
-Поиск значения
-14. Есть ли среди введенных число k?
-var Exists := False;
+```
+## Поиск значения
+
+### 14. Есть ли среди введенных число k?
+```pascalvar Exists := False;
 loop n do
 begin
   var x := ReadInteger;
@@ -205,9 +205,8 @@ begin
     Exists := True;
 end;
 ```
-
 ### 14a. То же с использованием break
-```pas
+```pascal
 var Exists := False;
 loop n do
 begin
@@ -221,7 +220,7 @@ end;
 ```
 
 ### 14б. То же с использованием while
-```pas
+```pascal
 var Exists := False;
 var i := 1;
 while (i<=n) and not Exists do
@@ -234,8 +233,9 @@ end;
 ```
 
 # Другие алгоритмы
+
 ### 15. Является ли число n>1 простым?
-```pas
+``pascal
 var IsPrime := True;
 // for var i:=2 to n-1 do 
 for var i:=2 to Round(Sqrt(n)) do
@@ -247,7 +247,7 @@ for var i:=2 to Round(Sqrt(n)) do
 ```
 
 ### 16. Разложение числа на простые множители
-```pas
+```pascal
 Assert(x>=2);
 var i := 2;
 repeat
@@ -261,7 +261,8 @@ until x = 1;
 ```
 
 ### 17. Дана непрерывная на [a,b] функция f(x), имеющая на (a,b) ровно один корень (f(a)*f(b)<0). Найти его методом половинного деления
-```pas
+
+```pascal
 Assert(b>a);  
 var (fa,fb) := (f(a), f(b));
 Assert(fa*fb < 0);  
