@@ -11,7 +11,9 @@ folder: mydoc
 
 # Алгоритмы и программы с использованием циклов
 
-### Сколько нечетных среди n введенных
+### Количество по условию
+Задача. Сколько нечетных среди n введенных
+Решение 1. Ввод данных в цикле
 ```pascal
 var c := 0;
 loop n do
@@ -21,7 +23,7 @@ begin
     c += 1;
 end;
 ```
-### C помощью ReadSeqInteger и foreach
+Решение 2. C помощью ReadSeqInteger и foreach
 ```pascal
 var sq := ReadSeqInteger(n);
 var c := 0;
