@@ -1,5 +1,5 @@
 ---
-title: Программы и алгоритмы для студентов
+title: Программы и алгоритмы с использованием циклов
 keywords: beginners, examples, programs, algorithms
 last_updated: 31.12.19
 tags: [getting_started]
@@ -8,8 +8,6 @@ sidebar: mydoc_sidebar
 permalink: progr_students.html
 folder: mydoc
 ---
-
-## Алгоритмы и программы с использованием циклов
 
 ### Количество по условию
 **Задача.** Сколько нечетных среди n введенных
