@@ -36,6 +36,10 @@ entries:
     output: web, pdf
     folderitems:
 
+    - title: Примечания к версии 3.6 
+      url: /mydoc_release_notes_3_6.html
+      output: web, pdf
+
     - title: Примечания к версии 3.5.1 
       url: /mydoc_release_notes_3_5_1.html
       output: web, pdf
