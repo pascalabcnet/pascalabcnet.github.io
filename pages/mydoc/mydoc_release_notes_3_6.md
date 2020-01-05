@@ -33,5 +33,18 @@ x in 1..5
 ```pascal  
 x in 1..10
 ```
+переводится в 
+```pascal
+(x >= 1) and (x<=10)
+```
+
+Конструкция 
+```pascal  
+foreach var x in 1..10 do
+```
+переводится в 
+```pascal
+for var x := 1 to 10 do
+```
 
 {% include links.html %}
