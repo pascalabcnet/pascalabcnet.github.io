@@ -72,6 +72,33 @@ for var i := 1 to a.Length do
 ```pascal
 var min := if a<b then a else b;
 ```
+Это позволяет писать более понятный код со вложенными конструкциями:
+```pascal
+begin
+  var (x,y) := (5,-3);
+  var q := 
+    if x>0 then
+      if y>0 then
+        1
+      else 4
+    else
+      if y>0 then
+        2
+      else 3;
+        
+  Print(q)
+end.
+```
+и
+```pascal
+begin
+  var x := ReadReal;
+  var sign := if x>0 then 1
+    else if x=0 then 0
+    else -1;
+  Print(sign)
+end.
+```
 
 
 ### Программы без begin-end (предложение)
