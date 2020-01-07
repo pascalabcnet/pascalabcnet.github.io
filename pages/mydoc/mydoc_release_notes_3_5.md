@@ -4,6 +4,7 @@ keywords: release notes, announcements, what's new, new features
 last_updated: 25.05.19
 sidebar: mydoc_sidebar
 permalink: mydoc_release_notes_3_5.html
+toc: false
 folder: mydoc
 ---
 
