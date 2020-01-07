@@ -195,7 +195,9 @@ if min = real.MaxValue then
 
 ### Суммирование рядов
 
-**Задача.** Вычислить Σ <sub><i>i</i>=0..<i>n</i></sub> <i>a</i><sup><i>i</i></sup>/<i>i</i>!
+<p><b>Задача.</b> Вычислить $$\sum\limits_{i=0}^n \frac{a^i}{i!}$$</p>
+  
+  Σ <sub><i>i</i>=0..<i>n</i></sub> <i>a</i><sup><i>i</i></sup>/<i>i</i>!
 
 **Решение.**
 ```pascal
@@ -211,13 +213,11 @@ end;
 
 ### Предел последовательности
 
-<p>*<b>Задача.</b> Вычислить $$\inline ax^2+bx+c=0  \lim\limits_{n \to \infty} a_{n} = \sqrt{x}$$</p>
+<p><b>Задача.</b> Вычислить $$\lim\limits_{n \to \infty} a_{n} = \sqrt{x}$$</p>
 
-<p>$$\lim\limits_{n \to \infty} a_{n} = \sqrt{x}$$</p>
 
-Для решения используется следующая рекуррентная последовательность:
-
-<p>$$a_1=x, a_{i+1}=\frac{1}{2}\left(a_n+\frac{x}{a_n}\right)$$</p>
+<p>Для решения используется следующая рекуррентная последовательность:
+$$a_1=x, a_{i+1}=\frac{1}{2}\left(a_n+\frac{x}{a_n}\right)$$</p>
 
 **Решение 1.**
 ```pascal
