@@ -8,9 +8,11 @@ permalink: progr_arrays.html
 folder: mydoc
 ---
 
+$\alpha$
+
 ## Методы и операции для работы с массивами
 
-Объявление и выделение памяти <img src="https://tex.s2cms.ru/svg/ax%5E2%2Bbx%2Bc%3D0" alt="ax^2+bx+c=0" />
+Объявление и выделение памяти 
 ```pascal
   var n := ReadInteger;
   var a: array of integer;
