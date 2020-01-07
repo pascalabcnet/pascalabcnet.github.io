@@ -219,8 +219,7 @@ lim <sub>n→∞</sub>⁡ a<sub>n</sub>=√x.
 
 Для решения используется следующая рекуррентная последовательность:
 
-<p>$$a_1=x$$</p>
-<p>$$a_{i+1}=\frac{1}{2}\dot(a_n+\frac{x}{a_n})$$</p>
+<p>$$a_1=x, a_{i+1}=\frac{1}{2}\dot(a_n+\frac{x}{a_n})$$</p>
 
 <i>a</i><sub>1</sub>⁡=<i>x</i>,
 <i>a</i><sub><i>n</i>+1</sub>⁡=1/2 * (<i>a</i><sub><i>n</i></sub>⁡+<i>x</i>/<i>a</i><sub><i>n</i></sub>⁡)   
