@@ -60,6 +60,10 @@ entries:
       url: /progr_loops.html
       output: web, pdf
 
+    - title: Массивы
+      url: /progr_arrays.html
+      output: web, pdf
+
     - title: Особенности языка
       url: /progr_lang_features.html
       output: web, pdf
