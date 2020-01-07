@@ -20,7 +20,7 @@ folder: mydoc
 
 ### Простые алгоритмы, типичные данные
 
-**[ЗАДАЧА №766]**(https://acmp.ru/index.asp?main=task&id_task=766)   
+[**ЗАДАЧА №766**](https://acmp.ru/index.asp?main=task&id_task=766)   
 	
 Орешки
 (Время: 1 сек. Память: 16 Мб Сложность: 3%)
