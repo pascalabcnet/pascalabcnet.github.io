@@ -211,7 +211,7 @@ end;
 
 ### Предел последовательности
 
-<p>**Задача.** Вычислить $$\inline ax^2+bx+c=0$$</p>
+<p>*<b>Задача.</b> Вычислить $$\inline ax^2+bx+c=0  \lim\limits_{n \to \infty} a_{n} = \sqrt{x}$$</p>
 
 <p>$$\lim\limits_{n \to \infty} a_{n} = \sqrt{x}$$</p>
 
