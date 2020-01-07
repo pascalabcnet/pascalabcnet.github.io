@@ -10,7 +10,7 @@ folder: mydoc
 ---
 
 
-{% include image.html file="819.gif" url="https://pascalabcnet.github.io" alt="Jekyll" caption="This is a sample caption" %}
+{% include image.html file="819.gif" alt="819" caption="819" %}
 
 
 
