@@ -58,6 +58,37 @@ folder: mydoc
   (Arr(0) + Arr(1))*3 // 0 1 0 1 0 1
 ```
 
+## Циклы по массиву
+
+**For**
+```pascal
+for var i:=0 to a.Length-1 do
+  a[i] += 1;
+```
+
+**Foreach**
+```pascal
+foreach var x in a do
+  Print(x);
+```
+
+**Foreach по индексам**
+```pascal
+foreach var i in a.Indices do
+  a[i] *= 2;
+```
+
+**Foreach по определённым индексам**
+```pascal
+foreach var i in a.Indices(x -> x in 10..20) do
+  a[i] += 1;
+```
+
+```pascal
+foreach var i in a.Indices((x,i) -> i.IsEven and (x > 0)) do
+  a[i] += 1;
+```
+
 ## Инвертирование
 
 **Задача.** Инвертировать массив
@@ -86,9 +117,10 @@ Reverse(a)
 
 **Задача.** Есть ли в массиве a элемент x
 
-**Решение.** С помощью операции in
+**Решение.** С помощью операции in или метода Contains:
 ```pascal
 x in a
+a.Contains(x)
 ```
 
 **Задача.** Найти индекс первого вхождения элемента x
@@ -136,13 +168,22 @@ begin
 end;
 ```
 
+За счет использования барьера экономится одна операция сравнения
+
+**Решение 4.** Стандартные методы
+```pascal
+a.IndexOf(x)
+a.LastIndexOf(x)
+```
+
+
 ## Поиск по условию
 
-**Задача.** Поиск по условию (есть стандартная a.FindIndex(cond))
+**Задача.** Поиск по условию 
 
 **Решение 1.** Алгоритм
 ```pascal
-function IndexOf<T>(a: array of T; cond: T->boolean): integer;
+function FindIndex<T>(a: array of T; cond: T->boolean): integer;
 begin
   Result := -1;
   for var i := 0 to a.High do
@@ -154,7 +195,7 @@ begin
 end;
 ```
 
-**Решение 2.** С помощью стандартной процедуры
+**Решение 2.** С помощью стандартной функции
 ```pascal
 a.FindIndex(cond)
 ```
@@ -162,6 +203,9 @@ a.FindIndex(cond)
 ## Количество по условию
 
 **Задача.** Количество (есть стандартная a.Count(условие))
+
+**Решение 1.** Алгоритм
+
 ```pascal
 function Count<T>(a: array of T; cond: T->boolean): integer;
 begin
@@ -172,23 +216,52 @@ begin
 end;
 ```
 
+**Решение 2.** С помощью стандартной функции
+```pascal
+a.Count(условие)
+```
+
 ## Минимумы-максимумы
 
-**Задача.** Минимальный элемент и его индекс (a.Min, a.IndexMin)
+**Задача.** Найти минимальный элемент и его индекс 
+
+**Решение 1.** Алгоритм
 ```pascal
-function MinElem(a: array of real): (real,integer); 
-begin
-  var (min, minind) := (a[0], 0);  
-  for var i:=1 to a.Length-1 do
+function MinElemAndIndex(a: array of real): (real,integer); begin
+  var (min, minind) := (real.MaxValue, -1);  
+  for var i:=0 to a.Length-1 do
     if a[i]<min then
+      (min, minind) := (a[i], i);  Result := (min, minind)
+end;
+```
+
+**Решение 2.** С помощью стандартной функции
+```pascal
+a.Min
+a.IndexMin
+```
+
+**Задача.** Найти минимальный элемент, удовлетворяющий условию, и его индекс 
+
+**Решение.** Алгоритм
+```pascal
+function MinElemAndIndexCond(a: array of real: cond: real -> boolean): 
+  (real,integer); 
+begin
+  var (min, minind) := (real.MaxValue, -1);  
+  for var i:=0 to a.Length-1 do
+    if (a[i]<min) and cond(a[i]) then
       (min, minind) := (a[i], i);
   Result := (min, minind)
 end;
 ```
 
+
 ## Сдвиги
 
-**Задача.** Сдвиг влево
+**Задача.** Сдвиг влево на 1
+
+**Решение 1.** Алгоритм
 ```pascal
 procedure ShiftLeft<T>(a: array of T);
 begin
@@ -198,7 +271,14 @@ begin
 end;
 ```
 
+**Решение 2.** С помощью срезов
+```pascal
+a := a[1:] + Arr(0);
+```
+
 **Задача.** Сдвиг вправо
+
+**Решение 1.** Алгоритм
 ```pascal
 procedure ShiftRight<T>(a: array of T);
 begin
@@ -208,7 +288,14 @@ begin
 end;
 ```
 
+**Решение 2.** С помощью срезов
+```pascal
+a := Arr(0) + a[:a.Length-1];
+```
+
 **Задача.** Циклический сдвиг вправо
+
+**Решение 1.** Алгоритм
 ```pascal
 procedure CycleShiftRight<T>(a: array of T);
 begin
@@ -217,6 +304,50 @@ begin
     a[i] := a[i-1];
   a[0] := v;  
 end;
+```
+
+**Решение 2.** С помощью срезов
+```pascal
+var m := a.Length-1;
+a := a[m:] + a[:m];
+```
+
+**Задача.** Циклический сдвиг влево на k
+
+**Решение 1.** С помощью срезов
+```pascal
+a := a[k:] + a[:k];
+```
+
+**Решение 2.** С помощью частичного Reverse
+```pascal
+Reverse(a,0,k);
+Reverse(a,k,a.Length-k);
+Reverse(a);
+```
+
+## Преобразование
+
+**Задача.** Требуется преобразовать элементы массива по правилу x -> f(x)
+
+**Решение 1.** Алгоритм
+```pascal
+procedure Transform<T>(a: array of T; f: T -> T);
+begin
+  for var i:=0 to a.Length-1 do
+    a[i] := f(a[i]);
+end;
+```
+
+**Решение 2.** С помощью стандартной функции
+```pascal
+a.Transform(x -> x*x)
+```
+
+Для преобразования части элементов:
+
+```pascal
+a.Transform(x -> if x mod 2 = 0 then x*x else x)
 ```
 
 ## Слияние
