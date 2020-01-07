@@ -8,16 +8,7 @@ permalink: progr_arrays.html
 folder: mydoc
 ---
 
-### Количество по условию
-```pascal
-var c := 0;
-loop n do
-begin
-  var x := ReadInteger;
-  if x mod 2 <> 0 then
-    c += 1;
-end;
-```
+## Методы и операции для работы с массивами
 
 1. Ввод-вывод
 ```pascal
@@ -31,6 +22,7 @@ end;
 2. Заполнение
 ```pascal
   a := Arr(1,3,7);
+  a := Arr(1..10);
   a := ArrFill(10,666);
   a := ArrGen(n,i->i*i[,from:=0])
   a := ArrGen(n,1,x->x+2)
@@ -66,7 +58,9 @@ end;
   (Arr(0) + Arr(1))*3 // 0 1 0 1 0 1
 ```
 
-**Задача.** Инвертирование массива
+## Инвертирование
+
+**Задача.** Инвертировать массив
 
 **Решение 1.** Алгоритм
 ```pascal
@@ -78,17 +72,28 @@ begin
 end;
 ```
 
-**Решение 2.** Срезами
+**Решение 2.** С помощью срезов
 ```pascal
 a := a[::-1]
 ```
 
-**Решение 3.** Стандартная процедура
+**Решение 3.** С помощью стандартной процедуры
 ```pascal
 Reverse(a)
 ```
 
-7. Поиск (есть стандартная x in a)
+## Поиск
+
+**Задача.** Есть ли в массиве a элемент x
+
+**Решение.** С помощью операции in
+```pascal
+x in a
+```
+
+**Задача.** Найти индекс первого вхождения элемента x
+
+**Решение 1.** С использованием break
 ```pascal
 function FindIndex<T>(a: array of T; x: T): integer;
 begin
@@ -101,6 +106,37 @@ begin
     end;
 end;
 ```
+
+**Решение 2.** Без использования break
+```pascal
+function FindIndexW<T>(a: array of T; x: T): integer;
+begin
+  var n := a.Length;
+  var i := 0;
+  while (i<n) and (a[i]<>x) do
+    i += 1;
+  Result := i=n ? -1 : i;
+end;
+```
+
+**Решение 3.** Поиск с барьером
+
+Добавим в конец массива барьер, равный x. В массиве должно быть место под этот элемент
+
+```pascal
+function FindIndexWithBarrier<T>
+  (a: array of T; n: integer; x: T): integer;
+begin
+  Assert((0 < n) and (n < a.Length));
+  a[n] := x; // барьер
+  var i := 0;
+  while a[i]<>x do
+    i += 1;
+  Result := i=n ? -1 : i;
+end;
+```
+
+## Поиск по условию
 
 7а. Поиск по условию (есть стандартная a.FindIndex(cond))
 ```pascal
@@ -117,31 +153,6 @@ begin
 end;
 ```
 
-7b. Поиск без использования break
-```pascal
-function FindIndexW<T>(a: array of T; x: T): integer;
-begin
-  var n := a.Length;
-  var i := 0;
-  while (i<n) and (a[i]<>x) do
-    i += 1;
-  Result := i=n ? -1 : i;
-end;
-```
-
-7c. Поиск с барьером
-```pascal
-function FindIndexWithBarrier<T>
-  (a: array of T; n: integer; x: T): integer;
-begin
-  Assert((0 < n) and (n < a.Length));
-  a[n] := x; // барьер
-  var i := 0;
-  while a[i]<>x do
-    i += 1;
-  Result := i=n ? -1 : i;
-end;
-```
 
 8. Количество (есть стандартная a.Count(условие))
 ```pascal
