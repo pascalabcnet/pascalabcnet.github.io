@@ -1,9 +1,8 @@
 ---
 title: Олимпиадное программирование в PascalABC.NET
-keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
-last_updated: July 3, 2016
-tags: [getting_started]
-summary: "I have used this theme for projects that I've worked on as a professional technical writer."
+keywords: olympiads
+last_updated: 07.01.2020
+tags: [olymp]
 sidebar: mydoc_sidebar
 permalink: olymp_index.html
 toc: false
@@ -12,8 +11,10 @@ folder: mydoc
 
 ## Введение
 
+TODO
 
 ## Сайты с автоматической проверкой задач
 
+TODO
 
 {% include links.html %}
