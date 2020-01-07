@@ -11,6 +11,8 @@ folder: mydoc
 
 <script src="//i.upmath.me/latex.js"></script>
 
+<p>$$\sqrt{\pi}$$</p>
+
 ### Количество по условию
 **Задача.** Сколько нечетных среди n введенных
 
