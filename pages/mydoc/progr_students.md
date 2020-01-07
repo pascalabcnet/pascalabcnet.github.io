@@ -193,7 +193,7 @@ if min = real.MaxValue then
 
 ### Суммирование рядов
 
-**Задача.** Вычислить Σ <sub><i>i</i>=0..<i>n</i></sub> a<sup><i>i</i></sup>/<i>i</i>!
+**Задача.** Вычислить Σ <sub><i>i</i>=0..<i>n</i></sub> <i>a</i><sup><i>i</i></sup>/<i>i</i>!
 
 **Решение.**
 ```pascal
@@ -213,8 +213,8 @@ end;
 
 Для решения используется следующая рекуррентная последовательность:
 
-a<sub>1</sub>⁡=x,
-a<sub>n+1</sub>⁡=1/2 * (a<sub>n</sub>⁡+x/a<sub>n</sub>⁡)   
+<i>a</i><sub>1</sub>⁡=<i>x</i>,
+<i>a</i><sub><i>n</i>+1</sub>⁡=1/2 * (<i>a</i><sub><i>n</i></sub>⁡+<i>x</i>/<i>a</i><sub><i>n</i></sub>⁡)   
 
 **Решение 1.**
 ```pascal
