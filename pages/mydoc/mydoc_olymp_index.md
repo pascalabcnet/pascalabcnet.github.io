@@ -2,7 +2,6 @@
 title: Олимпиадное программирование в PascalABC.NET
 keywords: olympiads
 last_updated: 07.01.2020
-tags: [olymp]
 sidebar: mydoc_sidebar
 permalink: olymp_index.html
 toc: false
