@@ -197,8 +197,6 @@ if min = real.MaxValue then
 
 <p><b>Задача.</b> Вычислить $$\sum\limits_{i=0}^n \frac{a^i}{i!}$$</p>
   
-  Σ <sub><i>i</i>=0..<i>n</i></sub> <i>a</i><sup><i>i</i></sup>/<i>i</i>!
-
 **Решение.**
 ```pascal
 Read(a, n);
