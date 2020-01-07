@@ -8,8 +8,6 @@ permalink: progr_arrays.html
 folder: mydoc
 ---
 
-$\alpha$
-
 ## Методы и операции для работы с массивами
 
 Объявление и выделение памяти 
