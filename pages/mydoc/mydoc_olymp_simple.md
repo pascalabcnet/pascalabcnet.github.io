@@ -58,10 +58,10 @@ end.
 
 ```pascal
 begin
-  var a,b,c: int64;
-  Read(a,b,c);
-  var s:= 2*(a*b+a*c+b*c);
-  Print(s, a*b*c)
+  var a, b, c: int64;
+  Read(a, b, c);
+  var s := 2 * (a * b + a * c + b * c);
+  Print(s, a * b * c)
 end.
 ```
 
