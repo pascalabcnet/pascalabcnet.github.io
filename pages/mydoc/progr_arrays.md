@@ -10,7 +10,7 @@ folder: mydoc
 
 ## Методы и операции для работы с массивами
 
-1. Ввод-вывод
+Ввод-вывод
 ```pascal
   var a := ReadArrInteger(n);
   var r := ReadArrReal(n);
@@ -19,7 +19,7 @@ folder: mydoc
   a.Println(', ');
 ```
 
-2. Заполнение
+Заполнение
 ```pascal
   a := Arr(1,3,7);
   a := Arr(1..10);
@@ -29,13 +29,13 @@ folder: mydoc
   a := ArrGen(n,1,1,(x,y)->x+y)
 ```
 
-3. Заполнение случайными числами
+Заполнение случайными числами
 ```pascal
   a := ArrRandomInteger(n[,from,to]);
   r := ArrRandomReal(n[,from,to]);
 ```
 
-4. Срезы
+Срезы
 ```pascal
   var a := Arr(0,1,2,3,4,5,6,7,8,9);
   a[2:5]    // 2 3 4 
@@ -48,7 +48,7 @@ folder: mydoc
   a[::-1]   // 9 8 7 6 5 4 3 2 1 0
 ```
 
-5. Операции + и *
+Операции + и *
 ```pascal
   var a := Arr(1,2,3);
   var b := Arr(4,5,6);
@@ -95,7 +95,7 @@ x in a
 
 **Решение 1.** С использованием break
 ```pascal
-function FindIndex<T>(a: array of T; x: T): integer;
+function IndexOf<T>(a: array of T; x: T): integer;
 begin
   Result := -1;
   for var i := 0 to a.High do // a.High = a.Length - 1
@@ -109,7 +109,7 @@ end;
 
 **Решение 2.** Без использования break
 ```pascal
-function FindIndexW<T>(a: array of T; x: T): integer;
+function IndexOfW<T>(a: array of T; x: T): integer;
 begin
   var n := a.Length;
   var i := 0;
@@ -124,7 +124,7 @@ end;
 Добавим в конец массива барьер, равный x. В массиве должно быть место под этот элемент
 
 ```pascal
-function FindIndexWithBarrier<T>
+function IndexOfWithBarrier<T>
   (a: array of T; n: integer; x: T): integer;
 begin
   Assert((0 < n) and (n < a.Length));
@@ -138,10 +138,11 @@ end;
 
 ## Поиск по условию
 
-7а. Поиск по условию (есть стандартная a.FindIndex(cond))
+**Задача.** Поиск по условию (есть стандартная a.FindIndex(cond))
+
+**Решение 1.** Алгоритм
 ```pascal
-function FindIndex<T>
-  (a: array of T; cond: T->boolean): integer;
+function IndexOf<T>(a: array of T; cond: T->boolean): integer;
 begin
   Result := -1;
   for var i := 0 to a.High do
@@ -153,8 +154,14 @@ begin
 end;
 ```
 
+**Решение 2.** С помощью стандартной процедуры
+```pascal
+a.FindIndex(cond)
+```
 
-8. Количество (есть стандартная a.Count(условие))
+## Количество по условию
+
+**Задача.** Количество (есть стандартная a.Count(условие))
 ```pascal
 function Count<T>(a: array of T; cond: T->boolean): integer;
 begin
@@ -165,7 +172,9 @@ begin
 end;
 ```
 
-9. Минимальный элемент и его индекс (a.Min, a.IndexMin)
+## Минимумы-максимумы
+
+**Задача.** Минимальный элемент и его индекс (a.Min, a.IndexMin)
 ```pascal
 function MinElem(a: array of real): (real,integer); 
 begin
@@ -177,7 +186,9 @@ begin
 end;
 ```
 
-10. Сдвиг влево
+## Сдвиги
+
+**Задача.** Сдвиг влево
 ```pascal
 procedure ShiftLeft<T>(a: array of T);
 begin
@@ -187,7 +198,7 @@ begin
 end;
 ```
 
-11. Сдвиг вправо
+**Задача.** Сдвиг вправо
 ```pascal
 procedure ShiftRight<T>(a: array of T);
 begin
@@ -197,7 +208,7 @@ begin
 end;
 ```
 
-12. Циклический сдвиг вправо
+**Задача.** Циклический сдвиг вправо
 ```pascal
 procedure CycleShiftRight<T>(a: array of T);
 begin
@@ -208,8 +219,12 @@ begin
 end;
 ```
 
-13. Слияние двух упорядоченных в один упорядоченный
-// a,b упорядочены по возрастанию
+## Слияние
+
+**Задача.** Слияние двух упорядоченных в один упорядоченный
+
+a,b упорядочены по возрастанию
+
 ```pascal
 function Merge(a,b: array of real; n,m: integer): 
   array of real;
@@ -234,7 +249,9 @@ begin
 end;
 ```
 
-14. Поиск в упорядоченном массиве (есть стандартная a.BinarySearch(x))
+## Бинарный поиск
+
+**Задача.** Поиск в упорядоченном массиве (есть стандартная a.BinarySearch(x))
 ```pascal
 function BinarySearch(a: array of integer; x: integer): integer;
 begin
