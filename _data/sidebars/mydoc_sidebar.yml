@@ -56,14 +56,14 @@ entries:
       url: /progr_beginners.html
       output: web, pdf
 
-    - title: Студентам 
+    - title: Студентам
       url: /progr_students.html
       output: web, pdf
 
     - title: Студентам 2 
       output: web, pdf
-      folderitems:
 
+      folderitems:
       - title: Использование циклов 
         url: /progr_students.html
         output: web, pdf
