@@ -202,7 +202,7 @@ a.FindIndex(cond)
 
 ## Количество по условию
 
-**Задача.** Количество (есть стандартная a.Count(условие))
+**Задача.** Количество элементов, удовлетворяющих заданному условию
 
 **Решение 1.** Алгоритм
 
@@ -326,7 +326,7 @@ Reverse(a,k,a.Length-k);
 Reverse(a);
 ```
 
-## Преобразование
+## Преобразование элементов
 
 **Задача.** Требуется преобразовать элементы массива по правилу x -> f(x)
 
@@ -352,9 +352,9 @@ a.Transform(x -> if x mod 2 = 0 then x*x else x)
 
 ## Слияние
 
-**Задача.** Слияние двух упорядоченных в один упорядоченный
+**Задача.** Слияние двух упорядоченных массивов в один упорядоченный
 
-a,b упорядочены по возрастанию
+В массивах должно быть место под один барьерный элмент
 
 ```pascal
 function Merge(a,b: array of real; n,m: integer): 
@@ -398,6 +398,89 @@ begin
 end;
 ```
 
+Асимптотическая сложность - O(log(n))
 
+## Алгоритмы сортировки
+
+### Сортировка выбором
+
+```pascal
+procedure SortByChoice(a: array of integer);
+begin
+  for var i := 0 to a.High-1 do
+  begin
+    var min := a[i];
+    var imin := i;
+    for var j := i + 1 to a.High do
+      if a[j] < min then
+      begin        
+        min := a[j];
+        imin := j;
+      end;  
+    Swap(a[imin],a[i]);
+  end;
+end;
+```
+
+С использованием срезов:
+
+```pascal
+procedure SortByChoice(a: array of integer);
+begin
+  for var i := 0 to a.High-1 do
+    Swap(a[a[i:].IndexMin + i],a[i]);
+end;
+```
+
+## Пузырьковая сортировка 
+
+```pascal
+procedure BubbleSort(a: array of integer);
+begin
+  for var i := 0 to a.High-1 do
+    for var j := a.High downto i+1 do
+      if a[j] < a[j-1] then
+        Swap(a[j], a[j-1]);
+end;
+```
+
+С флагом (эффективнее в ситуациях, когда массив частично отсортирован):
+
+```pascal
+procedure BubbleSort2(a: array of integer);
+begin
+  var i := a.High;
+  var q: boolean;
+  repeat
+    q := true;
+    for var j := 0 to i - 1 do
+      if a[j+1] < a[j] then
+      begin
+        Swap(a[j+1], a[j]);
+        q := false;
+      end;
+    i -= 1;
+  until q;
+end;
+```
+
+## Сортировка вставками
+
+```pascal
+procedure SortByInsert(a: array of integer);
+begin
+  for var i:=1 to a.High do
+  begin
+    var x := a[i];
+    var j := i - 1;
+    while (j >= 0) and (x < a[j]) do
+    begin
+      a[j+1] := a[j];
+      j -= 1;
+    end;
+    a[j+1] := x;
+  end;
+end;
+```
 
 {% include links.html %}
