@@ -1,5 +1,5 @@
 ---
-title: Supported features
+title: О сайте
 tags:
   - getting_started
 keywords: 
@@ -10,7 +10,5 @@ permalink: mydoc_about_site.html
 toc: false
 folder: mydoc
 ---
-
-## О сайте
 
 Данный сайт содержит примеры программ на PascalABC.NET различной сложности.
