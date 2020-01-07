@@ -1,7 +1,5 @@
 ---
 title: О сайте
-tags:
-  - getting_started
 keywords: 
 last_updated: 31.12.2019
 published: true
@@ -11,4 +9,5 @@ toc: false
 folder: mydoc
 ---
 
+## Основное
 Данный сайт содержит примеры программ на PascalABC.NET различной сложности.
