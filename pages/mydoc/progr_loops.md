@@ -211,13 +211,7 @@ end;
 
 ### Предел последовательности
 
-**Задача.** Вычислить $$\lim\limits_{n \to \infty} a_{n} = \sqrt{x}$$
-
-<p>$$\sqrt{\pi}$$</p>
-
-<p>$$\lim\limits_{n \to \infty}$$</p>
-
-$$a_{n}$$
+**Задача.** Вычислить <p>$$\lim\limits_{n \to \infty} a_{n} = \sqrt{x}$$</p>
 
 lim <sub>n→∞</sub>⁡ a<sub>n</sub>=√x.
 
