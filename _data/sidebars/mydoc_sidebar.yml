@@ -80,7 +80,14 @@ entries:
       url: /olymp_index.html
       output: web, pdf
 
+    - title: Простейшие олимпиадные задачи
+      url: /olymp_simple.html
+      output: web, pdf
 
+    - title: Критика
+      url: /olymp_critique.html
+      output: web, pdf
+      
   - title: Правила форматирования на сайте
     output: web, pdf
 
