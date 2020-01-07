@@ -9,6 +9,8 @@ permalink: progr_loops.html
 folder: mydoc
 ---
 
+<script src="//i.upmath.me/latex.js"></script>
+
 ### Количество по условию
 **Задача.** Сколько нечетных среди n введенных
 
