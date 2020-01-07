@@ -60,7 +60,7 @@ entries:
       url: /progr_students.html
       output: web, pdf
 
-    - title: Студентам 2 
+    - title: Студентам нов 
       output: web, pdf
 
       folderitems:
