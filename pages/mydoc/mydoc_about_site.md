@@ -1,11 +1,11 @@
 ---
 title: О сайте
-keywords: 
+keywords: PascalABC
 last_updated: 31.12.2019
 published: true
 sidebar: mydoc_sidebar
 permalink: mydoc_about_site.html
-toc: true
+toc: false
 folder: mydoc
 ---
 
