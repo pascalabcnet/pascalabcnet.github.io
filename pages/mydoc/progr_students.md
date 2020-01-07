@@ -213,7 +213,7 @@ end;
 
 Для решения используется следующая рекуррентная последовательность:
 
-a<sub>1</sub>⁡=1,
+a<sub>1</sub>⁡=x,
 a<sub>n+1</sub>⁡=1/2 * (a<sub>n</sub>⁡+x/a<sub>n</sub>⁡)   
 
 **Решение 1.**
@@ -221,7 +221,7 @@ a<sub>n+1</sub>⁡=1/2 * (a<sub>n</sub>⁡+x/a<sub>n</sub>⁡)
 Assert(x>=0);
 var x := ReadReal;
 var eps := 1e-10;
-var a := 1.0;
+var a := x;
 var b := real.MaxValue;
 while Abs(b - a) >= eps do
 begin
@@ -233,7 +233,7 @@ Print(a,Sqrt(x));
 
 **Решение 2.** С помощью множественного присваивания
 ```pascal
-var (a,b) := (1.0,real.MaxValue);
+var (a,b) := (x,real.MaxValue);
 while Abs(b - a) >= eps do
   (b,a) := (a, (a + x / a) / 2);
 ```
