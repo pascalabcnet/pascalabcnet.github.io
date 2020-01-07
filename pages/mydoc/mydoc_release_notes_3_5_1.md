@@ -1,11 +1,10 @@
 ---
 title: Версия 3.5.1
-tags: [getting_started]
-keywords: release notes, announcements, what's new, new features
+keywords: PascalABC, release notes, announcements, what's new, new features
 last_updated: 14.09.19
 sidebar: mydoc_sidebar
 permalink: mydoc_release_notes_3_5_1.html
-tok: false
+toc: false
 folder: mydoc
 ---
 
