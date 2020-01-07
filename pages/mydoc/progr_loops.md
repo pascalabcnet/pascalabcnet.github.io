@@ -213,7 +213,7 @@ end;
 
 **Задача.** Вычислить 
 
-текст $$ax^2+bx+c=0$$
+<p>текст $$\inline ax^2+bx+c=0$$<.p>
 
 <p>$$\lim\limits_{n \to \infty} a_{n} = \sqrt{x}$$</p>
 
