@@ -9,11 +9,6 @@ toc: false
 folder: mydoc
 ---
 
-
-{% include image.html file="819.gif" alt="819" caption="819" max-width="100" %}
-
-
-
 ## Разбор простейших олимпиадных задач
 
 {% include links.html %}
