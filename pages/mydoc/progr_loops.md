@@ -11,8 +11,6 @@ folder: mydoc
 
 <script src="//i.upmath.me/latex.js"></script>
 
-<p>$$\sqrt{\pi}$$</p>
-
 ### Количество по условию
 **Задача.** Сколько нечетных среди n введенных
 
@@ -213,7 +211,13 @@ end;
 
 ### Предел последовательности
 
-**Задача.** Вычислить $$\lim\limits_{n \to \infty} a_n = \sqrt{x}$$
+**Задача.** Вычислить $$\lim\limits_{n \to \infty} a_{n} = \sqrt{x}$$
+
+<p>$$\sqrt{\pi}$$</p>
+
+<p>$$\lim\limits_{n \to \infty}$$</p>
+
+$$a_{n}$$
 
 lim <sub>n→∞</sub>⁡ a<sub>n</sub>=√x.
 
