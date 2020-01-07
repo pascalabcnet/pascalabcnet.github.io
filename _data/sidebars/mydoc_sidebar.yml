@@ -56,17 +56,9 @@ entries:
       url: /progr_beginners.html
       output: web, pdf
 
-    - title: Студентам
-      url: /progr_students.html
+    - title: Использование циклов
+      url: /progr_loops.html
       output: web, pdf
-
-    - title: Студентам нов 
-      output: web, pdf
-
-      folderitems:
-      - title: Использование циклов 
-        url: /progr_students.html
-        output: web, pdf
 
     - title: Особенности языка
       url: /progr_lang_features.html
