@@ -56,7 +56,7 @@ entries:
       url: /progr_beginners.html
       output: web, pdf
 
-    - title: Использование циклов
+    - title: Циклы
       url: /progr_loops.html
       output: web, pdf
 
