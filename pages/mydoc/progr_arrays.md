@@ -10,6 +10,18 @@ folder: mydoc
 
 ## Методы и операции для работы с массивами
 
+Объявление и выделение памяти
+```pascal
+  var n := ReadInteger;
+  var a: array of integer;
+  a := new integer[n];
+```
+или 
+```pascal
+  var n := ReadInteger;
+  var a := new integer[n];
+```
+
 Ввод-вывод
 ```pascal
   var a := ReadArrInteger(n);
