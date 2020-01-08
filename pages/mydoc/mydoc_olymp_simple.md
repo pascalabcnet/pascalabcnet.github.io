@@ -9,6 +9,7 @@ toc: false
 folder: mydoc
 ---
 
+<script src="//i.upmath.me/latex.js"></script> 
 ## Разбор простейших олимпиадных задач
 
 {% include links.html %}
