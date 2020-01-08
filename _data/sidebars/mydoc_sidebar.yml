@@ -76,12 +76,12 @@ entries:
       url: /olymp_index.html
       output: web, pdf
 
-    - title: Простейшие олимпиадные задачи
+    - title: Простые алгоритмы
       url: /olymp_simple.html
       output: web, pdf
 
-    - title: Критика
-      url: /olymp_critique.html
+    - title: Геометрия
+      url: /olymp_geometry.html
       output: web, pdf
       
   - title: Правила форматирования на сайте
