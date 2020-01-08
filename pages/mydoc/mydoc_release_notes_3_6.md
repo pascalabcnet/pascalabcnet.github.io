@@ -1,5 +1,5 @@
 ---
-title: Версия 3.6.0. Предстоящие изменения
+title: Версия 3.6.0
 keywords: release notes, announcements, what's new, new features
 last_updated: 05.01.20
 sidebar: mydoc_sidebar
@@ -23,7 +23,10 @@ x in 1..5
 
 В штатной ситуации `a..b` эквивалентно `Range(a,b)`:
 ```pascal  
-(1..10).Select(x -> x*x).Println
+(1..10).Select(x -> x*x).Println;
+var a := Arr(1..10);
+var h := HSet(1..10);
+(1..5).Cartesian('a'..'z').Println;
 ```
 
 Конструкция 
@@ -44,13 +47,13 @@ foreach var x in 1..10 do
 for var x := 1 to 10 do
 ```
 
-## Оптимизация скорости срезов a[f:t]
+## Оптимизация скорости срезов строк a[f:t]
 
-Подобные срезы будут оптимизированы заменой на вызов оптимальной функции. Например, для строк `s[f:t]` будет заменена на `s.Substring`
+Подобные срезы оптимизированы заменой на вызов функции `s.Substring`
 
 ## Оптимизация a.Indices
 
-Для массивов, строк и списков - единый цикл по индексам:
+Для массивов и списков - единый цикл по индексам:
 ```pascal
 foreach var i in a.Indices do
 ```
@@ -59,8 +62,6 @@ foreach var i in a.Indices do
 for var i := 0 to a.Length-1 do
 
 for var i := 0 to a.Count-1 do
-
-for var i := 1 to a.Length do
 ```
 в зависимости от типа контейнера
 
@@ -96,13 +97,6 @@ begin
     else -1;
   Print(sign)
 end.
-```
-
-## Программы без begin-end (предложение, не реализовано)
-
-Программы, не требующие подключения внешних модулей и описаний вне блока, можно писать без begin-end:
-```
-(1..10).Select(i -> 1..i).Println;
 ```
 
 {% include links.html %}
