@@ -99,7 +99,7 @@ begin
 end.
 ```
 
-## ReadInt64
+## Стандартная функция ReadInt64
 
 ```pascal
 var x := ReadInt64;
