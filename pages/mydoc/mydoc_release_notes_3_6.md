@@ -99,4 +99,11 @@ begin
 end.
 ```
 
+## ReadInt64
+
+```pascal
+var x := ReadInt64;
+```
+
+
 {% include links.html %}
