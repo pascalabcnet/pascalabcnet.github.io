@@ -8,6 +8,8 @@ permalink: progr_arrays.html
 folder: mydoc
 ---
 
+<script src="//i.upmath.me/latex.js"></script> 
+
 ## Методы и операции для работы с массивами
 
 Объявление и выделение памяти 
