@@ -12,7 +12,7 @@ folder: mydoc
 
 ## Задачи, требующие знаний из геометрии
 
-[**ЗАДАЧА №894**]https://acmp.ru/index.asp?main=task&id_task=894)   
+[**ЗАДАЧА №894**](https://acmp.ru/index.asp?main=task&id_task=894)   
 	
 Кольцо
 (Время: 1 сек. Память: 16 Мб Сложность: 16%)
