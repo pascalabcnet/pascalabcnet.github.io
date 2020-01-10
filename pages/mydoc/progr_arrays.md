@@ -38,9 +38,9 @@ folder: mydoc
   a := Arr(1,3,7);
   a := Arr(1..10);
   a := ArrFill(10,666);
-  a := ArrGen(n,i->i*i[,from:=0])
-  a := ArrGen(n,1,x->x+2)
-  a := ArrGen(n,1,1,(x,y)->x+y)
+  a := ArrGen(n,i->elem(i)[,from:=0])
+  a := ArrGen(n,first,x->next(x))
+  a := ArrGen(n,first,second,(x,y)->next(x,y))
 ```
 
 Примеры:
