@@ -1,6 +1,6 @@
 ---
 title: Программы и алгоритмы с использованием последовательностей
-keywords: arrays, examples, programs, algorithms
+keywords: sequences, examples, programs, algorithms
 last_updated: 12.01.20
 summary: "Здесь приведены примеры программ и алгоритмов, используемых в курсе Основы программирования для студентов 1 курса ФИИТ мехмата ЮФУ"
 sidebar: mydoc_sidebar
