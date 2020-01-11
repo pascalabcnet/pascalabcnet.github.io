@@ -36,6 +36,7 @@ Println(a2);
 ```
 
 **Код 2** 
+
 ```pascal
 **Код 1** 
 var a := new integer[3,4];
@@ -52,9 +53,10 @@ a.Println(3); // 3 позиции под элемент
 2  3  4  5
 ```
 
-## Заполнение по правилу и случайными
+### Заполнение по правилу и случайными
 
 **Код ** 
+
 ```pascal
 var a := Matr(3,4,1,2,3,4,5,6,7,8,9,10,11,12);
 a.Println(3);
@@ -74,6 +76,7 @@ a1.Println(5,1);
 ```
 
 **Код ** 
+
 ```pascal
 var a := MatrRandomInteger(3,4);
 a.Println(4);
@@ -93,7 +96,8 @@ a1.Println(6,2);
 
 ## Операции со строками и столбцами
 
-**Вывод k-той строки ** 
+**Вывод k-той строки **
+
 ```pascal
 var k := 1; // Номер строки
 
@@ -106,6 +110,7 @@ a.Row(k).Println;
 ```
 
 **Вывод k-того столбца ** 
+
 ```pascal
 var k := 2; // Номер столбца
 
@@ -118,6 +123,42 @@ for var i:=0 to a.RowCount-1 do
 a.Col(k).Println;
 ```
 
+**Простейшие операции над строками и столбцами строками и столбцами ** 
 
+```pascal
+var a := MatrRandomInteger(3,4);
+a.Println;
+a.Row(0).Sum.Println;
+a.Row(1).Average.Println;
+a.Row(2).Product.Println;
+a.Col(0).Min.Println;
+a.Col(1).Max.Println;
+```
+
+## Массовые операции со строками и столбцами
+
+**Сумма в каждой строке - алгоритм ** 
+
+```pascal
+var a := MatrRandomInteger(3,4);
+a.Println;
+
+var Sums := new integer[a.RowCount];
+for var i:=0 to a.RowCount-1 do
+begin
+  var sum := 0;
+  for var j:=0 to a.ColCount-1 do
+    sum += a[i,j];
+  Sums[i] := sum
+end;
+Sums.Println;
+```
+
+**Сумма в каждой строке - использование методов ** 
+
+```pascal
+var Sums := ArrGen(a.RowCount,r -> a.Row(r).Sum);
+Sums.Println;
+```
 
 {% include links.html %}
