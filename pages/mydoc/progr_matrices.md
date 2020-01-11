@@ -108,7 +108,7 @@ for var j:=0 to a.ColCount-1 do
 a.Row(k).Println;
 ```
 
-**Вывод k-того столбца ** 
+**Вывод k-того столбца** 
 
 ```pascal
 var k := 2; // Номер столбца
@@ -122,7 +122,7 @@ for var i:=0 to a.RowCount-1 do
 a.Col(k).Println;
 ```
 
-**Простейшие операции над строками и столбцами строками и столбцами ** 
+**Простейшие операции над строками и столбцами строками и столбцами** 
 
 ```pascal
 var a := MatrRandomInteger(3,4);
@@ -136,7 +136,7 @@ a.Col(1).Max.Println;
 
 ## Массовые операции со строками и столбцами
 
-**Сумма в каждой строке - алгоритм ** 
+**Сумма в каждой строке - алгоритм** 
 
 ```pascal
 var a := MatrRandomInteger(3,4);
@@ -153,7 +153,7 @@ end;
 Sums.Println;
 ```
 
-**Сумма в каждой строке - использование методов ** 
+**Сумма в каждой строке - использование методов** 
 
 ```pascal
 var Sums := ArrGen(a.RowCount,r -> a.Row(r).Sum);
@@ -167,7 +167,7 @@ var Mins := ArrGen(a.ColCount,c -> a.Col(c).Min);
 Mins.Println;
 ```
 
-**Количество четных в каждом столбце ** 
+**Количество четных в каждом столбце** 
 
 ```pascal
 var EvensCount := ArrGen(a.ColCount,c -> a.Col(c).Count(x->x.IsEven));
