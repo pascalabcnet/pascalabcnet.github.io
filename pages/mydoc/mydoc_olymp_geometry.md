@@ -138,7 +138,7 @@ begin
   var (x, y) := ReadInteger2;
   var (xa, ya) := (x, y);
   (x, y) := (xa, ya);
-  var S := 0.0;
+  var S := 0;
   loop n - 1 do
   begin
     var (xb, yb) := ReadInteger2;
