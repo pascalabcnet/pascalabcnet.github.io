@@ -72,7 +72,6 @@ entries:
       url: /progr_sequences.html
       output: web, pdf
 
-
     - title: Особенности языка
       url: /progr_lang_features.html
       output: web, pdf
@@ -92,7 +91,11 @@ entries:
     - title: Геометрия
       url: /olymp_geometry.html
       output: web, pdf
-      
+
+    - title: Ростов, 2019
+      url: /olymp_rostov2019.html
+      output: web, pdf      
+
   - title: Правила форматирования на сайте
     output: web, pdf
 
