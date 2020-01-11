@@ -10,18 +10,49 @@ folder: mydoc
 
 <script src="//i.upmath.me/latex.js"></script>
 
-### Количество по условию
-**Задача.** Сколько нечетных среди n введенных
 
-**Решение 1.** Ввод данных в цикле
+##  Основные действия с двумерными массивами (матрицами)
+
+** Описание, заполнение в цикле и вывод** 
+
+
+**Описание, заполнение в цикле и вывод** 
+
 ```pascal
-var c := 0;
-loop n do
-begin
-  var x := ReadInteger;
-  if x mod 2 <> 0 then
-    c += 1;
-end;
+**Код 1** 
+var a2: array [,] of integer;
+a2 := new integer[3,4];
+for var i:=0 to a2.GetLength(0)-1 do
+for var j:=0 to a2.GetLength(1)-1 do
+  a2[i,j] := i + j;
+a2.Println;
+Println(a2); 
+```
+
+***Вывод***
+```
+0 1 2 3
+1 2 3 4
+2 3 4 5
+[[0,1,2,3],[1,2,3,4],[2,3,4,5]]
+```
+
+**Описание, заполнение в цикле и вывод 2** 
+
+```pascal
+**Код 1** 
+var a := new integer[3,4];
+for var i:=0 to a.RowCount-1 do
+for var j:=0 to a.ColCount-1 do
+  a[i,j] := i + j;
+a.Println(3); // 3 позиции под элемент
+```
+
+***Вывод*** 
+```
+0  1  2  3
+1  2  3  4
+2  3  4  5
 ```
 
 {% include links.html %}
