@@ -64,6 +64,15 @@ entries:
       url: /progr_arrays.html
       output: web, pdf
 
+    - title: Матрицы
+      url: /progr_matrices.html
+      output: web, pdf
+
+    - title: Последовательности
+      url: /progr_sequences.html
+      output: web, pdf
+
+
     - title: Особенности языка
       url: /progr_lang_features.html
       output: web, pdf
