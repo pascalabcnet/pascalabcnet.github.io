@@ -4,7 +4,7 @@ keywords: olympiads
 last_updated: 07.01.2020
 sidebar: mydoc_sidebar
 permalink: olymp_simple.html
-toc: false
+toc: true
 folder: mydoc
 ---
 
