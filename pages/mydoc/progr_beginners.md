@@ -8,5 +8,10 @@ permalink: progr_beginners.html
 folder: mydoc
 ---
 
+```pascal
+begin
+  Print('Hello PascalABC.NET!');
+end.
+```
 
 {% include links.html %}
