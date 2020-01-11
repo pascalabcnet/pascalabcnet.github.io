@@ -87,6 +87,7 @@ begin
       Write(Chr(Ord('A')+i));
 end.
 
+{
 3 5
 HEKEK
 ELDLR
@@ -104,6 +105,7 @@ AKEI
 DONT
 LIKE
 DFS
+}
 ```
 
 **Задача F**
@@ -165,6 +167,7 @@ begin
   Println(sum);
 end.
 
+{
 7
 Budapest 70.90 0
 Riga 75.41 1
@@ -192,5 +195,6 @@ Paris 112.12 0
 2
 Berlin Riga
 Berlin Rome
+}
 ```
 
