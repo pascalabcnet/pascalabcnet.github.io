@@ -141,7 +141,8 @@ begin
       end;
     cur += 1;
   end;
-  Println(res.Count);var resset := new HashSet<string>(res);
+  Println(res.Count);
+  var resset := new HashSet<string>(res);
   // удаление пар, не связанных с результирующими городами
   for var i := b.Count - 1 downto 0 do
     if not resset.Contains(b[i][1]) then
