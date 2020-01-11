@@ -161,4 +161,64 @@ var Sums := ArrGen(a.RowCount,r -> a.Row(r).Sum);
 Sums.Println;
 ```
 
+**Минимальный в каждом столбце** 
+
+```pascal
+var Mins := ArrGen(a.ColCount,c -> a.Col(c).Min);
+Mins.Println;
+```
+
+**Количество четных в каждом столбце ** 
+
+```pascal
+var EvensCount := ArrGen(a.ColCount,c -> a.Col(c).Count(x->x.IsEven));
+EvensCount.Println;
+```
+
+**Минимальный из максимальных элементов строк** 
+
+```pascal
+ArrGen(a.RowCount,r -> a.Row(r).Max).Min.Println;
+```
+
+## Замена строк (столбцов)
+
+**Задача**. Упорядочить вторую строку матрицы по возрастанию
+
+**Код**
+```pascal
+var a := MatrRandomInteger(3,4);
+a.Println;
+var b := a.Row(2);
+Sort(b);
+a.SetRow(2,b);
+a.Println;
+```
+
+## Поиск в матрице
+
+**Задача**. Содержит ли матрица заданный элемент
+
+**Код**
+```pascal
+function Contains<T>(a: array [,] of T; x: T): boolean;
+begin
+  Result := False;
+  for var i:=0 to a.RowCount-1 do
+  for var j:=0 to a.ColCount-1 do
+    if a[i,j]=x then
+    begin
+      Result := True;
+      exit;
+    end;
+end;
+
+begin
+  var a := MatrRandomInteger(3,4,1,10);
+  a.Println;
+  var found := Contains(a,5);
+  Println(found);
+end.
+```
+
 {% include links.html %}
