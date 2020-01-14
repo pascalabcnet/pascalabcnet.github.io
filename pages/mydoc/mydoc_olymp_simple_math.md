@@ -65,16 +65,15 @@ begin
       Write(1, NewLine, -c / b:0:6)
   else
   begin
-    var d := b * b - 4.0 * a * c;
+    var d := b * b - 4 * a * c;
     if d < 0 then
       Print(0)
     else if d = 0 then
-      Write(1, NewLine, -b / (2.0 * a):0:6)
+      Write(1, NewLine, -b / (2 * a):0:6)
     else
     begin
       d := Sqrt(d);
-      Write(2, NewLine, (-b - d) / (2.0 * a):0:6, NewLine,
-          (-b + d) / (2.0 * a):0:6)
+      Write(2, NewLine, (-b - d) / (2 * a):0:6, NewLine, (-b + d) / (2 * a):0:6)
     end
   end
 end.
