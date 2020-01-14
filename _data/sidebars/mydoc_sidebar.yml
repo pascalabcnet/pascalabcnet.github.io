@@ -92,6 +92,10 @@ entries:
       url: /olymp_geometry.html
       output: web, pdf
 
+    - title: Простая математика
+      url: /olymp_simple_math.html
+      output: web, pdf
+
     - title: Ростов, 2019
       url: /olymp_rostov2019.html
       output: web, pdf      
