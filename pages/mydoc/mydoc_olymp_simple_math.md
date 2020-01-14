@@ -57,10 +57,7 @@ begin
   var (a, b, c) := ReadReal3;
   if a = 0 then
     if b = 0 then
-      if c = 0 then
-        Print(-1)
-      else
-        Print(0)
+      Print(c = 0 ? -1 : 0)
     else
       Write(1, NewLine, -c / b:0:6)
   else
@@ -73,7 +70,8 @@ begin
     else
     begin
       d := Sqrt(d);
-      Write(2, NewLine, (-b - d) / (2 * a):0:6, NewLine, (-b + d) / (2 * a):0:6)
+      Write(2, NewLine, (-b - d) / (2 * a):0:6, NewLine,
+          (-b + d) / (2 * a):0:6)
     end
   end
 end.
