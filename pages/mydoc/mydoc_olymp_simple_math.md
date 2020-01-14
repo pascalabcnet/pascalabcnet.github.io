@@ -28,8 +28,8 @@ folder: mydoc
 
 ```pascal
 begin
-  var (a, b, n) := ReadInteger3;
-  Print(a + (b - a) * (n - 1))
+  var (a1, a2, n) := ReadInteger3;
+  Print(a1 + (a2 - a1) * (n - 1))
 end.
 ```
 
