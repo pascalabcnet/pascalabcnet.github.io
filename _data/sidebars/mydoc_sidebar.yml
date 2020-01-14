@@ -76,7 +76,7 @@ entries:
       url: /progr_lang_features.html
       output: web, pdf
 
-  - title: Олимпиадное программирование
+  - title: Задачи олимпиад
     output: web, pdf
     folderitems:
 
@@ -96,7 +96,7 @@ entries:
       url: /olymp_rostov2019.html
       output: web, pdf      
 
-  - title: Правила форматирования на сайте
+  - title: Форматирование на сайте
     output: web, pdf
 
     folderitems:
