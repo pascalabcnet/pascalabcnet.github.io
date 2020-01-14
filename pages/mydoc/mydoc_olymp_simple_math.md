@@ -1,5 +1,5 @@
 ---
-title: Олимпиадное программирование в PascalABC.NET
+title: Олимпиадные задачи - простая математика
 keywords: olympiads
 last_updated: 08.01.2020
 sidebar: mydoc_sidebar
