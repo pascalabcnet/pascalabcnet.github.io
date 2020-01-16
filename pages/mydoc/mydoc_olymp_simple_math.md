@@ -154,11 +154,11 @@ end.
 
 ```pascal
 begin
+  var k: array of int64 = (1, 60, 3600);
   var a := ReadlnString.Replace(':', ' ').ToIntegers;
-  var t := int64(a[0]) * 3600 + int64(a[1]) * 60 + a[2];
+  var t := a[0] * k[2] + a[1] * k[1] + a[2];
   a := ReadlnString.Replace(':', ' ').ToIntegers;
   Reverse(a);
-  var k: array of int64 = (1, 60, 3600);
   for var i := 0 to a.High do
     t += a[i] * k[i];
   var s := $':{t mod 60:d2}';
