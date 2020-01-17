@@ -96,6 +96,14 @@ entries:
       url: /olymp_simple_math.html
       output: web, pdf
 
+    - title: Разбор строк
+      url: /olymp_strings.html
+      output: web, pdf
+
+    - title: Сортировка и последовательности
+      url: /olymp_seq_sort.html
+      output: web, pdf
+
     - title: Ростов, 2019
       url: /olymp_rostov2019.html
       output: web, pdf      
