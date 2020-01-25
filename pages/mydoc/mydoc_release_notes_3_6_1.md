@@ -1,5 +1,5 @@
 ---
-title: Версия 3.6.0
+title: Версия 3.6.1
 keywords: release notes, announcements, what's new, new features
 last_updated: 05.01.20
 sidebar: mydoc_sidebar
