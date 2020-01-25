@@ -87,5 +87,23 @@ end.
 В выходной файл OUTPUT.TXT выведите ответ на задачу. 
 
 ```pascal
-
+begin
+  var D := new Dictionary<char, integer>;
+  var k: integer;
+  for var i := 1 to 26 do
+  begin 
+    k := i div 10 + i mod 10;
+    D.Add(Chr(Ord('A') + i - 1), k + 10);
+    D.Add(Chr(Ord('a') + i - 1), k);
+  end;
+  for var i := 0 to 9 do
+    D.Add(Chr(Ord('0') + i), 13 - i);
+  var s := ' .,;+-="''()<>[]{}'+#13#10;
+  var a := Arr(4,5,2,7,3,3,3,3,3,1,1,8,8,8,8,8,8,0,0);
+  for var i := 1 to s.Length do
+    D.Add(s[i], a[i-1]);
+  var r := ReadAllText('input.txt');
+  r.Select(c -> D[c]).Sum.Print
+end.
 ```
+
