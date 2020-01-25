@@ -29,7 +29,7 @@ folder: mydoc
 
 ## s.JoinToString
 
-Старое название метожа последовательности `s.JoinIntoString` будет заменено на `s.JoinToString`
+Старое название метода последовательности `s.JoinIntoString` будет заменено на `s.JoinToString`
 
 
 {% include links.html %}
