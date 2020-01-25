@@ -20,6 +20,7 @@ folder: mydoc
 | ReadString | 1300 мс | 280 мс |
 | loop N do ReadLexem | - | 370 мс |
 | loop N do ReadInteger | 1570 мс | 280 мс |
+| ReadString.ToIntegers | 1450 мс | 380 мс |
 
 ## Pred и Succ с двумя параметрами 
 
