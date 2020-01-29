@@ -19,7 +19,7 @@ folder: mydoc
 
 |  | Старая версия (a.exe < a.txt) | Старая версия с Assign(input) | Новая версия (a.exe < a.txt)| Новая версия с Assign(input)|
 |-------|--------|---------|---------|---------|
-| ReadString | 6500 мс | 3400 мс | 910 мс | 390 мс |  
+| ReadString | 4100 мс | 2100 мс | 910 мс | 390 мс |  
 | ReadString.ToIntegers | 6000 мс | 4200 мс | 1280 мс | 780 мс |  
 | ReadString.ToIntegers(N) | - | - | 1200 мс | 680 мс |  
 | loop N do ReadLexem | - | - | 1640 мс | 1520 мс |  
