@@ -53,7 +53,7 @@ folder: mydoc
 
 `Each` - более общая версия, проектирует группу с данным ключом на произвольное значение:
 
-`a.GroupBy(x->x.year).Each(g->g.Select(x->x.Height).Average).Println` выводит `(1,2) (2,3) (3,2) (4,1)`
+`a.GroupBy(x->x.year).Each(g->g.Select(x->x.Height).Average).Println` 
 
 
 {% include links.html %}
