@@ -53,7 +53,7 @@ end.
 begin
   var w := ReadArrInteger(3);
   var c := ReadArrInteger(3);
-  var r := ReadArrInteger3);
+  var r := ReadArrInteger(3);
   var res := ArrGen(3, i -> c[i]*r[i] - w[i]);
   var max := res.Max;
   if max <= 0 then
