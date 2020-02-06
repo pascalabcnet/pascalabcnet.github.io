@@ -10,7 +10,7 @@ folder: mydoc
 
 ## Чтение BigInteger: процедура Read(bi) и функция ReadBigInteger
 
-```
+```pascal
 begin
   var b := ReadBigInteger;
   Print(b);
@@ -21,7 +21,7 @@ end.
 
 В настоящее время библиотека lll.dll, генерируемая PascalABC.NET, содержит ряд пространств имен, специфичных для PascalABC.NET: 
 
-```
+```pascal
 lll_implementation____
 PABCSystem
 PABCSystem_implementation____
