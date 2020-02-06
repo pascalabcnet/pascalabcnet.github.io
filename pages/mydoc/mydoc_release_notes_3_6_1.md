@@ -8,7 +8,7 @@ toс: false
 folder: mydoc
 ---
 
-## Чтение BigInteger: процедура Read(bi) и функция ReadBigInteger
+## Чтение BigInteger: процедура Read(bi) и функция ReadBigInteger (сделано)
 
 ```pascal
 begin
@@ -79,9 +79,5 @@ PABCExtensions_implementation____
 `Each` - более общая версия, проектирует группу с данным ключом на произвольное значение:
 
 `a.GroupBy(x->x.year).Each(g->g.Select(x->x.Height).Average).Println` 
-
-## ReadBigInteger и Read(bi)
-
-Считывание длинных целых
 
 {% include links.html %}
