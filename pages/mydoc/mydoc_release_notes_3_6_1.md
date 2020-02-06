@@ -8,7 +8,16 @@ toс: false
 folder: mydoc
 ---
 
-## Скрытие в dll пространств имен, специфических для PascalABC.NET
+## Чтение BigInteger: процедура Read(bi) и функция ReadBigInteger
+
+```
+begin
+  var b := ReadBigInteger;
+  Print(b);
+end.
+```
+
+## Скрытие в dll пространств имен, специфических для PascalABC.NET (сделано)
 
 В настоящее время библиотека lll.dll, генерируемая PascalABC.NET, содержит ряд пространств имен, специфичных для PascalABC.NET: 
 
