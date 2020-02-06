@@ -72,5 +72,8 @@ PABCExtensions_implementation____
 
 `a.GroupBy(x->x.year).Each(g->g.Select(x->x.Height).Average).Println` 
 
+## ReadBigInteger и Read(bi)
+
+Считывание длинных целых
 
 {% include links.html %}
