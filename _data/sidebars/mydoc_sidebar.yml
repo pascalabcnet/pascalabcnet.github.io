@@ -37,7 +37,7 @@ entries:
     folderitems:
 
     - title: Примечания к версии 3.6.2 (будущие изменения) 
-      url: /mydoc_release_notes_3_6_1.html
+      url: /mydoc_release_notes_3_6_2.html
       output: web, pdf
 
     - title: Примечания к версии 3.6 
