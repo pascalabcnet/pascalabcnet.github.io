@@ -3,7 +3,7 @@ title: Версия 3.6.2
 keywords: release notes, announcements, what's new, new features
 last_updated: 05.01.20
 sidebar: mydoc_sidebar
-permalink: mydoc_release_notes_3_6_1.html
+permalink: mydoc_release_notes_3_6_2.html
 toс: false
 folder: mydoc
 ---
