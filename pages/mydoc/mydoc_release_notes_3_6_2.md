@@ -8,15 +8,6 @@ toс: false
 folder: mydoc
 ---
 
-## Чтение BigInteger: процедура Read(bi) и функция ReadBigInteger (реализовано)
-
-```pascal
-begin
-  var b := ReadBigInteger;
-  Print(b);
-end.
-```
-
 ## Скрытие в dll пространств имен, специфических для PascalABC.NET (реализовано)
 
 В настоящее время библиотека lll.dll, генерируемая PascalABC.NET, содержит ряд пространств имен, специфичных для PascalABC.NET: 
@@ -81,5 +72,19 @@ PABCExtensions_implementation____
 `Each` - более общая версия, проектирует группу с данным ключом на произвольное значение:
 
 `a.GroupBy(x->x.year).Each(g->g.Select(x->x.Height).Average).Println` 
+
+## Чтение BigInteger: процедура Read(bi) и функция ReadBigInteger (реализовано)
+
+```pascal
+begin
+  var b := ReadBigInteger;
+  Print(b);
+end.
+```
+
+## Автозавершение кода - правки (реализовано)
+
+При включённом автозавершении кода убрано автоматическое завершение оператора присваивания точкой с запятой. Данная возможность срабатывала неправильно если выражение в операторе присваивания распространялось на несколько строк. 
+
 
 {% include links.html %}
