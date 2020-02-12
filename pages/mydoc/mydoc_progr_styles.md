@@ -17,9 +17,9 @@ PascalABC.NET как мультипарадигменный язык позво�
 
 ```pascal
 begin
-  var (a,b) := ReadInteger2;
-  var sum := 0;
-  for var i:=a to b do
+  var (a,b) := ReadInteger2; // автовывод типов
+  var sum := 0;              // автовывод типов
+  for var i:=a to b do       // счётчик цикла описывается в заголовке цикла
     sum += i*i;
   Print($'Сумма = {sum}')    
 end.
@@ -37,11 +37,13 @@ end.
 ### Стиль C#
 
 ```pascal
+// Запуск - по Shift-F9
 uses System;
 begin
-  var arr := Console.ReadString.Split(new char[](' '),StringSplitOptions.RemoveEmptyEntries);
-  var (a,b) := (arr[0],arr[1]);
-  for var i:=a to b do
+  var arr := Console.ReadLine.Split(new char[](' '),StringSplitOptions.RemoveEmptyEntries);
+  var (a,b) := (integer.Parse(arr[0]),integer.Parse(arr[1]));
+  var sum := 0;
+  for var i:=a to b do 
     sum += i*i;
   Console.WriteLine($'Сумма = {sum}')
 end.
