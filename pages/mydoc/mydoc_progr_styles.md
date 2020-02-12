@@ -34,6 +34,22 @@ begin
 end.
 ```
 
+### Процедурный стиль
+
+```pascal
+function SumSquares(a,b: integer): integer;
+begin
+  Result := 0;
+  for var i := a to b do     
+    Result += i * i
+end;
+
+begin
+  var (a,b) := ReadInteger2;   
+  Print($'Сумма = {SumSquares(a,b)}')    
+end.
+```
+
 ### Сочетание функционального и процедурного стиля
 
 ```pascal
@@ -41,7 +57,7 @@ function SumSquares(a,b: integer) := (a..b).Sum(x -> x*x);
 
 begin
   var (a,b) := ReadInteger2;
-  SumSquares(a,b).Print
+  Print($'Сумма = {SumSquares(a,b)}')    
 end.
 ```
 
@@ -69,7 +85,7 @@ begin
   sum := 0;
   for i:=a to b do
     sum := sum + i*i;
-  Write(sum)
+  Write('Сумма = ',sum)
 end.
 ```
 
