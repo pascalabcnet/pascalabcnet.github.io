@@ -25,15 +25,6 @@ begin
 end.
 ```
 
-### Функциональный стиль PascalABC.NET
-
-```pascal
-begin
-  var (a,b) := ReadInteger2;
-  (a..b).Sum(x -> x*x).Print
-end.
-```
-
 ### Процедурный стиль
 
 ```pascal
@@ -47,6 +38,15 @@ end;
 begin
   var (a,b) := ReadInteger2;   
   Print($'Сумма = {SumSquares(a,b)}')    
+end.
+```
+
+### Функциональный стиль PascalABC.NET
+
+```pascal
+begin
+  var (a,b) := ReadInteger2;
+  (a..b).Sum(x -> x*x).Print
 end.
 ```
 
