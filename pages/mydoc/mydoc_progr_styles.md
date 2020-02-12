@@ -13,7 +13,7 @@ PascalABC.NET как мультипарадигменный язык позво�
 
 Рассмотрим несколько стилей написания программ на PascalABC.NET
 
-### Стиль PascalABC.NET с алгоритмом
+### Алгоритмический стиль PascalABC.NET 
 
 ```pascal
 begin
@@ -31,6 +31,17 @@ end.
 begin
   var (a,b) := ReadInteger2;
   (a..b).Sum(x -> x*x).Print
+end.
+```
+
+### Сочетание функционального и процедурного стиля
+
+```pascal
+function SumSquares(a,b: integer) := (a..b).Sum(x -> x*x);
+
+begin
+  var (a,b) := ReadInteger2;
+  SumSquares(a,b).Print
 end.
 ```
 
