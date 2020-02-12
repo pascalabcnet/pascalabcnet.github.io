@@ -1,5 +1,5 @@
 ---
-title: О сайте
+title: О данном сайте
 keywords: PascalABC
 last_updated: 31.12.2019
 sidebar: mydoc_sidebar
@@ -9,4 +9,7 @@ folder: mydoc
 ---
 
 ## Основное
-Данный сайт содержит примеры программ на PascalABC.NET различной сложности.
+Данный сайт содержит:
+* примеры программ на PascalABC.NET различной сложности.
+* примеры решения олимпиадных задач
+* статьи о PascalABC.NET
