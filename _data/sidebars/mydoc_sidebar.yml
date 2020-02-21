@@ -60,7 +60,7 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Начинающим 
+    - title: Обзор программ и алгоритмов 
       url: /progr_beginners.html
       output: web, pdf
 
