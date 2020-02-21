@@ -1,17 +1,20 @@
 ---
-title: Программы и алгоритмы для начинающих
+title: Обзор примеров программ
 keywords: beginners, examples, programs, algorithms
 last_updated: 31.12.19
-summary: "Здесь приведены примеры программ и алгоритмов начального уровня"
+summary: "Обзор примеров программ"
 sidebar: mydoc_sidebar
 permalink: progr_beginners.html
 folder: mydoc
 ---
+* Циклы
 
-```pascal
-begin
-  Print('Hello PascalABC.NET!');
-end.
-```
+* Массивы
+
+* Матрицы
+
+* Последовательности
+
+* Особенности языка
 
 {% include links.html %}
