@@ -1,8 +1,8 @@
 ---
-title: Обзор примеров программ
+title: Обзор программ и алгоритмов
 keywords: beginners, examples, programs, algorithms
 last_updated: 31.12.19
-summary: "Обзор примеров программ"
+summary: "Обзор программ и алгоритмов"
 sidebar: mydoc_sidebar
 permalink: progr_beginners.html
 folder: mydoc
