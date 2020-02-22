@@ -40,19 +40,23 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Примечания к версии 3.6.2 (будущие изменения) 
+    - title: Версия 3.6.3 (будущие изменения)
+      url: /mydoc_release_notes_3_6_3.html
+      output: web, pdf
+
+    - title: Версия 3.6.2
       url: /mydoc_release_notes_3_6_1.html
       output: web, pdf
 
-    - title: Примечания к версии 3.6 
+    - title: Версия 3.6 
       url: /mydoc_release_notes_3_6.html
       output: web, pdf
 
-    - title: Примечания к версии 3.5.1 
+    - title: Версия 3.5.1 
       url: /mydoc_release_notes_3_5_1.html
       output: web, pdf
 
-    - title: Примечания к версии 3.5
+    - title: Версия 3.5
       url: /mydoc_release_notes_3_5.html
       output: web, pdf
 
