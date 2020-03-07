@@ -41,7 +41,7 @@ entries:
       output: web, pdf
 
     - title: PascalABC.NET для школьников
-      url: /mydoc_for_school_students.html
+      url: /mydoc_for_schoolstudents.html
       output: web, pdf
 
   - title: Версии PascalABC.NET
