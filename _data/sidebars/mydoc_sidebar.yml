@@ -36,12 +36,12 @@ entries:
       url: /mydoc_progr_styles.html
       output: web, pdf
 
-    - title: PascalABC.NET для школьных учителей
-      url: /mydoc_school_teachers.html
+    - title: PascalABC.NET для учителей
+      url: /mydoc_for_school_teachers.html
       output: web, pdf
 
     - title: PascalABC.NET для школьников
-      url: /mydoc_school_students.html
+      url: /mydoc_for_school_students.html
       output: web, pdf
 
   - title: Версии PascalABC.NET
