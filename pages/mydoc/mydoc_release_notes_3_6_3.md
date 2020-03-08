@@ -7,6 +7,47 @@ permalink: mydoc_release_notes_3_6_3.html
 toс: false
 folder: mydoc
 ---
+## Разрешены вложенные безымянные записи с некоторыми ограничениями
+
+Во вложенных безымянных записях разрешено захватывать внешние имена только из глобального контекста:
+```
+type int = integer;
+
+var globalr := 2.5;
+var globali: integer;
+
+type Class1<T,T1> = class
+  procedure p;
+  var
+    A: record
+      i: int := globali;
+      jlocal0: record
+        k: real := globalr;
+      end;
+    end;
+  begin
+    
+  end;  
+end;  
+  
+begin
+  
+end.
+```
+Однако следующая программа является ошибочной (захватывается неглобальный тип T):
+```
+type Class1<T> = class
+    A: record
+      i: T;
+      end;
+end;  
+  
+begin
+  
+end.
+```
+Ошибка: Безымянные записи не могут захватывать имена из неглобального контекста
+
 
 ## Pred и Succ с двумя параметрами (не реализовано)
 
