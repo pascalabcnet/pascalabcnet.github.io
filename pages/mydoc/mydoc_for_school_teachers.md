@@ -156,7 +156,8 @@ begin
   var i: integer;
   while not TryRead(i,'Введите i:') do
     Println('Повторите ввод!');
-end.```
+end.
+```
 
 
 ### Кортежи
