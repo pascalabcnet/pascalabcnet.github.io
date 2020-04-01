@@ -4,7 +4,7 @@ keywords: styles
 last_updated: 01.04.2020
 sidebar: mydoc_sidebar
 permalink: mydoc_for_school_teachers.html
-toc: false
+toc: true
 folder: mydoc
 ---
 
