@@ -17,4 +17,6 @@ folder: mydoc
 
 * [Особенности языка](progr_lang_features.html)
 
+* [PascalABC.NET для школьных учителей](mydoc_for_school_teachers.html)
+
 {% include links.html %}
