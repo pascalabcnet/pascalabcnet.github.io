@@ -7,14 +7,14 @@ sidebar: mydoc_sidebar
 permalink: progr_beginners.html
 folder: mydoc
 ---
-* Циклы
+* [Циклы](progr_loops.html)
 
-* Массивы
+* [Массивы](progr_arrays.html)
 
-* Матрицы
+* [Матрицы](progr_matrices.html)
 
-* Последовательности
+* [Последовательности](progr_sequences.html)
 
-* Особенности языка
+* [Особенности языка](progr_lang_features.html)
 
 {% include links.html %}
