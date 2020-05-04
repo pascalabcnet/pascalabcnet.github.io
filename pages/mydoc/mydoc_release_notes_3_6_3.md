@@ -71,6 +71,10 @@ end.
 
 Переработана DrawGraph в GraphWPF - выводится сетка и координаты
 
+## GraphWPF, WPFObjects под Windows XP
+
+GraphWPF, WPFObjects теперь работают под под Windows XP
+
 ## TryRead с приглашением к вводу 
 
 Теперь можно делать приглашение к вводу в TryRead Стандартный шаблон использования: 
