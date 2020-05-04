@@ -1,23 +1,24 @@
 ---
 title: Версия 3.6.3
-keywords: release notes, announcements, what's new, new features
+keywords: release notes, what's new, new features
 last_updated: 05.01.20
 sidebar: mydoc_sidebar
 permalink: mydoc_release_notes_3_6_3.html
 toс: false
 folder: mydoc
 ---
-## Индексация массивов и списков (м.б. строк) с конца с помощью конструкции ^1 (не реализовано)
+## Индексация массивов, списков и строк с конца с помощью конструкции ^1
 ```pascal
 begin
   var a := Arr(1..10);
   Print(a[^1]); // последний элемент
+  a[^2] := 777; // второй от конца элемент
 end.
 ```
 
 Тип конструкции ^i - SystemIndex, он хранит число и флаг, указывающий, присутствует ли в записи ^.
 
-## Срезы с использованием конструкции ^1 (не реализовано)
+## Срезы с использованием конструкции ^1
 ```pascal
 begin
   var a := Arr(1..10);
@@ -25,7 +26,7 @@ begin
 end.
 ```
 
-## Использование срезов в левой части (не для строк) (не реализовано)
+## Использование срезов в левой части 
 ```pascal
 begin
   var a := Arr(1..10);
