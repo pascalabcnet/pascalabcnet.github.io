@@ -132,7 +132,6 @@ else l := r[m - p];
 ```pascal
 var l := if p = 0 then r[0] else r[m - p];
 ```
-
 6. Множественное присваивание `(left, right) := (l, a);` избавляет нас от необходимости использовать составной оператор по ветви then оператора if. Сравним:
 ```pascal
 if (l > a) and (l + a > left + right) then
