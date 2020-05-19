@@ -223,7 +223,7 @@ end.
 begin
   var a := ReadArrInteger(30);
 
-  var k := a.Where(k -> k mod 6 <> 0).Min;
+  var k := a.Where(j -> j mod 6 <> 0).Min;
   
   for var i:=0 to a.Length-1 do
     if a[i] mod 6 <> 0 then
@@ -252,7 +252,7 @@ end.
 begin
   var a := ReadArrInteger(30);
 
-  var k := a.Where(k -> k mod 6 <> 0).Min;
+  var k := a.Where(j -> j mod 6 <> 0).Min;
   foreach var i in a.Indices(j -> j mod 6 <> 0) do
     a[i] := k;
   
