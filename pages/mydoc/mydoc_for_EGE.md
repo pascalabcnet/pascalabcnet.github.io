@@ -135,8 +135,8 @@ end.
 ```pascal
 if (b > a) and (b + a > left + right) then
 begin
-  left := b;
-  right := a;
+   left := b;
+   right := a;
 end;    
 ```
 и 
