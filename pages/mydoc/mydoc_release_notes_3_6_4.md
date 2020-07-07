@@ -88,9 +88,39 @@ end.
 foreach var (i, v)
 ```
 
-## Улучшен DrawGraph в GraphWPF (реализовано)
+## Тип RealRange (реализовано)
+
+Добавлен стандартный тип RealRange
+```
+if x in 2.5..3.4 then
+  Print(1);
+```
+
+## Изменения в GraphWPF (реализовано)
 
 При вызове DrawGraph теперь рисуется сетка, оси, заголовок и значения на осях (автоматически)
+
+Имя типа FontType заменено на FontOptions
+
+DrawText и TextOut с параметром FontOptions
+
+Font.WithSize, Font.WithStyle, Font.WithColor, Font.WithName
+
+добавлен класс Vector и операции над ним и точкой, создающая функция Vect
+
+Метод Line - с параметрами-точками (потом надо будет сделать то же для всех примитивов)
+
+Метод Lines(n)
+
+RandomPoint и RandomPoints(n)
+
+
+## IDE - улучшена подсветка форматных строк (реализовано @Kotov)
+
+
+
+
+
 
 {% include links.html %}
 
