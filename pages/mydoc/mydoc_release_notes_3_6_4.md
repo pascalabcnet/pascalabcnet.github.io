@@ -88,4 +88,9 @@ end.
 foreach var (i, v)
 ```
 
+## Улучшен DrawGraph в GraphWPF (реализовано)
+
+При вызове DrawGraph теперь рисуется сетка, оси, заголовок и значения на осях (автоматически)
+
 {% include links.html %}
+
