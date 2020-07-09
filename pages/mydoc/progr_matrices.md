@@ -57,7 +57,7 @@ a.Println(3); // 3 позиции под элемент
 **Код**
 
 ```pascal
-var a := Matr(3,4,1,2,3,4,5,6,7,8,9,10,11,12);
+var a := Matr(|1,2,3,4|,|5,6,7,8|,|9,10,11,12|);
 a.Println(3);
 var a1 := MatrGen(3,4,(i,j)->i+j+0.5);
 a1.Println(5,1);
@@ -219,5 +219,15 @@ begin
   Println(found);
 end.
 ```
+
+Можно проще:
+```pascal
+begin
+  var a := MatrRandomInteger(3,4,1,10);
+  a.Println;
+  Println(5 in a);
+end.
+```
+
 
 {% include links.html %}
