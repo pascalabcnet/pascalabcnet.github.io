@@ -84,35 +84,35 @@ end.
 ```
 
 ## Расширенный foreach по последовательности кортежей и по словарям (не реализовано)
-```
+```pascal
 foreach var (i, v)
 ```
 
 ## Тип RealRange (реализовано)
 
 Добавлен стандартный тип RealRange
-```
+```pascal
 if x in 2.5..3.4 then
   Print(1);
 ```
 
 ## Изменения в GraphWPF (реализовано)
 
-При вызове DrawGraph теперь рисуется сетка, оси, заголовок и значения на осях (автоматически)
+При вызове `DrawGraph` теперь рисуется сетка, оси, заголовок и значения на осях (автоматически)
 
-Имя типа FontType заменено на FontOptions
+Имя типа `FontType` заменено на `FontOptions`
 
-DrawText и TextOut с параметром FontOptions
+`DrawText` и `TextOut` с параметром `FontOptions`
 
-Font.WithSize, Font.WithStyle, Font.WithColor, Font.WithName
+`Font.WithSize`, `Font.WithStyle`, `Font.WithColor`, `Font.WithName`
 
-добавлен класс Vector и операции над ним и точкой, создающая функция Vect
+добавлен класс `Vector` и операции над ним и точкой, создающая функция `Vect`
 
-Метод Line - с параметрами-точками (потом надо будет сделать то же для всех примитивов)
+Метод `Line` - с параметрами-точками (потом надо будет сделать то же для всех примитивов)
 
-Метод Lines(n)
+Метод `Lines(n)`
 
-RandomPoint и RandomPoints(n)
+`RandomPoint` и `RandomPoints(n)`
 
 
 ## IDE - улучшена подсветка форматных строк (реализовано @Kotov)
