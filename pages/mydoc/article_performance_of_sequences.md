@@ -226,7 +226,7 @@ Println(MillisecondsDelta);
 **Последовательности**:
 
 ```pascal
-a.Where(x -> x mod 2 = 0).Select(x -> x div 2)..Count(x->x>integer.MaxValue div 4).Println;
+a.Where(x -> x mod 2 = 0).Select(x -> x div 2).Count(x -> x > MaxInt div 4).Println;
 ```
 
 **Рукописные алгоритмы с массивами**:
@@ -244,13 +244,9 @@ SetLength(a,j);
 
 var count := 0;
 for var i:=0 to a.Length-1 do
-  if a[i] > integer.MaxValue div 4 then
+  if a[i] > MaxInt div 4 then
     count += 1;
 ```
-
-
-
-
 
 
 
