@@ -76,7 +76,16 @@ entries:
       url: /mydoc_release_notes_3_5.html
       output: web, pdf
 
-  - title: Программы и алгоритмы
+- title: Статьи
+    output: web, pdf
+    folderitems:
+    
+    - title: Последовательности против массивов
+      url: /article_performance_of_sequences.html
+      output: web, pdf
+    
+
+- title: Программы и алгоритмы
     output: web, pdf
     folderitems:
 
