@@ -116,6 +116,7 @@ Println(MillisecondsDelta);
 ## Программа 3. Только вычисление Count
 
 ```pascal
+##
 var n := 100000000;
 var a := ArrRandom(n,0,integer.MaxValue-1);
 var b := Copy(a);
@@ -141,6 +142,7 @@ for var i:=0 to a.Length-1 do
 ## Программа 4. Только Where и Select
 
 ```pascal
+##
 var n := 100000000;
 var a := ArrRandom(n,0,integer.MaxValue-1);
 var b := Copy(a);
@@ -179,7 +181,8 @@ Println(MillisecondsDelta);
 
 ```pascal
 ##
-var n := 10000000;
+##
+var n := 100000000;
 var a := ArrRandom(n,0,integer.MaxValue-1);
 var b := Copy(a);
 var q := |1,2,3,4,5|;
@@ -193,13 +196,10 @@ var j := 0;
 for var i:=0 to a.Length-1 do
   if a[i] mod 10 in q then
   begin  
-    a[j] := a[i];
+    a[j] := a[i] div 2 + a[i] div 3 + a[i] div 4 + a[i] div 5 + a[i] div 6; // Соединим фильтрацию и преобразование!
     j += 1;
   end;
 SetLength(a,j);
-
-for var i:=0 to a.Length-1 do
-  a[i] := a[i] div 2 + a[i] div 3 + a[i] div 4 + a[i] div 5 + a[i] div 6;
 
 var count := 0;
 for var i:=0 to a.Length-1 do
@@ -211,11 +211,11 @@ Println(MillisecondsDelta);
 
 **Результат:**
 ```pascal
-427
-406
+4313
+4065
 ```
 
-**Вывод.** На 5% медленнее. Совсем ни о чём. 
+**Вывод.** На 6% медленнее. Совсем ни о чём. 
 
 **Итоговый вывод.** Последовательности столь же эффективны по времени, что и массивы. Неэффективность в методах последовательностей возникает из-за передачи в качестве параметров лямбда-функций. Однако чем более сложное будет тело лямбда-функций, тем меньше будет разница по времени при использовании методов последовательностей и рукописных адгоритмов для массивов
 
