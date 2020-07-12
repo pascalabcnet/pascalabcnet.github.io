@@ -76,7 +76,7 @@ entries:
       url: /mydoc_release_notes_3_5.html
       output: web, pdf
 
-- title: Статьи
+  - title: Статьи
     output: web, pdf
     folderitems:
     
@@ -85,7 +85,7 @@ entries:
       output: web, pdf
     
 
-- title: Программы и алгоритмы
+  - title: Программы и алгоритмы
     output: web, pdf
     folderitems:
 
