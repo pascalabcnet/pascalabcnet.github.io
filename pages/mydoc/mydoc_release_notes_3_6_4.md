@@ -180,7 +180,7 @@ if x in 2.5..3.4 then
 
 ```pascal
 begin
-  {$ifdef PascalABC}
+  {$ifdef PASCALABC}
   Print(1);  
   {$endif}
   {$ifdef FPC}
