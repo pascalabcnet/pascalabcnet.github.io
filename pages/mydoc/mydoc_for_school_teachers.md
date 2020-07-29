@@ -533,7 +533,7 @@ foreach var x in a do
 
 3. Цикл foreach по индексам 
 ```pascal
-foreach var x in a.Indices do
+foreach var i in a.Indices do
   a[i] += 2;
 ```
 
