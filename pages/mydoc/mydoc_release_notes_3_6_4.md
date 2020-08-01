@@ -84,7 +84,7 @@ Pr(RI+RI)
 В case по строкам теперь в качестве констант выбора допустимы символы:
 
 ```pascal
-var s ;=- ReadString;
+var s := ReadString;
 case s of
 '1': Print(1);
 '2': Print(2);
