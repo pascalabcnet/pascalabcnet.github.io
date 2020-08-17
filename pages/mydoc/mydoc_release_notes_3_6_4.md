@@ -1,7 +1,7 @@
 ---
-title: Версия 3.6.4 (будущие изменения)
+title: Версия 3.7 (будущие изменения)
 keywords: release notes, what's new, announcements, new features
-last_updated: 05.05.20
+last_updated: 17.08.20
 sidebar: mydoc_sidebar
 permalink: mydoc_release_notes_3_6_4.html
 toс: false
@@ -247,7 +247,29 @@ begin
 end.
 ```
 
+###  Оптимизирована распаковка из кортежа констант в переменные
 
+Код
+
+```pascal
+begin
+  var (a,b) := (1,2);
+  var c,d: integer;
+  (c,d) := (3,'4');
+end.
+```
+
+раскрывается в 
+
+```pascal
+begin
+  var a := 1;
+  var b := 2;
+  var c,d: integer;
+  c := 3;
+  d := '4';
+end.
+```
 
 
 
