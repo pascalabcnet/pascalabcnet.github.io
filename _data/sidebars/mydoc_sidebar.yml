@@ -3,7 +3,7 @@
 entries:
 - title: sidebar
   product: PascalABC.NET
-  version: 3.6.3
+  version: 3.7
   folders:
 
   - title:
@@ -52,7 +52,7 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Версия 3.6.4 (будущие изменения)
+    - title: Версия 3.7
       url: /mydoc_release_notes_3_6_4.html
       output: web, pdf
 
