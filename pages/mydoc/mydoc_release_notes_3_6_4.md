@@ -96,7 +96,7 @@ Pr(RI+RI)
 
 ```pascal
 var p: procedure := procedure -> begin
-
+  Print(1);
 end;
 
 var f: (integer,integer)->integer := function(a,b: integer): integer -> a + b;
@@ -105,7 +105,7 @@ var f: (integer,integer)->integer := function(a,b: integer): integer -> a + b;
 Теперь тип переменной в этих случаях можно не указывать:
 ```pascal
 var p := procedure -> begin
-
+  Print(1);
 end;
 
 var f := function(a,b: integer): integer -> a + b;
