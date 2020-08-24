@@ -1,9 +1,9 @@
 ---
 title: Версия 3.7 
 keywords: release notes, what's new, announcements, new features
-last_updated: 17.08.20
+last_updated: 24.08.20
 sidebar: mydoc_sidebar
-permalink: mydoc_release_notes_3_6_4.html
+permalink: mydoc_release_notes_3_7.html
 toс: false
 folder: mydoc
 ---
