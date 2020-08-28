@@ -201,7 +201,7 @@ a := MatrByCol(a.Cols.OrderBy(col->col.Sum));
 a.Println;
 ```
 
-### Тип RealRange (реализовано)
+### Тип RealRange
 
 Добавлен стандартный тип RealRange
 ```pascal
@@ -213,7 +213,7 @@ if x in 2.5..3.4 then
 
 `DictStr` и `DictStrInt` генерируют Dictionary<string,string> и Dictionary<string,integer> соответственно. Могут вызываться с пустым списком параметров
 
-### Изменения в GraphWPF (реализовано)
+### Изменения в GraphWPF
 
 При вызове `DrawGraph` теперь рисуется сетка, оси, заголовок и значения на осях (автоматически)
 
@@ -233,6 +233,41 @@ if x in 2.5..3.4 then
 
 
 ## IDE
+
+###  В IDE интегрирована библиотека NUnit 
+
+Простейшее unit-тестирование можно осуществить если набрать, например, программу
+
+```pascal
+uses NUnitABC;
+
+[Test]
+procedure Test1;
+begin
+  Assert.AreEqual(3,3);
+end;
+
+[Test]
+procedure Test2;
+begin
+  Assert.Contains(2.5,Arr(1,2,3));
+end;
+
+function IsPrime(n: integer) := (2..n-1).All(i -> n mod i <> 0);
+
+[TestCase(2)]
+[TestCase(3)]
+[TestCase(5)]
+procedure Test3(value: integer);
+begin
+  Assert.IsTrue(IsPrime(value));
+end;
+
+begin
+end.
+```
+
+и выбрать из меню "Запустить модульные тесты"
 
 ###  Улучшена подсветка форматных строк (реализовано @Kotov)
 
