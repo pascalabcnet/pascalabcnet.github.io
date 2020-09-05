@@ -1,5 +1,5 @@
 ---
-title: Версия 3.6.4 (будущие изменения)
+title: Здоровье кода PascalABC.NET
 keywords: code health
 last_updated: 05.05.20
 sidebar: mydoc_sidebar
