@@ -12,9 +12,8 @@ folder: mydoc
 
 ###  В IDE появилась кнопка "Здоровье PascalABC.NET программы"
 
-Прочитать о здоровье кода можно здесь:
+[https://pascalabcnet.github.io/program_health.html] Прочитать о здоровье кода можно здесь.
 
-https://pascalabcnet.github.io/program_health.html
 
 {% include links.html %}
 
