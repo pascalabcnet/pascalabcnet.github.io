@@ -32,6 +32,10 @@ entries:
       url: /mydoc_about_site.html
       output: web, pdf
 
+    - title: Здоровье кода PascalABC.NET
+      url: /program_health.html
+      output: web, pdf
+
     - title: Стили написания программ
       url: /mydoc_progr_styles.html
       output: web, pdf
