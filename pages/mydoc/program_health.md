@@ -22,7 +22,7 @@ PascalABC.NET создан для того чтобы обучать совре�
 ```pascal
 var i,s,n: integer;
 begin
-  Write(Введите n: ');
+  Write('Введите n: ');
   Read(n);
   s := 0;
   for i:=1 to n do
