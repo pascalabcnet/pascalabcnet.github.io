@@ -303,7 +303,8 @@ end.
 ```pascal
 begin
   var (a,b) := (1,2);
-  var c,d: integer;
+  var c: integer;
+  var d: char;
   (c,d) := (3,'4');
 end.
 ```
