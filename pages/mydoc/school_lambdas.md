@@ -1,6 +1,6 @@
 ---
 title: Базовые конструкции PascalABC.NET
-keywords: lambda expressions, lambdas, PascalABC.NET, Pascal, Паскаль, лямбда-выраженияб безымянные функции
+keywords: lambda expressions, lambdas, PascalABC.NET, Pascal, Паскаль, лямбда-выражения, безымянные функции
 last_updated: 19.12.2020
 sidebar: mydoc_sidebar
 permalink: school_lambdas.html
