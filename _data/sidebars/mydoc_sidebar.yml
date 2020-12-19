@@ -40,7 +40,11 @@ entries:
       url: /mydoc_progr_styles.html
       output: web, pdf
 
-    - title: PascalABC.NET для учителей
+- title: Для учителей и школьников
+    output: web, pdf
+    folderitems:
+
+    - title: Введение
       url: /mydoc_for_school_teachers.html
       output: web, pdf
 
