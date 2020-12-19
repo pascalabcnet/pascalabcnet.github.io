@@ -40,7 +40,7 @@ entries:
       url: /mydoc_progr_styles.html
       output: web, pdf
 
-- title: Для учителей и школьников
+  - title: Для учителей и школьников
     output: web, pdf
     folderitems:
 
@@ -68,12 +68,8 @@ entries:
       url: /school_files.html
       output: web, pdf
 
-- title: PascalABC.NET и ЕГЭ
+    - title: PascalABC.NET и ЕГЭ
       url: /mydoc_for_EGE.html
-      output: web, pdf
-
-    - title: PascalABC.NET для школьников
-      url: /mydoc_for_schoolstudents.html
       output: web, pdf
 
   - title: Версии PascalABC.NET
