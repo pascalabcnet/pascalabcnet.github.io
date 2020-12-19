@@ -1,5 +1,5 @@
 ---
-title: Строки в PascalABC.NET
+title: Символы и строки в PascalABC.NET
 keywords: strings, PascalABC.NET, Pascal, Паскаль
 last_updated: 19.12.2020
 sidebar: mydoc_sidebar
@@ -8,7 +8,9 @@ toc: true
 folder: mydoc
 ---
 
-## Строки в PascalABC.NET
+## Символы и основные операции с ними
+
+
 
 
 {% include links.html %}
