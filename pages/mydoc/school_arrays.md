@@ -1,5 +1,5 @@
 ---
-title: Базовые конструкции PascalABC.NET
+title: Массивы в PascalABC.NET
 keywords: styles
 last_updated: 19.12.2020
 sidebar: mydoc_sidebar
