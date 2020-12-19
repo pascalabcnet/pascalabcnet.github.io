@@ -72,10 +72,6 @@ entries:
       url: /mydoc_for_EGE.html
       output: web, pdf
 
-    - title: PascalABC.NET для школьников
-      url: /mydoc_for_schoolstudents.html
-      output: web, pdf
-
   - title: Версии PascalABC.NET
     output: web, pdf
     folderitems:
