@@ -1,5 +1,5 @@
 ---
-title: PascalABC.NET для учителей и преподавателей
+title: PascalABC.NET для учителей и школьников
 keywords: styles
 last_updated: 01.04.2020
 sidebar: mydoc_sidebar
