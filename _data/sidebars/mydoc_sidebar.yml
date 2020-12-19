@@ -68,7 +68,7 @@ entries:
       url: /school_files.html
       output: web, pdf
 
-- title: PascalABC.NET и ЕГЭ
+    - title: PascalABC.NET и ЕГЭ
       url: /mydoc_for_EGE.html
       output: web, pdf
 
