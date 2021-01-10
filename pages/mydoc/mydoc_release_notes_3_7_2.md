@@ -12,7 +12,7 @@ folder: mydoc
 
 Появились методы расширения строк s.IsInteger и s.IsReal:
 
-```
+```pascal
 begin
   var s := '123.4 3 5 6.6 a v 67';
   var (si,sr) := (0,0.0);
