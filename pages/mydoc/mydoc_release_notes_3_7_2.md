@@ -1,5 +1,5 @@
 ---
-title: Версия 3.7.2 
+title: Версия 3.7.2 (будущая версия)
 keywords: release notes, what's new, announcements, new features
 last_updated: 24.08.20
 sidebar: mydoc_sidebar
