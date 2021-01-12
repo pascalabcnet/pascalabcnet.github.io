@@ -68,32 +68,7 @@ uses School;
 Pr(Bin(123));
 ```
 
-
 ## Стандартная библиотека
-
-### Sum Average Product для последовательностей BigInteger
-
-```pascal
-begin
-  var s := SeqGen(100,i->BigInteger(i)**i);
-  Print(s.Sum,s.Product);
-end.
-```
-
-### Методы расширения строк s.IsInteger и s.IsReal:
-
-```pascal
-begin
-  var s := '123.4 3 5 6.6 a v 67';
-  var (si,sr) := (0,0.0);
-  foreach var w in s.ToWords do
-    if w.IsInteger then
-      si += w.ToInteger
-    else if w.IsReal then
-      sr += w.Toreal;
-  Print(si,sr);  
-end.
-```
 
 ### Размещения и размещения с повторениями
 
@@ -119,7 +94,56 @@ s.Permutations(2).Println;
 s.Combinations(2).Println;
 ```
 
+### s.CountOf(x) для последовательностей
 
+```pascal
+###
+var a := Arr(1,3,5,7,1,2,1,3,1,5);
+a.CountOf(1).Print
+```
+
+### Sum, Average, Product для последовательностей BigInteger
+
+```pascal
+begin
+  var s := SeqGen(100,i->BigInteger(i)**i);
+  Print(s.Sum,s.Product);
+end.
+```
+
+### Методы расширения строк s.IsInteger и s.IsReal:
+
+```pascal
+begin
+  var s := '123.4 3 5 6.6 a v 67';
+  var (si,sr) := (0,0.0);
+  foreach var w in s.ToWords do
+    if w.IsInteger then
+      si += w.ToInteger
+    else if w.IsReal then
+      sr += w.Toreal;
+  Print(si,sr);  
+end.
+```
+
+### s.ToWords(delims) с разделителями в виде строки
+
+Разделители в s.ToWords теперь можно задавать в виде строки
+
+```pascal
+begin
+  var s := '123.4, 6.6, 67';
+  s.ToWords(' ,').PrintLines
+end.
+```
+
+Кроме того, определена константа AllDelimiters, содержащая все разделители слов в текстах
+```pascal
+begin
+  ...
+  s.ToWords(AllDelimiters).Println
+end.
+```
 
 ## Graph3D
 
