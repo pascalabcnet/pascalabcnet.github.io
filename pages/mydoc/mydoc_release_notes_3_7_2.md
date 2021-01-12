@@ -36,7 +36,16 @@ Print(25bi ** 25 + 17bi ** 17)
 
 ## Стандартная библиотека
 
-Появились методы расширения строк s.IsInteger и s.IsReal:
+### Sum Average Product для последовательностей BigInteger
+
+```pascal
+begin
+  var s := SeqGen(100,i->BigInteger(i)**i);
+  Print(s.Sum,s.Product);
+end.
+```
+
+### Методы расширения строк s.IsInteger и s.IsReal:
 
 ```pascal
 begin
