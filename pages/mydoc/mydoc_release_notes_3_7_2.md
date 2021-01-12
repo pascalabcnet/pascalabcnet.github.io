@@ -10,6 +10,23 @@ folder: mydoc
 
 ## Новые конструкции в языке
 
+### Расширенный foreach
+
+foreach с распаковкой значений в несколько переменных. Значения должны быть кортежами или последовательностями
+
+```pascal
+begin
+  var a := Arr((1,2),(3,4),(5,6));
+  foreach var (x,y) in a do
+    Print(x,y);
+  Println;
+  var b := Arr(|1,2,3|,|4,5|,|6,7,8,9|);
+  foreach var (x,y) in b do
+    Print(x,y);
+end.
+```
+
+
 ### Литералы для BigInteger
 
 Литералы для BigInteger имеют окончание bi: `1bi`, `874658734265762345bi`
