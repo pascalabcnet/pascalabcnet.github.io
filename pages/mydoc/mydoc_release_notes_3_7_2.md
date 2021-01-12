@@ -8,6 +8,32 @@ toс: false
 folder: mydoc
 ---
 
+## Новые конструкции в языке
+
+### Литералы для BigInteger
+
+Литералы для BigInteger имеют окончание bi: `1bi`, `874658734265762345bi`
+
+Использование 1:
+
+```pascal
+begin
+  var n := ReadInteger;
+  var p := 1bi;
+  for var i:=2 to n do
+    p *= i;
+  Print(p);  
+end.
+```
+
+Использование 2:
+
+```pascal
+##
+Print(25bi ** 25 + 17bi ** 17)
+```
+
+
 ## Стандартная библиотека
 
 Появились методы расширения строк s.IsInteger и s.IsReal:
