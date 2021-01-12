@@ -145,7 +145,7 @@ uses Graph3D;
 begin
   var s := Object3D.DeSerialize('c.dat') as SphereT;
   var c1 := s[0] as CubeT;
-  var c2 := s[1 as CubeT;
+  var c2 := s[1] as CubeT;
   var c3 := s[2] as CubeT;
 end.
 ```
