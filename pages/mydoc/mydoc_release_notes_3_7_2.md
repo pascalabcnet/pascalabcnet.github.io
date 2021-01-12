@@ -55,6 +55,30 @@ end.
 
 ### Сериализация и десериализация компонент Object3D 
 
+Сериализация
+```pascal
+uses Graph3D;
+
+begin
+  var s := Sphere(0,0,0,1);
+  s.AddChild(Cube(0,0,1,0.5));
+  s.AddChild(Cube(1,0,0,0.5));
+  s.AddChild(Cube(-1,0,0,0.5));
+  s.Serialize('c.dat');
+end.
+```
+
+Десериализация
+```pascal
+uses Graph3D;
+
+begin
+  var s := Object3D.DeSerialize('c.dat') as SphereT;
+  var c1 := s[0] as CubeT;
+  var c2 := s[1 as CubeT;
+  var c3 := s[2] as CubeT;
+end.
+```
 
 
 
