@@ -31,7 +31,7 @@ end.
 
 Литералы для BigInteger имеют окончание bi: `1bi`, `874658734265762345bi`
 
-Использование 1:
+Пример 1
 
 ```pascal
 begin
@@ -43,7 +43,7 @@ begin
 end.
 ```
 
-Использование 2:
+Пример 2
 
 ```pascal
 ##
@@ -67,9 +67,6 @@ Sphere(Origin,1);
 uses School;
 Pr(Bin(123));
 ```
-
-
-
 
 
 ## Стандартная библиотека
@@ -97,6 +94,32 @@ begin
   Print(si,sr);  
 end.
 ```
+
+### Размещения и размещения с повторениями
+
+В дополнение к методам a.Permutations и a.Combinations(m) для массивов реализованы
+
+a.Cartesian(n) - Возвращает n-тую декартову степень множества элементов
+a.Permutations(m) - Возвращает все частичные перестановки из n элементов по m
+
+Кроме того, все указанные методы опреджелены также над последовательностями
+
+```pascal
+###
+var a := Arr(1,3,5,7);
+a.Permutations.Println;
+a.Cartesian(2).Println;
+a.Permutations(2).Println;
+a.Combinations(2).Println;
+Println;
+var s := Seq(1,3,5,7);
+s.Permutations.Println;
+s.Cartesian(2).Println;
+s.Permutations(2).Println;
+s.Combinations(2).Println;
+```
+
+
 
 ## Graph3D
 
