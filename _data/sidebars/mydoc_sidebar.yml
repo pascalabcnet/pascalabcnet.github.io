@@ -76,6 +76,10 @@ entries:
     output: web, pdf
     folderitems:
 
+    - title: Версия 3.7.3
+      url: /mydoc_release_notes_3_7_3.html
+      output: web, pdf
+
     - title: Версия 3.7.2
       url: /mydoc_release_notes_3_7_2.html
       output: web, pdf
