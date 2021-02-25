@@ -28,17 +28,18 @@ begin
 end.  
 ```
 
+## Уточнения в языке
 
-### Литеральные константы для массивов [1,2,3], определяемые по контексту
+### Разрешена конструкция a as array of T
+
+Ранее конструкция `a as array of T` была запрещена на уровне грамматики. Таким образом, невозможно было выполнить DownCast привести к типу массива.
+Теперь это ограничение снято
 
 ```pascal
-procedure p(a: array of integer);
-begin
-end;
-
-begin
-  p([1,2,3]);
-end.
+bagin
+  var ob: object := new integer[2,3];
+  var a := ob as array [,] of integer;
+end.  
 ```
 
 {% include links.html %}
