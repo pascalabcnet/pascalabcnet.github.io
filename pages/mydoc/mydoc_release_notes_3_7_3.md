@@ -1,5 +1,5 @@
 ---
-title: Версия 3.8 (предполагаемые изменения)
+title: Версия 3.8 
 keywords: release notes, what's new, announcements, new features
 last_updated: 02.02.21
 sidebar: mydoc_sidebar
@@ -10,8 +10,7 @@ folder: mydoc
 
 ## Новые конструкции в языке
 
-### Срезы многомерных массивов (реализовано)
-
+### Срезы многомерных массивов 
 ```pascal
 begin
   var m := MatrByRow(||1,2,3,4|,|5,6,7,8|,|9,10,11,12||);
