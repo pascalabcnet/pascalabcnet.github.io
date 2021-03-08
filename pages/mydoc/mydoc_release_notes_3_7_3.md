@@ -76,7 +76,7 @@ Print(bin(f));
 Теперь это ограничение снято
 
 ```pascal
-bagin
+begin
   var ob: object := new integer[2,3];
   var a := ob as array [,] of integer;
 end.  
