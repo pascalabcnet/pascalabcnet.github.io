@@ -3,7 +3,7 @@ title: Версия 3.8
 keywords: release notes, what's new, announcements, new features
 last_updated: 07.03.21
 sidebar: mydoc_sidebar
-permalink: mydoc_release_notes_3_8.html
+permalink: mydoc_release_notes_3_7_3.html
 toс: false
 folder: mydoc
 ---
