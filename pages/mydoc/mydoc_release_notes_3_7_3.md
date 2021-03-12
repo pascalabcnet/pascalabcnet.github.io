@@ -49,23 +49,7 @@ begin
   s.Where(x -> x[1] >= 18).Println;
   Println('Сортировка по фамилии:');
   s.OrderBy(x -> x[0]).Println;
-end.```
-
-
-
-### Описания процедур и функций в программах без внешнего begin-end (реализовано)
-
-Описания процедур и функций в программах без внешнего begin-end разрешено делать только до блока операторов
-
-```pascal
-##
-uses School;
-
-procedure p; begin Print(1) end;
-function f := 777;
-
-p; 
-Print(bin(f));
+end.
 ```
 
 ## Уточнения в языке
