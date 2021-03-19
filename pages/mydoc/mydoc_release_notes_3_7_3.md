@@ -1,30 +1,29 @@
 ---
-title: Версия 3.8 (предполагаемые изменения)
+title: Версия 3.8 
 keywords: release notes, what's new, announcements, new features
-last_updated: 02.02.21
+last_updated: 07.03.21
 sidebar: mydoc_sidebar
-permalink: mydoc_release_notes_3_8.html
+permalink: mydoc_release_notes_3_7_3.html
 toс: false
 folder: mydoc
 ---
 
 ## Новые конструкции в языке
 
-### Срезы многомерных массивов (реализовано)
-
+### Срезы многомерных массивов 
 ```pascal
 begin
   var m := MatrByRow(||1,2,3,4|,|5,6,7,8|,|9,10,11,12||);
-  Println(m[:,:]);           // ||1,2,3,4|,|5,6,7,8|,|9,10,11,12||
-  Println(m[::1,::1]);       // ||1,2,3,4|,|5,6,7,8|,|9,10,11,12||
-  Println(m[1:3,1:4]);       // ||6,7,8|,|10,11,12||
-  Println(m[::2,::3]);       // ||1,4|,|9,12||
-  Println(m[::-2,::-1]);     // ||12,11,10,9|,|4,3,2,1||
-  Println(m[^2::-1,^2::-1]); // ||7,6,5|,|3,2,1||
-  Println(m[:^1,:^1]);       // ||1,2,3|,|5,6,7||
-  Println(m[1,:]);           // |5,6,7,8|
-  Println(m[^1,:]);          // |9,10,11,12|
-  Println(m[:,^1]);          // |4,8,12|
+  Println(m[:,:]);           // [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
+  Println(m[::1,::1]);       // [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
+  Println(m[1:3,1:4]);       // [[6,7,8],[10,11,12]]
+  Println(m[::2,::3]);       // [[1,4],[9,12]]
+  Println(m[::-2,::-1]);     // [[12,11,10,9],[4,3,2,1]] 
+  Println(m[^2::-1,^2::-1]); // [[7,6,5],[3,2,1]] 
+  Println(m[:^1,:^1]);       // [[1,2,3],[5,6,7]] 
+  Println(m[1,:]);           // [5,6,7,8] 
+  Println(m[^1,:]);          // [9,10,11,12] 
+  Println(m[:,^1]);          // [4,8,12] 
 end.  
 ```
 
@@ -50,23 +49,7 @@ begin
   s.Where(x -> x[1] >= 18).Println;
   Println('Сортировка по фамилии:');
   s.OrderBy(x -> x[0]).Println;
-end.```
-
-
-
-### Описания процедур и функций в программах без внешнего begin-end (реализовано)
-
-Описания процедур и функций в программах без внешнего begin-end разрешено делать только до блока операторов
-
-```pascal
-##
-uses School;
-
-procedure p; begin Print(1) end;
-function f := 777;
-
-p; 
-Print(bin(f));
+end.
 ```
 
 ## Уточнения в языке
@@ -77,7 +60,7 @@ Print(bin(f));
 Теперь это ограничение снято
 
 ```pascal
-bagin
+begin
   var ob: object := new integer[2,3];
   var a := ob as array [,] of integer;
 end.  
