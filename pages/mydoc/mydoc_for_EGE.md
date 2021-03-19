@@ -1,5 +1,5 @@
 ---
-title: PascalABC.NET и ЕГЭ по информатике
+title: PascalABC.NET и ЕГЭ по информатике (до 2020 г.)
 keywords: styles
 last_updated: 07.01.2020
 sidebar: mydoc_sidebar
