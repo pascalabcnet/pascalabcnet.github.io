@@ -76,7 +76,7 @@ entries:
       url: /mydoc_for_EGE_old.html
       output: web, pdf
 
-- title: Версии PascalABC.NET
+  - title: Версии PascalABC.NET
     output: web, pdf
     folderitems:
 
