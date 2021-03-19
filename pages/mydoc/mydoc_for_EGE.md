@@ -266,6 +266,7 @@ begin
   Println(count, data.Last(x -> x - data[count-1] <= delta));
 end. 
 ```
+Решение скорее всего позаимствовано с [сайта К. Полякова](https://kpolyakov.spb.ru/school/ege.htm) с косметическими правками в стиле PascalABC.NET.
 
 **Ответ**. 
 ```
@@ -326,6 +327,8 @@ begin
   else Print(s-d)
 end.
 ```
+
+Решение скорее всего позаимствовано с [сайта К. Полякова](https://kpolyakov.spb.ru/school/ege.htm) с косметическими правками в стиле PascalABC.NET.
 
 **Ответ**. 
 ```
