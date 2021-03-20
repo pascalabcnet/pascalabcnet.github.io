@@ -498,7 +498,7 @@ end.
 uses School;
 
 begin
-  ToBase(49bi ** 7 + 7bi ** 21 - 7, 7).Count(x → x='6').Print
+  (49bi ** 7 + 7bi ** 21 - 7).ToBase(7).CountOf('6').Print
 end.
 ```
 
