@@ -277,6 +277,8 @@ end.
 ```
 Решение скорее всего позаимствовано с [сайта К. Полякова](https://kpolyakov.spb.ru/school/ege.htm) с косметическими правками в стиле PascalABC.NET.
 
+Решения аналогичных задач на чистом PascalABC.NET содержатся [в презентации К.Ю. Полякова](https://kpolyakov.spb.ru/download/sochi2021.ppt).
+
 **Ответ**. 
 ```
 568 50 
