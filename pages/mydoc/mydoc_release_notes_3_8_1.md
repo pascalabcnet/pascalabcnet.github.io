@@ -27,7 +27,7 @@ function fib1(n: integer): integer :=
   else fib1(n-1) + fib1(n-2);
 
 Println(fib(42),MillisecondsDelta/1000);
-Println(fib1(42),MillisecondsDelta/1000);![изображение](https://user-images.githubusercontent.com/10325391/130331262-6722ff3b-455c-4d6e-a57b-1cc2242fc2eb.png)
+Println(fib1(42),MillisecondsDelta/1000);
 ```
 
 
