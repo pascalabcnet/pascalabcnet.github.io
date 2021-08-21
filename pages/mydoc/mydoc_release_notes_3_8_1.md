@@ -29,6 +29,11 @@ function fib1(n: integer): integer :=
 Println(fib(42),MillisecondsDelta/1000);
 Println(fib1(42),MillisecondsDelta/1000);
 ```
+Вывод:
+```pascal
+267914296 0.011 
+267914296 9.362 
+```
 
 
 
