@@ -68,7 +68,7 @@ entries:
       url: /school_files.html
       output: web, pdf
 
-    - title: PascalABC.NET и ЕГЭ
+    - title: PascalABC.NET и ЕГЭ 2021
       url: /mydoc_for_EGE.html
       output: web, pdf
 
@@ -79,6 +79,10 @@ entries:
   - title: Версии PascalABC.NET
     output: web, pdf
     folderitems:
+
+    - title: Версия 3.8.1
+      url: /mydoc_release_notes_3_8_1.html
+      output: web, pdf
 
     - title: Версия 3.8
       url: /mydoc_release_notes_3_8.html
