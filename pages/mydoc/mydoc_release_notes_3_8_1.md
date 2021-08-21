@@ -44,7 +44,7 @@ Println(fib1(42),MillisecondsDelta/1000);
 ##
 function Add(a,b: integer) := a + b;
 
-Print(Add(2,3);
+Print(Add(2,3));
 ```
 
 ### Директива {$string_nullbased+} и срезы
