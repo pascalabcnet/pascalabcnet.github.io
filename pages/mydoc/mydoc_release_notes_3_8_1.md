@@ -40,5 +40,19 @@ begin
 end.  
 ```
 
+### Распаковака ValueType
+ValueType - типы теперь также можно распаковывать в переменные:
+```pascal
+begin
+  var (n,s) := System.ValueTuple.Create(2,'ab');
+  Print(n,s);
+end. 
+```
+
+
+
+
+
+
 {% include links.html %}
 
