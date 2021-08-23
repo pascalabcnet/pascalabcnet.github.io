@@ -69,8 +69,8 @@ begin
 end.  
 ```
 
-### Распаковака ValueType
-ValueType - типы теперь также можно распаковывать в переменные:
+### Распаковака ValueTuple
+ValueTuple - типы теперь также можно распаковывать в переменные:
 ```pascal
 begin
   var (n,s) := System.ValueTuple.Create(2,'ab');
