@@ -69,7 +69,7 @@ begin
 end.  
 ```
 
-### Распаковака ValueTuple
+### Распаковка ValueTuple
 ValueTuple - типы теперь также можно распаковывать в переменные:
 ```pascal
 begin
