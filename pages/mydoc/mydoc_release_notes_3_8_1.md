@@ -47,10 +47,10 @@ function Add(a,b: integer) := a + b;
 Print(Add(2,3));
 ```
 
-### Директива {$string_nullbased+} и срезы
-Директива {$string_nullbased+} теперь воздействует на срезы
+### Директива {$zerobasedstrings} и срезы
+Директива {$zerobasedstrings} теперь воздействует на срезы
 ```pascal
-{$string_nullbased+}
+{$zerobasedstrings}
 begin
   var s := '0123456789';
   Print(s[0:5],s[5:8],s[8:]); // 01234 567 89
