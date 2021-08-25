@@ -46,7 +46,13 @@ end.
 //2 8 4
 //10 48 12 50 30 25
 ```
-
+**Задача A (вариант 2)**
+```pascal
+##
+  var (a,b) := (ReadArrInt64(3), ReadArrInt64(6));
+  a.SortedDescending.Zip(b.Sorted.Take(3), (x, y) -> y div x).Min.Print;
+  a.Sorted.Zip(b.Sorted.TakeLast(3), (x, y) -> y div x).Min.Println;
+```
 **Задача B**
 
 ```pascal
