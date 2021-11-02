@@ -42,37 +42,24 @@ Print(1,2);
 1 <пробел> 2
 ```
 
-
-### Директива {$zerobasedstrings} и срезы
-Директива {$zerobasedstrings} теперь воздействует на срезы
-```pascal
-{$zerobasedstrings}
-begin
-  var s := '0123456789';
-  Print(s[0:5],s[5:8],s[8:]); // 01234 567 89
-end.
-```
 ## Стандартная библиотека
 
-### Cтандартный поток ErrOutput
-В стандартном модуле появился стандартный поток ErrOutput для вывода шибок:
+### PartialSum для числовых последовательностей
+
+Для числовых последовательностей метод PartialSum возвраает последовательность частичных сумм:
 
 ```pascal
-##
-Print(ErrOutput,'Error1')
+begin
+  Arr(1,2,3,4).PartialSum.Println;
+  |1bi,2bi,3bi,4bi|.PartialSum.Println;
+  Arr(1,2,3,4).Select(x->x+0.5).PartialSum.Println;
+end.
 ```
-
-По умолчанию он связан с консолью, но легко перенаправляется в произвольный файл
-
-### PartioalSum для числовых последовательностей
-
-В процедуре Sort для массивов и списков появилась перегруженная версия с дополнительным параметром - проекцией на ключ:
-
+Вывод:
 ```pascal
-##
-var pp := |('Сидоров',20),('Петров',22), ('Попов',20),('Иванов',22)|;
-Sort(pp, p->p[1]); // Сортировка по возрасту
-pp.Print;
+1 3 6 10
+1 3 6 10
+1.5 4 7.5 12
 ```
 
 
@@ -84,32 +71,16 @@ pp.Print;
 
 Пример. 
 ```pascal
-uses PlotWPF;
+uses XLSX;
 
 begin
-  var g := new GridWPF(2,2,10);
-
-  var c := new LineGraphWPF(0,Pi,v -> v*Sin(v*10));
-  c.PlotRect := Rect(0,0,10,10);
-  c.Graph[0].ChangeData(0,Pi,x->x*x);
-  c.Graph[0].Color := Colors.Green;
-  c.Graph[0].Thickness := 3;
-  c.AddLineGraph(0,Pi,v -> Sqrt(v));
-  
-  var c2 := new LineGraphWPF(0,Pi,v -> Sin(v*10)-Cos(v*7));
-  
-  var c4 := new MarkerGraphWPF(|1.0,2,3,4,5|,|5.0,15,7,12,2|);
-  c4.AddLineGraph(|1.0,2,3,4,5|,|5.0+1,15+1,7+1,12+1,2+1|);
-  c4.AddMarkerGraph(|1.0,2,3,4,5|,|5.0+1,15+1,7+1,12+1,2+1|,Colors.Bisque,MarkerType.Diamond,8);
-  c4.Graph[0].Thickness := 0.7;
-  c4.Graph[1].MarkerType := MarkerType.Box;
-  c4.Graph[2].Thickness := 0.7;
-
-  var gg := new GridWPF(2,2,3);
-  new LineGraphWPF(0,2,x->Cos(10*x));
-  new LineGraphWPF(0,2,x->Sqrt(x));
-  new LineGraphWPF(0,2,x->Sin(10*x));
-  new LineGraphWPF(0,2,x->exp(x));
+  var (lg,tv,mg) := ReadXLSX('3.xlsx').Values.ToArray;
+  var mgs := mg.Skip(1).Where(s->s[1]='Заречный').Select(s->s[0]).ToArray;
+  var tvi := tv.Where(s->'Яйцо' in s[2]).First[0];
+  var egg := lg.Where(s->(s[2] in mgs) and (s[3]=tvi));
+  var sumInc := egg.Where(s->s[5]='Поступление').Sum(s->s[4].ToInteger);
+  var decInc := egg.Where(s->s[5]='Продажа').Sum(s->s[4].ToInteger);
+  Print(sumInc, decInc, sumInc-decInc);
 end.
 ```
 
