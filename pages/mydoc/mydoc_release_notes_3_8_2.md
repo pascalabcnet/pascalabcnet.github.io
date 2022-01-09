@@ -57,13 +57,8 @@ end.
 uses XLSX;
 
 begin
-  var (lg,tv,mg) := ReadXLSX('3.xlsx').Values.ToArray;
-  var mgs := mg.Skip(1).Where(s->s[1]='Заречный').Select(s->s[0]).ToArray;
-  var tvi := tv.Where(s->'Яйцо' in s[2]).First[0];
-  var egg := lg.Where(s->(s[2] in mgs) and (s[3]=tvi));
-  var sumInc := egg.Where(s->s[5]='Поступление').Sum(s->s[4].ToInteger);
-  var decInc := egg.Where(s->s[5]='Продажа').Sum(s->s[4].ToInteger);
-  Print(sumInc, decInc, sumInc-decInc);
+  var d: Dictionary<string,array of array of string> := ReadXLSX('3.xlsx').Values.ToArray;
+  
 end.
 ```
 
