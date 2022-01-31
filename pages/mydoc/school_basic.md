@@ -157,7 +157,7 @@ end.
 Для обмена значений двух переменных `a` и `b` используйте стандартную функцию `Swap(a,b)`:
 ```pascal
 begin
-  var a,b := ReadReal2;
+  var (a,b) := ReadReal2;
   Println(a,b);
   Swap(a,b);
   Println(a,b);
