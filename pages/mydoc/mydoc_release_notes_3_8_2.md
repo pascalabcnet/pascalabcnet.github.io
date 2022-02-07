@@ -33,6 +33,15 @@ end.
 
 ## Стандартная библиотека
 
+### Добавлены перегрузки функции Random 
+
+```pascal
+function Random(a, b: char): char;
+function Random(diap: IntRange): integer;
+function Random(diap: RealRange): real;
+function Random(diap: CharRange): char;
+```
+
 ### PartialSum для числовых последовательностей
 
 Для числовых последовательностей метод PartialSum возвраает последовательность частичных сумм:
