@@ -36,10 +36,6 @@ entries:
       url: /program_health.html
       output: web, pdf
 
-    - title: Стили написания программ
-      url: /mydoc_progr_styles.html
-      output: web, pdf
-
   - title: Для учителей и школьников
     output: web, pdf
     folderitems:
