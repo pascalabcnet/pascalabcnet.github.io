@@ -22,10 +22,44 @@ folder: mydoc
 
 Появилась Linux-версия IDE PascalABC.NET (пока без отладчика)
 В Alt Linux - rpm-пакет PascalABC.NET
+GraphABC работает под Linux
+Linux F1 - вызывается kchmviewer
+
+School - Permutations, Cartesian, Combinations для строк
+Graph3D LocalAxisX Y Z, MoveByLocal
+
+Utils Benchmark
 
 
+OnMouseWheel в GraphWPF.pas
+x.Sqr возвращает int64
 
+окно About - улучшено оформление и добавлена гипетрссылка на Telegram канал
 
+Ковариантность (не вся)
+
+Модуль Мозаика для дошкольников МозаикаABC.pas
+модуль TurtleWPF.pas
+
+Digits с основанием в School
+
+Короткие создающие функции DictStr, DictInt, DictStrInt, LstLin, LstStr, HSetInt, HSetStr, SSetInt, SSetStr
+и Dict для последовательностей пар
+
+Convert = System.Convert
+function Each<Key,Res>(Self: sequence of Key; proj: Key -> Res): Dictionary<Key,Res>; extensionmethod;
+
+a.Cartesian(n) -> a.CartesianPower(n)
+Timers: TimerProc -> OnTimer
+GraphWPF - Arrow
+GraphWPF TextOut и DrawText - параметр text сделан object - можно выводить и кортежи и автоклассы
+TextOut(pos: Point
+
+nuget - инсталляция сборок с учетом папки netstandard2.0
+и копирование нативных dll из папок runtimes\win-x64\native\
+-decimal
+
+Sort(a,x->x) - ускорение
 
 ## Изменения в языке 3.8.4
 
