@@ -182,27 +182,44 @@ Conf2023_MC ArrSum 2023-03-30 16:12:15Z Solved NoInfo
 
 Защиты от поддельных данных и обмана системы в данной версии не предусмотрено.
 
-В модуль LightPT интегрированы Робот, Чертежник, задачник PT
-
+В модуль LightPT интегрированы Робот, Чертежник, задачник PT - задания, выполненные в них, автоматически фиксируются в файле db.txt.
 
 
 ## Изменения в модулях
 
-Цветной вывод в окне вывода (Windows)
+### Цветовой вывод в окне вывода (Windows)
 
-School - Permutations, Cartesian, Combinations для строк
+### Модуль School 
 
-Graph3D LocalAxisX Y Z, MoveByLocal
+Permutations, Cartesian, Combinations для строк
 
-Utils Benchmark
+Digits с основанием 
 
-OnMouseWheel в GraphWPF.pas
+### Модуль Graph3D 
+
+Методы графического объекта LocalAxisX, LocalAxisY, LocalAxisZ, MoveByLocal
+
+### Модуль Utils 
+
+Benchmark
+
+### Модуль GraphWPF 
+
+Событие OnMouseWheel
+
+GraphWPF - Arrow
+
+GraphWPF TextOut и DrawText - параметр text сделан object - можно выводить и кортежи и автоклассы
+
+GraphWPF: TextOut(pos: Point
+
+### Модуль Timers
+
+Событие таймера TimerProc переименовано в OnTimer
+
+### Стандартный модуль 
 
 x.Sqr возвращает int64
-
-Sort(a,x->x) - ускорение
-
-Digits с основанием в School
 
 Короткие создающие функции DictStr, DictInt, DictStrInt, LstLin, LstStr, HSetInt, HSetStr, SSetInt, SSetStr
 и Dict для последовательностей пар
@@ -211,17 +228,12 @@ Convert = System.Convert
 
 function Each<Key,Res>(Self: sequence of Key; proj: Key -> Res): Dictionary<Key,Res>; extensionmethod;
 
-a.Cartesian(n) -> a.CartesianPower(n)
+a.Cartesian(n) переименован в a.CartesianPower(n)
 
-Timers: TimerProc -> OnTimer
-
-GraphWPF - Arrow
-
-GraphWPF TextOut и DrawText - параметр text сделан object - можно выводить и кортежи и автоклассы
-
-GraphWPF: TextOut(pos: Point
 
 ## Оптимизация
+
+Sort(a,x->x) - ускорен в несколько раз
 
 Ускорена функция Abs для целых
 
@@ -235,7 +247,7 @@ GraphWPF: TextOut(pos: Point
 
 Окно About - улучшено оформление и добавлена гипетрссылка на Telegram канал
 
-nuget - инсталляция сборок с учетом папки netstandard2.0
+При инсталляции nuget-пакета в окне проекта производится инсталляция сборок с учетом папки netstandard2.0
 и копирование нативных dll из папок runtimes\win-x64\native\
 
 
