@@ -310,7 +310,7 @@ Println(n);
 
 ### Модуль Graph3D 
 
-Методы графического объекта LocalAxisX, LocalAxisY, LocalAxisZ, MoveByLocal, позволяющие работать в локальных координатах объекта.
+Реализованы методы графического объекта LocalAxisX, LocalAxisY, LocalAxisZ, MoveByLocal, позволяющие работать в локальных координатах объекта.
 
 ### Модуль Utils 
 
