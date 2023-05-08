@@ -233,13 +233,26 @@ end.
 
 ## Изменения в модулях
 
-### Цветовой вывод в окне вывода (Windows)
+### Стандартный модуль 
+
+## Permutations, Cartesian, Combinations для строк
+
+x.Sqr возвращает int64
+
+Короткие создающие функции DictStr, DictInt, DictStrInt, LstLin, LstStr, HSetInt, HSetStr, SSetInt, SSetStr
+и Dict для последовательностей пар
+
+Convert = System.Convert
+
+function Each<Key,Res>(Self: sequence of Key; proj: Key -> Res): Dictionary<Key,Res>; extensionmethod;
+
+a.Cartesian(n) переименован в a.CartesianPower(n)
+
+
 
 ### Модуль School 
 
-Permutations, Cartesian, Combinations для строк
-
-Digits с основанием 
+igits с основанием 
 
 ### Модуль Graph3D 
 
@@ -263,19 +276,6 @@ GraphWPF: TextOut(pos: Point
 
 Событие таймера TimerProc переименовано в OnTimer
 
-### Стандартный модуль 
-
-x.Sqr возвращает int64
-
-Короткие создающие функции DictStr, DictInt, DictStrInt, LstLin, LstStr, HSetInt, HSetStr, SSetInt, SSetStr
-и Dict для последовательностей пар
-
-Convert = System.Convert
-
-function Each<Key,Res>(Self: sequence of Key; proj: Key -> Res): Dictionary<Key,Res>; extensionmethod;
-
-a.Cartesian(n) переименован в a.CartesianPower(n)
-
 
 ## Оптимизация
 
@@ -288,6 +288,8 @@ Sort(a,x->x) - ускорен в несколько раз
 В [cache] Tuple заменен на ValueTuple (ускорить кеширование функций с 2 параметрами и более примерно в 3 раза)
 
 ## Оболочка
+
+### Цветовой вывод в окне вывода (Windows)
 
 Новый файл теперь создается в папке файла из текущей вкладки
 
