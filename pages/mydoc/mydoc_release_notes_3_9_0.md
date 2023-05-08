@@ -235,7 +235,7 @@ end.
 
 ### Стандартный модуль 
 
-1. a.Cartesian(n) переименован в a.CartesianPower(n)
+1. a.Cartesian(n) переименован в a.CartesianPower(n). Теперь методы расширения Permutations, Combinations, CartesianPower возвращают последовательность массивов, а Cartesian - последовательность кортежей
 2. Тип Convert сделан синонимом System.Convert
 3. Permutations, Cartesian, CartesianPower, Combinations для строк
 ```pascal
@@ -293,51 +293,143 @@ Print(dct); // словарь
 
 ### Модуль School 
 
-Метод расширения целых Digits с основанием системы счисления
+Метод расширения целых Digits c параметром-основанием системы счисления и обратный метод lst.DigitsToInt64, преобразующий список в целое int64.
 ```pascal
 ##
 uses School;
-1234.Digits(2).Println;
+var lst := 1234.Digits(2);
+lst.Println;
+var n := lst.DigitsToInt64(2);
+Println(n);
 ```
 Вывод:
 ```
 1 0 0 1 1 0 1 0 0 1 0 
+1234
 ```
 
 ### Модуль Graph3D 
 
-Методы графического объекта LocalAxisX, LocalAxisY, LocalAxisZ, MoveByLocal
+Методы графического объекта LocalAxisX, LocalAxisY, LocalAxisZ, MoveByLocal, позволяющие работать в локальных координатах объекта.
 
 ### Модуль Utils 
 
-Benchmark
+Реализована функция Benchmark для замера времени работы участка кода. Участок кода надо оформить в процедуру или передать в виде лямбда-выражения. По умолчанию берется среднее время за 100 запусков.
+
+```pascal
+uses Utils;
+
+procedure Test1;
+begin
+  var n := 1000000;
+  var s := 0.0;
+  for var i:=1 to n do
+    s += Sin(i);
+end;
+
+begin
+  Benchmark(Test1).Println;
+
+  var n := 100000000;
+  var Sq := ArrRandomInteger(n,0,MaxInt-1);
+  Benchmark(()->
+  begin
+    var Min := Sq.Min;
+  end,1).Println;
+end.
+```
 
 ### Модуль GraphWPF 
 
-Событие OnMouseWheel
+Реализовано событие OnMouseWheel. Пимер иллюстрирует масштабирование изображения колёсиком мыши.
 
-Графический примитив Arrow
+```pascal
+uses GraphWPF;
 
-TextOut и DrawText - параметр text имеет теперь тип object - можно выводить кортежи и автоклассы
+var a := 10.0;
+
+procedure Draw;
+begin
+  SetMathematicCoords(-a,a);
+  var pp := |Pnt(4,-3),Pnt(-3,-1),Pnt(3,3)|;
+  Polygon(pp,ARGB(50,255,0,0));
+end;
+
+begin
+  Window.Title := 'Событие колёсика мыши';
+  Window.SetSize(640,480);
+  Draw;
+  OnMouseWheel := delta -> begin
+    a -= 0.3 * Sign(delta);
+    a := a.Clamp(0.1,100);
+    Draw;
+  end;
+end.
+```
+
+Реализован графический примитив Arrow и статический класс Parameters, содержащий в частности размеры наконечника стрелки по умолчанию.
+
+```pascal
+uses GraphWPF;
+
+begin
+  Parameters.ArrowSizeAcross := 4;
+  Parameters.ArrowSizeAlong := 10;
+  SetMathematicCoords;
+  var (p1,p2,p3) := (Pnt(0,0),Pnt(2,3),Pnt(4,-1));
+  Arrow(p1,p2);
+  Arrow(p2,p3);
+  Arrow(p3,p1);
+end.
+```
+
+TextOut и DrawText - параметр text имеет теперь тип object - он преобразуется к строковому представлению
+
+```pascal
+uses GraphWPF;
+
+begin
+  SetMathematicCoords;
+  var (p1,p2,p3) := (Pnt(0,0),Pnt(2,3),Pnt(4,-1));
+  Circle(p1,0.1);
+  Circle(p2,0.1);
+  Circle(p3,0.1);
+  TextOut(p1,p1);
+  TextOut(p2,p2);
+  TextOut(p3,p3);
+end.
+```
 
 ### Модуль Timers
 
 Событие таймера TimerProc переименовано в OnTimer
 
-
 ## Оптимизация
 
-Sort(a,x->x) - ускорен в несколько раз
+Процедура Sort(a,x->x) ускорена в несколько раз
 
 Ускорена функция Abs для целых
 
-[cache] для одного параметра не оборачивает его в Tuple - за счет этого ускорена в 10 раз
+Атрибут [Cache] для одного параметра не оборачивает его в Tuple - за счет этого выполнение программы ускорено примерно в 10 раз
 
-В [cache] Tuple заменен на ValueTuple (ускорить кеширование функций с 2 параметрами и более примерно в 3 раза)
+В атрибуте [Cache] Tuple заменен на ValueTuple, что позволило ускорить кеширование функций с двумя параметрами и более примерно в 3 раза
 
 ## Оболочка
 
 ### Цветовой вывод в окне вывода (Windows)
+
+Использование указанных символьных констант переключает цвет вывода в окне вывода PascalABC.NET
+
+```pascal
+begin
+  Writeln('123456789');
+  Writeln(#65535'123456789'); // зеленый
+  Writeln(#65534'123456789'); // красный
+  Writeln(#65533'123456789'); // оранжевый
+  Writeln(#65532'123456789'); // малиновый 
+  Writeln(#65531'123456789'); // серый
+end.
+```
 
 Новый файл теперь создается в папке файла из текущей вкладки
 
