@@ -235,18 +235,17 @@ end.
 
 ### Стандартный модуль 
 
-## Permutations, Cartesian, Combinations для строк
+1. a.Cartesian(n) переименован в a.CartesianPower(n)
+2. Convert = System.Convert
+3. Permutations, Cartesian, Combinations для строк
+```pascal
+sdhgf
+```
 
-x.Sqr возвращает int64
-
-Короткие создающие функции DictStr, DictInt, DictStrInt, LstLin, LstStr, HSetInt, HSetStr, SSetInt, SSetStr
+5. x.Sqr возвращает int64
+6. Короткие создающие функции DictStr, DictInt, DictStrInt, LstLin, LstStr, HSetInt, HSetStr, SSetInt, SSetStr
 и Dict для последовательностей пар
-
-Convert = System.Convert
-
-function Each<Key,Res>(Self: sequence of Key; proj: Key -> Res): Dictionary<Key,Res>; extensionmethod;
-
-a.Cartesian(n) переименован в a.CartesianPower(n)
+6. function Each<Key,Res>(Self: sequence of Key; proj: Key -> Res): Dictionary<Key,Res>; extensionmethod;
 
 
 
