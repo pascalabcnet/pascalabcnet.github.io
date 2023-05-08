@@ -25,6 +25,50 @@ begin
 end.
 ```
 
+Реализация ковариантности позволила подключать пакет Microsoft.ML машинного обучения к PascalABC.NET. Для этого следует создать проект, добавить в него пакет Microsoft.ML. Вот пример простой программы, предсказывающей цену дома по известной площади на основании известных данных о продажах домов:
+
+```pascal
+uses Microsoft.ML;
+uses Microsoft.ML.Data;
+uses Microsoft.ML.Trainers;
+uses Microsoft.ML.Transforms;
+
+type 
+  HouseData = auto class
+  public  
+    Size: single;
+    Price: single;
+  end;
+  Prediction = class
+  public  
+    [ColumnName('Score')] // Непонятно, почему Score. Без этого не работает
+    Price: single;
+  end;
+  
+function HD(sz,pr: single) := new HouseData(sz,pr);  
+
+begin
+  var mlContext := new MLContext;
+  var hData := Arr(HD(1.1,1.2),HD(1.9,2.3),HD(2.8,3.0),HD(3.4,3.7));
+  var data := mlContext.Data.LoadFromEnumerable(hData);
+
+  var opt := new SdcaRegressionTrainer.Options; 
+  opt.LabelColumnName := 'Price'; // Зависимое значение
+  opt.maximumNumberOfIterations := 100;
+// Все независимые значения - Features - объединяются в массив
+  var pipeline := mlContext.Transforms.Concatenate('Features', Arr('Size')) 
+    .Append(mlContext.Regression.Trainers.Sdca(opt)); 
+    
+  var model: ITransformer := pipeline.Fit(data);
+  
+  var size := new HouseData(3.5,0);
+  var engine := mlContext.Model.CreatePredictionEngine&<HouseData, Prediction>(model);
+  var price := engine.Predict(size);
+  
+  Println(price.Price);
+end.```
+
+
 ### Именованные аргументы при вызове подпрограмм
 При вызове подпрограмм теперь можно использовать именованные атрибуты. Они могут менять значения параметров по умолчанию.
 
