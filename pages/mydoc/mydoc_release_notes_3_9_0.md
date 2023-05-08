@@ -235,17 +235,58 @@ end.
 ### Стандартный модуль 
 
 1. a.Cartesian(n) переименован в a.CartesianPower(n)
-2. Convert = System.Convert
-3. Permutations, Cartesian, Combinations для строк
+2. Тип Convert сделан синонимом System.Convert
+3. Permutations, Cartesian, CartesianPower, Combinations для строк
 ```pascal
-sdhgf
+begin
+  'abc'.Permutations.Println;
+  'abc'.Permutations(2).Println;
+  'abc'.Combinations(2).Println;
+  'abc'.CartesianPower(2).Println;
+  'abc'.Cartesian('def').Println;
+end. 
 ```
-
-5. x.Sqr возвращает int64
-6. Короткие создающие функции DictStr, DictInt, DictStrInt, LstLin, LstStr, HSetInt, HSetStr, SSetInt, SSetStr
-и Dict для последовательностей пар
-6. function Each<Key,Res>(Self: sequence of Key; proj: Key -> Res): Dictionary<Key,Res>; extensionmethod;
-
+Вывод:
+```pascal
+abc acb bac bca cab cba
+ab ba ac ca bc cb
+ab ac bc
+aa ab ac ba bb bc ca cb cc
+(a,d) (a,e) (a,f) (b,d) (b,e) (b,f) (c,d) (c,e) (c,f)
+```
+4. x.Sqr возвращает теперь int64
+5. Короткие создающие функции DictStr, DictInt, DictStrInt, LstLin, LstStr, HSetInt, HSetStr, SSetInt, SSetStr для создания пустых словарей, списков и множеств соответствующих типов
+```pascal
+##
+var d := DictStr;
+d['кошка'] := 'cat';
+d.Println;
+var L := LstInt;
+L.Add(2); L.Add(3);
+L.Println;
+```
+6. Dict для последовательностей пар 
+```pascal
+##
+var pairs := Arr((1,'один'),(2,'два'));
+var d := Dict(pairs);
+Println(pairs);
+Println(d);
+```
+Вывод:
+```
+[(1,один),(2,два)] 
+{(1,один),(2,два)} 
+```
+7. Метод расширения последовательности Each с проекцией элемента на значение
+```pascal
+##
+var dct := Arr(1..10).Each(x -> 0);
+Print(dct); // словарь```
+Вывод:
+```
+{(1,0),(2,0),(3,0),(4,0),(5,0),(6,0),(7,0),(8,0),(9,0),(10,0)} 
+```
 
 
 ### Модуль School 
