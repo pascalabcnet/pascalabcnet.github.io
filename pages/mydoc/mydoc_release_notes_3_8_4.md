@@ -1,15 +1,15 @@
 ---
-title: Версия 3.8.4
+title: Версия 3.9.0
 keywords: release notes, what's new, announcements, new features
-last_updated: 07.05.23
+last_updated: 08.05.23
 sidebar: mydoc_sidebar
-permalink: mydoc_release_notes_3_8_4.html
+permalink: mydoc_release_notes_3_9_0.html
 toс: false
 folder: mydoc
 ---
 
 
-## Изменения в языке 3.8.4
+## Изменения в языке 3.9.0
 
 ### Ковариантность параметров обобщенных типов
 
