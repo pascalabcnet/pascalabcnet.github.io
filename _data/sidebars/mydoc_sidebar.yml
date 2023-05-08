@@ -80,8 +80,8 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Версия 3.8.4
-      url: /mydoc_release_notes_3_8_4.html
+    - title: Версия 3.9.0
+      url: /mydoc_release_notes_3_9_0.html
       output: web, pdf
 
     - title: Версия 3.8.3
