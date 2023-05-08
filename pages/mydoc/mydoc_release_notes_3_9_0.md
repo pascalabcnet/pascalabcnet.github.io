@@ -66,7 +66,8 @@ begin
   var price := engine.Predict(size);
   
   Println(price.Price);
-end.```
+end.
+```
 
 
 ### Именованные аргументы при вызове подпрограмм
