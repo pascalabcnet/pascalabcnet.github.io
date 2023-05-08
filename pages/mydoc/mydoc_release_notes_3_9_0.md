@@ -290,7 +290,7 @@ Print(dct); // словарь
 
 ### Модуль School 
 
-Digits с основанием 
+Метод расширения целых Digits с основанием системы счисления
 ```pascal
 ##
 uses School;
@@ -313,11 +313,9 @@ Benchmark
 
 Событие OnMouseWheel
 
-GraphWPF - Arrow
+Графический примитив Arrow
 
-GraphWPF TextOut и DrawText - параметр text сделан object - можно выводить и кортежи и автоклассы
-
-GraphWPF: TextOut(pos: Point
+TextOut и DrawText - параметр text имеет теперь тип object - можно выводить кортежи и автоклассы
 
 ### Модуль Timers
 
