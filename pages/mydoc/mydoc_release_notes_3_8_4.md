@@ -77,11 +77,6 @@ begin
   НарисоватьРяд(З*15);
 end.
 ```
-
-И результат:
-![изображение](https://user-images.githubusercontent.com/10325391/236816842-5fe34df3-8bdf-4e25-9014-70a269a52b56.png)
-
-
 ### Модуль TurtleWPF, реализующий черепашью графику с использованием GraphWPF
 
 Пример программы:
@@ -91,7 +86,6 @@ uses TurtleWPF;
 
 begin
   Down;
-  //Hide;
   SetSpeed(11);
   SetColor(Colors.Red);
   for var i:=1 to 450 do
@@ -100,18 +94,58 @@ begin
     Forw(i);
     Turn(96);
   end;
-  //Save('a.png');
 end.
 ```
 
-И результат:
-![изображение](https://user-images.githubusercontent.com/10325391/236816749-23719e8b-ecb9-43f0-83ff-c53118be7ade.png)
+### Модуль LightPT бесшумной легковесной автоматической проверки заданий
 
-### Модуль LightPT 
+Модуль LightPT обеспечивает бесшумную легковесную автоматическую проверку заданий, выполняемых учащимися.
 
-Плагин TeacherControlPlugin учительского контроля
+Для его работы в папке должен находиться текстовый файл lightpt.dat, единственная строка в котором - имя урока.
 
-Модуль LightPT бесшумной легковесной автоматической проверки заданий. Интегрированы Робот, Чертежник, задачник PT
+Также в папке должен находиться файл Tasks.pas, осуществляющий легковесную проверку заданий. Его примерное содержимое:
+
+```pascal
+unit Tasks;
+
+{$savepcu false}
+
+uses LightPT;
+
+procedure CheckTaskT(name: string);
+begin
+  case name of
+   'Simple2': begin 
+      FilterOnlyNumbers;
+      CheckInput(Arr(cInt)*2);
+      CheckOutputNew(Int(0)+Int(1));
+   end;
+  'MinMax': begin 
+    CheckInputCount(2);
+    FilterOnlyNumbers;
+    CheckOutputNew(Min(Int(0),Int(1)),Max(Int(0),Int(1)))
+   end;
+   'ArrSum': begin 
+    CheckInput(Arr(cInt)*10); // Проверка типов и количества введенных элементов
+    FilterOnlyNumbers;        // Фильтрация только чисел – на случай вывода строк-подсказок 
+    var a := IntArr(10);      // Считывание введенного массива целых
+    var out := new ObjectList; // Подготовка списка для вывода
+    out.AddRange(a);           // Добавление в него всех элементов массива a 
+    out.Add(a.Where(x -> x mod 2 = 0).Sum); // Добавление в него суммы четных
+    CheckOutputSeqNew(out);   // Проверка совпадения с выводом ученика      
+    end;
+  end;
+end;
+
+initialization
+  CheckTask := CheckTaskT;
+finalization
+end.
+```
+
+
+
+В модуль LightPT интегрированы Робот, Чертежник, задачник PT
 
 
 
