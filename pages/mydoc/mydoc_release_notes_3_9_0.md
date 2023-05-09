@@ -41,7 +41,7 @@ type
   end;
   Prediction = class
   public  
-    [ColumnName('Score')] // Непонятно, почему Score. Без этого не работает
+    [ColumnName('Score')] 
     Price: single;
   end;
   
