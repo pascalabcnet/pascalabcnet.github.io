@@ -89,7 +89,7 @@ Hello 1 22 33
 ```
 
 
-###Статические свойства разрешены в default-параметрах
+### Статические свойства разрешены в default-параметрах
 
 ```pascal
 type TClass = class
@@ -111,7 +111,8 @@ end;
 begin
   assert(f = 2);
   assert(f2 = 2);
-end.```
+end.
+```
 
 ## Linux версия IDE
 
