@@ -1,7 +1,7 @@
 ---
-title: Версия 3.9.0
+title: Версия 3.9.0 Release
 keywords: release notes, what's new, announcements, new features
-last_updated: 08.05.23
+last_updated: 10.07.23
 sidebar: mydoc_sidebar
 permalink: mydoc_release_notes_3_9_0.html
 toс: false
@@ -9,7 +9,7 @@ folder: mydoc
 ---
 
 
-## Изменения в языке 3.9.0
+## Изменения в языке 3.9.0 (10.07.23)
 
 ### Ковариантность параметров обобщенных типов
 
