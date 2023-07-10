@@ -116,24 +116,28 @@ uses LightPT;
 procedure CheckTaskT(name: string);
 begin
   case name of
+    'Var_4': begin 
+      CheckData(Input := Empty);
+      CheckOutput(25,3.14,100,0.75);
+    end;  
    'Simple2': begin 
       FilterOnlyNumbers;
-      CheckInput(Arr(cInt)*2);
-      CheckOutputNew(Int(0)+Int(1));
+      CheckData(Input := |cInt|*2);
+      CheckOutput(Int(0)+Int(1));
    end;
   'MinMax': begin 
-    CheckInputCount(2);
     FilterOnlyNumbers;
+    CheckData(Input := |cInt|*2);
     CheckOutputNew(Min(Int(0),Int(1)),Max(Int(0),Int(1)))
    end;
    'ArrSum': begin 
-    CheckInput(Arr(cInt)*10); // Проверка типов и количества введенных элементов
     FilterOnlyNumbers;        // Фильтрация только чисел – на случай вывода строк-подсказок 
+    CheckData(Input := |cInt|*10); // Проверка типов и количества введенных элементов
     var a := IntArr(10);      // Считывание введенного массива целых
     var out := new ObjectList; // Подготовка списка для вывода
     out.AddRange(a);           // Добавление в него всех элементов массива a 
     out.Add(a.Where(x -> x mod 2 = 0).Sum); // Добавление в него суммы четных
-    CheckOutputSeqNew(out);   // Проверка совпадения с выводом ученика      
+    CheckOutputSeq(out);   // Проверка совпадения с выводом ученика      
     end;
   end;
 end;
