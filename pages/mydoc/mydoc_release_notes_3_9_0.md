@@ -128,7 +128,7 @@ begin
   'MinMax': begin 
     FilterOnlyNumbers;
     CheckData(Input := |cInt|*2);
-    CheckOutputNew(Min(Int(0),Int(1)),Max(Int(0),Int(1)))
+    CheckOutput(Min(Int(0),Int(1)),Max(Int(0),Int(1)))
    end;
    'ArrSum': begin 
     FilterOnlyNumbers;        // Фильтрация только чисел – на случай вывода строк-подсказок 
