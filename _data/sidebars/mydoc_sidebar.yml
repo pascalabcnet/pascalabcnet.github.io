@@ -68,7 +68,7 @@ entries:
       url: /school_files.html
       output: web, pdf
 
-    - title: PascalABC.NET и ЕГЭ 2021
+    - title: PascalABC.NET и ЕГЭ 2023
       url: /mydoc_for_EGE.html
       output: web, pdf
 
