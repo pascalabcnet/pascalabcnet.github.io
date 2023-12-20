@@ -68,12 +68,8 @@ entries:
       url: /school_files.html
       output: web, pdf
 
-    - title: PascalABC.NET и ЕГЭ 2023
+    - title: PascalABC.NET и ЕГЭ 2024
       url: /mydoc_for_EGE.html
-      output: web, pdf
-
-    - title: PascalABC.NET и ЕГЭ (до 2020 г.)
-      url: /mydoc_for_EGE_old.html
       output: web, pdf
 
   - title: Версии PascalABC.NET
