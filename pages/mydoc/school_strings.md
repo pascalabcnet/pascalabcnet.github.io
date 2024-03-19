@@ -186,6 +186,29 @@ begin
 end.
 ```
 
+Следующий код удаляет в строке слово Python и вставляет на его место PascalABC.NET:
+```pascal
+begin
+  var s := 'Язык Python - мой любимый язык программирования';
+  Delete(s,6,6); // удалить с 6 позиции 6 символов
+  Insert('PascalABC.NET',s,6);
+  Print(s)
+end.
+```
+То же самое можно сделать с помощью метода Replace:
+```pascal
+begin
+  var s := 'Язык Python - мой любимый язык программирования';
+  s.Replace('Python','PascalABC.NET');
+  Print(s)
+end.
+```
+
+
+
+
+
+
 
 
 
