@@ -1,15 +1,15 @@
 ---
-title: Версия 3.9.1 Release
+title: Версия 3.10.0
 keywords: release notes, what's new, announcements, new features
-last_updated: 11.08.24
+last_updated: 12.08.24
 sidebar: mydoc_sidebar
-permalink: mydoc_release_notes_3_9_1.html
+permalink: mydoc_release_notes_3_10_0.html
 toс: false
 folder: mydoc
 ---
 
 
-## Изменения в языке 3.9.1 (11.08.24)
+## Изменения в языке 3.10.0 (12.08.24)
 
 ### Пока - общий список изменений
 
