@@ -13,11 +13,11 @@ folder: mydoc
 
 ### Пока - общий список изменений
 
-- LightPT - GenerateTests
+- **LightPT - GenerateTests**
 - SeqRandomReal - добавлен параметр digits
 - Возможность открывать гиперссылки из окна вывода
 - Улучшен отладчик под Linux - добавлены точки останова и индексаторы массивов
-- Разделители _ в числовых константах
+- **Разделители _ в числовых константах**
 - MatrRandomReal digits
 - School.pas - калькулятор IP
 - school s.translate
@@ -26,19 +26,19 @@ folder: mydoc
 - GraphABC - FloodFill - улучшена реализация
 - s.ToLines
 - RealRange(1,3,0.5)
-- Модуль WPF
+- **Модуль WPF**
 - Scan стандартный метод расширения
 - Исправление ошибки вывода лишнего пробела при s.Println
-- Многострочные строковые литералы
+- **Многострочные строковые литералы**
 - dict.GeT(key,default)
 - Директива HiddenParams для скрытых модулей
 - _ObjectToString переименован в ObjectToString
 - Zip как синоним ZipTuple
-- Внешние Zip и Cartesian для 2-5 параметров (и с проекцией на значение)
+- **Внешние Zip и Cartesian** для 2-5 параметров (и с проекцией на значение)
 - Вывод Complex в Print
 - LightPT - ряд уточнений (CheckOutput вместо CheckOutputNew и CheckOutputSeq)
-- Dictionaries:
-1 to 2 - новый оператор в стиле Котлина для пары Ключ-Значение
+- **Dictionaries**:
+**1 to 2** - новый оператор в стиле Котлина для пары Ключ-Значение
 Pair - синоним KV. KV - не запоминается
 Теперь:
   d := Dict(1 to 2, 3 to 4)
@@ -58,7 +58,7 @@ d -= Seq(ключ)
 
 - SetOf
 - School PrimeDivisors
-- бновленный модуль Turtle.pas
+- **Обновленный модуль Turtle.pas**
 
 
 
