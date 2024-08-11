@@ -15,6 +15,9 @@ folder: mydoc
 - **Многострочные строковые литералы**
 - **1 to 2** - новый оператор в стиле Котлина для пары Ключ-Значение
 
+## Изменения в директивах 
+- Директива HiddenParams для скрытых модулей
+
 ## IDE
 - Реализован отладчик под Linux
 ## IDE незначительные возможности
@@ -22,6 +25,8 @@ folder: mydoc
 
 ## Новые стандартные модули
 - **Модуль WPF**
+- **Полностью обновленный модуль Turtle.pas**
+
 
 ## Изменения в модулях
 
@@ -31,7 +36,7 @@ folder: mydoc
 - Scan стандартный метод расширения последовательностей
 - **Внешние Zip и Cartesian** для 2-5 параметров (и с проекцией на значение)
 
-## Системный модуль - незначительные улучшения
+### Системный модуль - незначительные улучшения
 - SeqRandomReal - добавлен параметр digits
 - MatrRandomReal digits
 - dict.GeT(key,default)
@@ -39,23 +44,25 @@ folder: mydoc
 - Zip как синоним ZipTuple
 - Улучшенный вывод Complex в Print
 
+### LightPT 
+- GenerateTests - возможность генерировать тесты
+- LightPT - ряд уточнений (CheckOutput вместо CheckOutputNew и CheckOutputSeq)
 
 ### School
 - School.pas - калькулятор IP
 - school s.translate
+- School PrimeDivisors
 
 
 ## Оптимизация
 - **Ускорено кортежное присваивание**. Реализовано оптимальное число единичных присваиваний (бакалаврская работа Филонова)
 
+## Исправления
+- Исправление ошибки вывода лишнего пробела при s.Println
+
 
 ## Всё вместе
 
-- **LightPT - GenerateTests**
-- GraphABC - FloodFill - улучшена реализация
-- Исправление ошибки вывода лишнего пробела при s.Println
-- Директива HiddenParams для скрытых модулей
-- LightPT - ряд уточнений (CheckOutput вместо CheckOutputNew и CheckOutputSeq)
 - **Dictionaries**:
 Pair - синоним KV. KV - не запоминается
 Теперь:
@@ -75,9 +82,6 @@ d - Seq(ключ)
 d -= Seq(ключ)
 
 - SetOf
-- School PrimeDivisors
-- **Обновленный модуль Turtle.pas**
-
 
 
 
