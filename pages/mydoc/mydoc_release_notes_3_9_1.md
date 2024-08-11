@@ -23,8 +23,45 @@ folder: mydoc
 - school s.translate
 - GraphWPF - Arc(Point)
 - Ускорено кортежное присваивание. Реализовано оптимальное число единичных присваиваний (бакалаврская работа Филонова)
+- GraphABC - FloodFill - улучшена реализация
+- s.ToLines
+- RealRange(1,3,0.5)
+- Модуль WPF
+- Scan стандартный метод расширения
+- Исправление ошибки вывода лишнего пробела при s.Println
+- Многострочные строковые литералы
+- dict.GeT(key,default)
+- Директива HiddenParams для скрытых модулей
+- _ObjectToString переименован в ObjectToString
+- Zip как синоним ZipTuple
+- Внешние Zip и Cartesian для 2-5 параметров (и с проекцией на значение)
+- Вывод Complex в Print
+- LightPT - ряд уточнений (CheckOutput вместо CheckOutputNew и CheckOutputSeq)
+- Dictionaries:
+1 to 2 - новый оператор в стиле Котлина для пары Ключ-Значение
+Pair - синоним KV. KV - не запоминается
+Теперь:
+  d := Dict(1 to 2, 3 to 4)
+   или
+  d := Dict(Pair(1,2),Pair(3,4)
+
+Кроме того
+Новые конструкторы
+  d := Dict(d1) - копия
+  d := Dict(keys,values)
+d.Update(d1)
+d + d1
+d += d1
+d + pair
+d - Seq(ключ)
+d -= Seq(ключ)
+
+- SetOf
+- Преобразование массивов к множествам того же типа
 - 
+
 - 
+
 
 
 
