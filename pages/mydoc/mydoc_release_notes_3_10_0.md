@@ -9,7 +9,7 @@ folder: mydoc
 ---
 
 
-## Изменения в языке 3.10.0 (12.08.24)
+## Изменения в языке 3.10.0 (26.08.24)
 
 - **Разделители _ в числовых константах**
 - **Многострочные строковые литералы**
@@ -20,12 +20,55 @@ folder: mydoc
 
 ## IDE
 - Реализован отладчик под Linux
-## IDE незначительные возможности
+  
+### IDE незначительные возможности
 - Возможность открывать гиперссылки из окна вывода
 
 ## Новые стандартные модули
-- **Модуль WPF**
-- **Полностью обновленный модуль Turtle.pas**
+
+### Модуль WPF
+а
+
+### Модуль Turtle.pas (полностью обновлён)
+- Осуществляется просмотр виртуального экрана с перемещением окна отображения мышью и изменением масштаба колёсиком мыши.
+- Режим отображения координат переключается тройным нажатием пробела.
+- Осуществляется рисование набора точек функцией DrawPoints
+- Черепаха может рисовать окружности
+
+Пример программы:
+```delphi
+uses Turtle;
+
+procedure Hilbert(level: integer; angle,step: real);
+begin
+  if level = 0 then
+    exit;
+  TurnRight(angle);
+  Hilbert(level-1, -angle, step);
+  
+  Forw(step);
+  TurnLeft(angle);
+  Hilbert(level-1, angle, step);
+  
+  Forw(step);
+  Hilbert(level-1, angle, step);
+  
+  TurnLeft(angle);
+  Forw(step);
+  Hilbert(level-1, -angle, step);
+  TurnRight(angle);
+end;
+
+begin
+  SetWidth(2);
+  ToPoint(-9,-9);
+  Down;
+  Hilbert(6,90,0.3);
+end.
+```
+Отображение:
+![изображение](https://github.com/user-attachments/assets/2b4c062b-8486-4cee-acc6-4b3aade9cb1f)
+
 
 
 ## Изменения в модулях
