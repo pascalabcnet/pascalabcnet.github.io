@@ -68,9 +68,8 @@ end.
 ```
 Отображение:
 
-![изображение](https://github.com/user-attachments/assets/2b4c062b-8486-4cee-acc6-4b3aade9cb1f)
 
-
+![111](https://github.com/user-attachments/assets/b7c3ae0b-7a18-42b2-9d9a-702bb0615edb)
 
 ## Изменения в модулях
 
