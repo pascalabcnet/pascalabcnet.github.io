@@ -76,8 +76,8 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Версия 3.9.1
-      url: /mydoc_release_notes_3_9_1.html
+    - title: Версия 3.10.0
+      url: /mydoc_release_notes_3_10_0.html
       output: web, pdf
 
     - title: Версия 3.9.0
