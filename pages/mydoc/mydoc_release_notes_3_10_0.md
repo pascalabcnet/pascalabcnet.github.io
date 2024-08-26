@@ -35,9 +35,9 @@ folder: mydoc
 - Осуществляется рисование набора точек функцией DrawPoints
 - Черепаха может рисовать окружности
 
-Пример. Рисование кривой Гильберта.
+**Пример.** Рисование кривой Гильберта.
 
-```delphi
+```pascal
 uses Turtle;
 
 procedure Hilbert(level: integer; angle,step: real);
@@ -69,8 +69,23 @@ end.
 ```
 Отображение:
 
-
 ![111](https://github.com/user-attachments/assets/b7c3ae0b-7a18-42b2-9d9a-702bb0615edb)
+
+**Пример.** Рисование массива точек.
+uses Turtle;
+
+begin
+  Window.Title := 'DrawPoints';
+  var n := 1000;
+  var d := 10;
+  var a := ArrRandomReal(n,-d,d);
+  DrawPoints(a[::2],a[1::2]);
+  a := ArrRandomReal(n,-d,d);
+  DrawPoints(a[::2],a[1::2]);
+end.
+```pascal
+
+```
 
 ## Изменения в модулях
 
