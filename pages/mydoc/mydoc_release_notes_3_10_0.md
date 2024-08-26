@@ -171,8 +171,8 @@ begin
   DrawPoints(a[::2],a[1::2]);
 end.
 ```
-![изображение](https://github.com/user-attachments/assets/5867a80e-6fde-4c04-a68f-69c33b01f8a4)
 
+![222](https://github.com/user-attachments/assets/b9e0cc10-8b7d-499a-9546-7d8b6c79ffe6)
 
 ## Изменения в модулях
 
