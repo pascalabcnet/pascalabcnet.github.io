@@ -67,6 +67,7 @@ begin
 end.
 ```
 Отображение:
+
 ![изображение](https://github.com/user-attachments/assets/2b4c062b-8486-4cee-acc6-4b3aade9cb1f =300x200)
 
 
