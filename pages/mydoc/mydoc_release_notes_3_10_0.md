@@ -1,7 +1,7 @@
 ---
 title: Версия 3.10.0
 keywords: release notes, what's new, announcements, new features
-last_updated: 12.08.24
+last_updated: 26.08.24
 sidebar: mydoc_sidebar
 permalink: mydoc_release_notes_3_10_0.html
 toс: false
