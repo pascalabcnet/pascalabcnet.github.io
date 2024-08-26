@@ -208,44 +208,25 @@ RealRange(1,3,0.5).Print
 
 ```
 
-### Системный модуль - незначительные улучшения
-- SeqRandomReal - добавлен параметр digits, определяющий количество цифр после десятичной точки
-- MatrRandomReal - добавлен параметр digits, определяющий количество цифр после десятичной точки
-- dict.GeT(key,default) - добавлен параметр default
-- _ObjectToString переименован в ObjectToString
-- Zip как синоним ZipTuple
-- Улучшенный вывод Complex
+#### Функция SetOf и метод расширения ToSet
 
-### LightPT 
-- GenerateTests - возможность генерировать тесты
-- LightPT - ряд уточнений (CheckOutput вместо CheckOutputNew и CheckOutputSeq)
+Функция SetOf и метод расширения ToSet введены как синонимы для HSet и ToHashSet
 
-### School
-- School.pas - калькулятор IP
-- school s.translate
-- School PrimeDivisors
+```pascal
 
+```
 
-## Оптимизация
-- **Ускорено кортежное присваивание**. Реализовано оптимальное число единичных присваиваний 
+#### Функция Pair
 
-## Исправления
-- Исправление ошибки вывода лишнего пробела при s.Println
+Функция Pair введена как синоним функции KV и возвращает пару KeyValuePair<K,V>
 
-
-## Всё вместе
-
-- **Dictionaries**:
-Pair - синоним KV. KV - не запоминается
-Теперь:
-  d := Dict(1 to 2, 3 to 4)
-   или
-  d := Dict(Pair(1,2),Pair(3,4)
-
-Кроме того
-Новые конструкторы
-  d := Dict(d1) - копия
-  d := Dict(keys,values)
+```pascal
+var d := Dict(1 to 2, 3 to 4);
+var d1 := Dict(Pair(1,2),Pair(3,4);
+```
+#### Новые конструкторы для словарей
+`d := Dict(d1)` - копия словаря
+`d := Dict(keys,values)` - построение словаря по ключам и значениям
 d.Update(d1)
 d + d1
 d += d1
@@ -280,7 +261,36 @@ begin
 end.
 ```
 
-- SetOf
+
+
+### Системный модуль - незначительные улучшения
+- SeqRandomReal - добавлен параметр digits, определяющий количество цифр после десятичной точки
+- MatrRandomReal - добавлен параметр digits, определяющий количество цифр после десятичной точки
+- dict.GeT(key,default) - добавлен параметр default
+- _ObjectToString переименован в ObjectToString
+- Zip как синоним ZipTuple
+- Улучшенный вывод Complex
+
+### LightPT 
+- Появилась возможность генерировать тесты с помощью GenerateTests.
+- CheckOutputNew и CheckOutputSeq заменены на CheckOutput
+
+### School
+- Калькулятор IP
+- s.translate
+- PrimeDivisors
+
+
+## Оптимизация
+- Драматически **ускорено кортежное присваивание**. В нескольких ситуациях количество присваиваний - оптимальное.
+В некоторых тестах кортежное присваивание опережает аналогичное на C# в 2 раза: https://t.me/pascalabc_official/626
+
+
+## Исправления
+- Исправлена ошибка вывода лишнего пробела при s.Println
+
+
+
 
 
 
