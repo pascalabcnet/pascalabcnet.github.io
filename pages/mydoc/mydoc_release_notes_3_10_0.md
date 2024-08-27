@@ -195,8 +195,18 @@ RealRange(1,3,0.5).Print
 
 #### Метод расширения последовательностей Scan 
 
-```pascal
+Метод Scan выполняет то же, что и .Aggregate, но возвращает элемент новой последовательности после обработки каждого элемента исходной последовательности.
 
+```pascal
+begin
+  var a := ArrRandom(10,1,9);
+  a.Println.PartialSum.Println;
+  a.Scan(min).Println;
+  a.Scan(max).Println;
+  a.Scan((x,y) -> x+y).Println;
+  var s := 'abcdef';
+  s.Scan('',(x,y) -> x+y).Println;
+end.
 ```
 
 
@@ -205,7 +215,20 @@ RealRange(1,3,0.5).Print
 Внешние функции Zip и Cartesian реализованы для 2-5 параметров и с проекцией на значение
 
 ```pascal
+begin
+  Zip(1..5,2..6).Println;
+  Zip(1..5,2..6,(x,y) -> x+y).Println;
+  Zip(1..5,2..6,3..7).Println;
+  Zip(1..5,2..6,3..7,(x,y,z) -> x+y+z).Println;
 
+  Cartesian(1..4,3..5).Println;
+  Cartesian(1..4,3..5,(x,y) -> x*y).Println;
+  Cartesian(1..2,4..5,6..7).Println;
+  Cartesian(1..2,4..5,6..7,(x,y,z) -> x*y*z).Println;
+  
+  foreach var (a,b) in Cartesian(1..2,3..5) do
+    Print($'{a}+{b}')
+end.
 ```
 
 #### Функция SetOf и метод расширения ToSet
@@ -213,7 +236,22 @@ RealRange(1,3,0.5).Print
 Функция SetOf и метод расширения ToSet введены как синонимы для HSet и ToHashSet
 
 ```pascal
+begin
+  var s := SetOf(1,2,3);
+  var s2 := SetOf(3,4,5);
+  var symmDiff := (s - s2) + (s2 - s);
+  Print(symmDiff);
+end.
+```
 
+```pascal
+begin
+  var x := 1668922;
+  var y := 90192697672838;
+  var s1 := x.ToString.ToSet;
+  var s2 := y.ToString.ToSet;
+  Println(x <= y);
+end.
 ```
 
 #### Функция Pair
@@ -224,15 +262,17 @@ RealRange(1,3,0.5).Print
 var d := Dict(1 to 2, 3 to 4);
 var d1 := Dict(Pair(1,2),Pair(3,4);
 ```
-#### Новые конструкторы для словарей
+#### Новые конструкторы, методы и операции для словарей
+
 `d := Dict(d1)` - копия словаря
 `d := Dict(keys,values)` - построение словаря по ключам и значениям
-d.Update(d1)
-d + d1
-d += d1
-d + pair
-d - Seq(ключ)
-d -= Seq(ключ)
+`d.Update(d1)` - обновляет данные словаря d данными словаря d1. Пары с новыми ключами добавляются, с таким же значением ключа - обновляются.
+`d += d1` - синоним `d.Update(d1)`
+`d + d1` - возвращает новый словарь, который получается обновлением словаря d словарем d1
+`d -= Seq(ключ)` - исключает из словаря пары с указанным значением ключа
+`d - Seq(ключ)` - возвращает новый словарь с исключенными из первого словаря парами с указанными значениями ключа
+
+Интегральный пример:
 
 ```pascal
 begin
