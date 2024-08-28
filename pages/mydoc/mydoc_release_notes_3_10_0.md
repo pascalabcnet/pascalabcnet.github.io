@@ -260,7 +260,7 @@ end.
 
 ```pascal
 var d := Dict(1 to 2, 3 to 4);
-var d1 := Dict(Pair(1,2),Pair(3,4);
+var d1 := Dict(Pair(1,2),Pair(3,4));
 ```
 #### Новые конструкторы, методы и операции для словарей
 
