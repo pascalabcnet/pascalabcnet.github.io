@@ -174,6 +174,10 @@ end.
 
 ![222](https://github.com/user-attachments/assets/b9e0cc10-8b7d-499a-9546-7d8b6c79ffe6)
 
+## Библиотека MathNet.Numerics.dll
+
+Известная библиотека математических вычислений MathNet.Numerics.dll интегрирована в поставку PascalABC.NET
+
 ## Изменения в модулях
 
 ### Системный модуль PABCSystem - новые функции
