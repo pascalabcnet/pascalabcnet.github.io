@@ -22,7 +22,7 @@ var s: set of byte := [1,2,3]; // set of byte
 
 ### [] - неявное преобразование во все контейнеры
 
-### Новый тип faststrings - синоним StringBuilder
+### Новый тип faststring - синоним StringBuilder
 
 ### Автоклассы могут наследоваться от классов без полей
 
