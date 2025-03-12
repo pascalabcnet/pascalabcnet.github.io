@@ -76,8 +76,6 @@ begin
   var t: (real,real);
   t := (1,2);
   
-  //var t: (real,real) := (1,2);
-  
   var t1: ((real,integer),real);
   t1 := ((3,4),5);
 end.
