@@ -20,7 +20,32 @@ var s: set of byte := [1,2,3]; // set of byte
 ```
 
 
-### [] - неявное преобразование во все контейнеры
+### Инициализатор пустой коллекции []
+Инициализатор [] пустой коллекции позволяет присваивать его любой коллекции, заменяя вызов конструктора по умолчанию.
+
+Особенно удобно использовать [] для передачи в качестве параметра - тип формального параметра уже указан при описании, а при вызове в параметрах мы всего лишь указываем [].
+```pascal
+procedure ppp(s: sequence of integer; a: array of integer; lst: List<(real,real)>;
+  d: Dictionary<string,integer>; hs: HashSet<integer>; ss: SortedSet<integer>);
+begin end;
+
+begin
+  var old: set of integer := [];
+  var s: sequence of integer := [];
+  var a: array of integer := [];
+  var lst: List<(real,real)> := [];
+  var d: Dictionary<string,integer> := [];
+  var st: Stack<string> := [];
+  var q: Queue<string> := [];
+  var hs: HashSet<integer> := [];
+  var ss: SortedSet<integer> := [];
+  
+  ppp([],[],[],[],[],[]);
+  
+  var aa: array of array of integer := [[1],[],[2,3]];  
+end.
+```
+
 
 ### Новый тип faststring - синоним StringBuilder
 IndexOf, ToSequence, 
