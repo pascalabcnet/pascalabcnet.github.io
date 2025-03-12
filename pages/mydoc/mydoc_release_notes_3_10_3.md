@@ -23,11 +23,40 @@ var s: set of byte := [1,2,3]; // set of byte
 ### [] - неявное преобразование во все контейнеры
 
 ### Новый тип faststring - синоним StringBuilder
+IndexOf, ToSequence, 
+in, +, *n
+.Replace(Self: faststring; OldValue, NewValue: string; n: integer): faststring
+
+```pascal
+begin
+  var mx := 0;
+  for var n := 4 to 9999 do
+  begin
+    var s: faststring := '4' + '1' * n;
+
+    while ('411' in s) or ('1111' in s) do
+      s.Replace('411', '14', 1).Replace('1111', '1', 1);
+    
+    mx := max(mx, s.ToString.Sum(d -> d.todigit));
+  end;
+  print(mx, Milliseconds / 1000);
+end.
+```
 
 ### Автоклассы могут наследоваться от классов без полей
 
 ### Кортежи неявно могут преобразовываться покомпонентно
-
+```pascal
+begin
+  var t: (real,real);
+  t := (1,2);
+  
+  //var t: (real,real) := (1,2);
+  
+  var t1: ((real,integer),real);
+  t1 := ((3,4),5);
+end.
+```
 
 ## Изменения в модулях
 
