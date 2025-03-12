@@ -47,15 +47,15 @@ end.
 
 
 ### Новый тип faststring - синоним StringBuilder
-Пусть s и s1 принадлежат к типу 'faststring'. 
-Тип 'faststring' расширен методами
+Пусть s и s1 принадлежат к типу `faststring`. 
+Тип `faststring` расширен методами
 `s.IndexOf(s1)` - индекс подстроки в строке или -1 если не найдена
 `s.ToSequence()` - преобразование в последовательность символов. Сама faststring по историческим причинам последовательностью не является
 Операции:
-'s1 in s' - входит ли подстрока s1 в s
-'s1 + s' - конкатенация быстрых строк 
-'s * n' - конкатенация строки s с собой n раз
-'s.Replace(s1, s2: string; n: integer)' - возвращает новую `faststring` где n первых вхождений `s1` заменены на `s2`.
+`s1 in s` - входит ли подстрока s1 в s
+`s1 + s` - конкатенация быстрых строк 
+`s * n` - конкатенация строки s с собой n раз
+`s.Replace(s1, s2: string; n: integer)` - возвращает новую `faststring` где n первых вхождений `s1` заменены на `s2`.
 
 ```pascal
 begin
@@ -74,6 +74,18 @@ end.
 ```
 
 ### Автоклассы могут наследоваться от классов без полей
+```pascal
+type
+  Base = class
+  end;
+  Person = auto class(Base)
+    name: string;
+    age: integer;
+  end;
+begin
+  var p := new Person('Иванов',18)
+end.
+```
 
 ### Кортежи неявно могут преобразовываться покомпонентно
 ```pascal
@@ -89,8 +101,26 @@ end.
 ## Изменения в модулях
 
 ### Новый Модуль Coords
-```pascal
+Модуль `Coords` позволяет отображать координатную сетку, масштабировать её колёсиком мыши и перемещать её центр левой мышью.
 
+Он содержит ряд простых примитивов, таких как `DrawPoint`, `DrawPoints`, `DrawLine`, `DrawRectangle`, `DrawText`, `DrawTextUnscaled`.
+
+```pascal
+uses Coords;
+
+function RandomPoint: Point 
+  := Pnt(Random(-13,13),Random(-10,10));
+
+begin
+  DrawPoints(ArrGen(10,i -> RandomPoint),PointRadius := 4);
+  DrawPoints(ArrGen(10,i -> RandomPoint),PointRadius := 6);
+  DrawPoint(2,3,Colors.Red);
+  DrawCircle(1,1,1,Colors.LightBlue);
+  DrawRectangle(3,2,2,1);
+  DrawText(3,2,'Hello');
+  DrawTextUnscaled(0,0,'Текст не масштабируется', Size := 20, Color := Colors.Red);
+  DrawText(-4,7,'Текст масштабируется', FontName := 'Courier New', Size := 34);
+end.
 ```
 
 ### Модуль Turtle - изменение реализации
