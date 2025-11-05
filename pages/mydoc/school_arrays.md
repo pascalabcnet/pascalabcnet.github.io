@@ -42,7 +42,7 @@ end.
 ```pascal
 begin
   var n := ReadInteger;
-  var a := |0| * n;
+  var a := [0] * n;
 end.
 ```
 
