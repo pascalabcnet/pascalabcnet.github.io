@@ -26,100 +26,20 @@ begin
 end;
 ```
 
-Поскольку синтаксис `[1,2,3]` по умолчанию отведен для массивов, то теперь для создания встроенных множеств используется `SetOf(1,2,3)`
-Также метод ToSet() для последовательности `sequence of t` возвращает `set of T`.
-
-Кроме этого, если в операциях s1 * s2, s1 + s2 хотя бы один операнд это множество, то результатом также будет множество, а для s1 = s2, s1 > s2 и т.д. если хотя бы один операнд это множество, то результат - логическое значение. 
-
-Очень важно понимать, что в сравнении [1,2,3] = [1,2,3] сравниваются ссылки на разные массивы и ответ будет False, а в сравнении var s: set of integer := [1,2,3]; s = [1,3,2] производится сравнение множеств и ответ будет True.
-
-
-### Инициализатор пустой коллекции []
-Инициализатор [] пустой коллекции позволяет присваивать его любой коллекции, заменяя вызов конструктора по умолчанию.
-
-Особенно удобно использовать [] для передачи в качестве параметра - тип формального параметра уже указан при описании, а при вызове в параметрах мы всего лишь указываем [].
+### Распаковка KeyValuePair
+Значение типа KeyValuePair можно распаковать в переменные
 ```pascal
-procedure ppp(s: sequence of integer; a: array of integer; lst: List<(real,real)>;
-  d: Dictionary<string,integer>; hs: HashSet<integer>; ss: SortedSet<integer>);
-begin end;
-
-begin
-  var old: set of integer := [];
-  var s: sequence of integer := [];
-  var a: array of integer := [];
-  var lst: List<(real,real)> := [];
-  var d: Dictionary<string,integer> := [];
-  var st: Stack<string> := [];
-  var q: Queue<string> := [];
-  var hs: HashSet<integer> := [];
-  var ss: SortedSet<integer> := [];
-  
-  ppp([],[],[],[],[],[]);
-  
-  var aa: array of array of integer := [[1],[],[2,3]];  
-end.
-```
-
-
-### Новый тип faststring - синоним StringBuilder
-Пусть s и s1 принадлежат к типу `faststring`. 
-
-Тип `faststring` расширен методами
-* `s.IndexOf(s1)` - индекс подстроки в строке или -1 если не найдена
-* `s.ToSequence()` - преобразование в последовательность символов. Сама faststring по историческим причинам последовательностью не является
-* `s.Replace(s1, s2: string; n: integer)` - возвращает новую `faststring` где n первых вхождений `s1` заменены на `s2`.
-Операции:
-* `s1 in s` - входит ли подстрока s1 в s
-* `s1 + s` - конкатенация быстрых строк 
-* `s * n` - конкатенация строки s с собой n раз
-
-```pascal
-begin
-  var mx := 0;
-  for var n := 4 to 9999 do
-  begin
-    var s: faststring := '4' + '1' * n;
-
-    while ('411' in s) or ('1111' in s) do
-      s.Replace('411', '14', 1).Replace('1111', '1', 1);
-    
-    mx := max(mx, s.ToString.Sum(d -> d.todigit));
-  end;
-  Print(mx, Milliseconds / 1000);
-end.
-```
-
-### Автоклассы могут наследоваться от классов без полей
-```pascal
-type
-  Base = class
-  end;
-  Person = auto class(Base)
-    name: string;
-    age: integer;
-  end;
-begin
-  var p := new Person('Иванов',18)
-end.
-```
-
-### Кортежи неявно могут преобразовываться покомпонентно
-```pascal
-begin
-  var t: (real,real);
-  t := (1,2);
-  
-  var t1: ((real,integer),real);
-  t1 := ((3,4),5);
-end.
+var t := 2 to 3.5;
+  var (a,b) := t;
+  Println(a,b);
+  foreach var (a1,b1) in Dict(1 to 7, 22 to 555) do
+    Println(a1,b1);
 ```
 
 ## Изменения в модулях
 
-### Новый Модуль Coords
-Модуль `Coords` позволяет отображать координатную сетку, масштабировать её колёсиком мыши и перемещать её центр левой мышью.
-
-Он содержит ряд простых примитивов, таких как `DrawPoint`, `DrawPoints`, `DrawLine`, `DrawRectangle`, `DrawText`, `DrawTextUnscaled`.
+### Новый Модуль TurtleABC 
+Модуль `TurtleABC` написан на Windows.Forms и поэтому может использоваться в Linux
 
 ```pascal
 uses Coords;
