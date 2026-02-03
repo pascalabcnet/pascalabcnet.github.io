@@ -68,16 +68,37 @@ begin
 end.
 ```
 
-### Новые стандартные методы последовательностей
-Реализованы новые стандартные методы расширения последовательностей `IndexMinBy`, `IndexMaxBy`, `DistinctBy`.
+### Новый стандартный метод последовательностей AdjacentGroupBy
+`AdjacentGroupBy` группирует соседние одинаковые по ключу элементы. Возвращает последовательность групп
+```pascal
+type
+  Player = auto class
+    Name: string; Score: integer;
+  end;  
 
-### Новые методы множеств
-Для новой реализации встроенных множеств реализованы методы `Add`, `AddRange`, `Remove` и `Contains`.
+function GetPlayers := [
+  new Player('Alice', 95),
+  new Player('Bob', 95),
+  new Player('Charlie', 110),
+  new Player('Diana', 110),
+  new Player('Karina', 120)
+];
 
-## Оптимизация производительности
+begin
+  var leaderboard := GetPlayers;
+  foreach var group in leaderboard.AdjacentGroupBy(p -> p.Score) do
+  begin
+    Println(group.Key);
+    group.Println;
+  end;
+end.
+```
 
-### Ускорение встроенных множеств
-Встроенные множества `set of T` ускорены примерно в 10 раз. Изменена их внутренняя реализация
+## Устранение багов
+Устранен ряд утечек памяти в Intellisense 
+
+## AbcObjects для Linux
+Модуль AbcObjects адаптирован для работы в Mono под Linux
 
 ## Разное
 
