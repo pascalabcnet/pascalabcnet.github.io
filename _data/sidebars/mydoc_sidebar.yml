@@ -3,7 +3,7 @@
 entries:
 - title: sidebar
   product: PascalABC.NET
-  version: 3.9
+  version: 3.11
   folders:
 
   - title:
@@ -75,6 +75,14 @@ entries:
   - title: Версии PascalABC.NET
     output: web, pdf
     folderitems:
+
+    - title: Версия 3.11.1
+      url: /mydoc_release_notes_3_11_1.html
+      output: web, pdf
+
+    - title: Версия 3.11.0
+      url: /mydoc_release_notes_3_11_0.html
+      output: web, pdf
 
     - title: Версия 3.10.3
       url: /mydoc_release_notes_3_10_3.html
