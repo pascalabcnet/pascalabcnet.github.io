@@ -9,14 +9,21 @@ folder: mydoc
 ---
 
 
-## Изменения в языке 3.11.0 (31.08.25)
+## Изменения в языке 3.11.0 (1.10.25)
 
-### Синтаксис [] по умолчанию для массивов
-Теперь по умолчанию константа [1,2,3] имеет тип массива. Именно так сейчас сделано в современном Delphi.
+### Оператор exit(param)
+Теперь в функциях можно использовать exit(param) для моментального возврата значения
 ```pascal
-var a := [1,2,3]; // array of integer
-var s: set of integer := [1,2,3]; // set of integer
-var s: set of byte := [1,2,3]; // set of byte
+function FastPower(a: real; n: integer): real;
+begin
+  if n = 0 then exit(1); // a^0 = 1
+  if n = 1 then exit(a); // a^1 = a
+  if n < 0 then exit(1 / FastPower(a, -n)); // отрицательная степень
+  
+  var half := FastPower(a, n div 2);
+  if n mod 2 = 0 then exit(half * half); // чётная степень
+  exit(half * half * a); // нечётная
+end;
 ```
 
 Поскольку синтаксис `[1,2,3]` по умолчанию отведен для массивов, то теперь для создания встроенных множеств используется `SetOf(1,2,3)`
