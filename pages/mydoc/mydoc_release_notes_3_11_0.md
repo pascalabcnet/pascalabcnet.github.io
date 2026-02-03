@@ -49,29 +49,22 @@ begin
 end.
 ```
 
+## Изменения в стандартоном модуле
 
+### Внешние функции Between и InRange
 
-
-## Изменения в модулях
-
-### Новый Модуль TurtleABC 
-Модуль `TurtleABC` написан на Windows.Forms и поэтому может использоваться в Linux
+Внешние функции Between и InRange реализованы для любого типа, удовлетворяющего IComparable<T>
 
 ```pascal
-uses Coords;
-
-function RandomPoint: Point 
-  := Pnt(Random(-13,13),Random(-10,10));
-
 begin
-  DrawPoints(ArrGen(10,i -> RandomPoint),PointRadius := 4);
-  DrawPoints(ArrGen(10,i -> RandomPoint),PointRadius := 6);
-  DrawPoint(2,3,Colors.Red);
-  DrawCircle(1,1,1,Colors.LightBlue);
-  DrawRectangle(3,2,2,1);
-  DrawText(3,2,'Hello');
-  DrawTextUnscaled(0,0,'Текст не масштабируется', Size := 20, Color := Colors.Red);
-  DrawText(-4,7,'Текст масштабируется', FontName := 'Courier New', Size := 34);
+  Between(6,2,6).Print;
+  Between(6,2,6,inclusive := False).Println;
+  var dt1 := DateTime.Create(2025,04,16);
+  var dt3 := DateTime.Now;
+  Between(DateTime.Now,dt1,dt3).Print; 
+
+  // Поведение изменено!! Теперь диапазон [6,2] считается пустым
+  InRange(5,2,6).Println;
 end.
 ```
 
