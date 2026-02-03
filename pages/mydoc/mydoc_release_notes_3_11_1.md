@@ -203,50 +203,155 @@ end.
 10 9 3 4 5 6 7 8 2 1
 ```
 
-
-## Изменения в модулях
-
-### Новый Модуль Coords
-Модуль `Coords` позволяет отображать координатную сетку, масштабировать её колёсиком мыши и перемещать её центр левой мышью.
-
-Он содержит ряд простых примитивов, таких как `DrawPoint`, `DrawPoints`, `DrawLine`, `DrawRectangle`, `DrawText`, `DrawTextUnscaled`.
-
+### Стандартная функция Lerp
+Функция `Lerp` возвращает значение на отрезке [a, b] в позиции t ∈ [0, 1]. 
+При t=0 — a, при t=1 — b, при t=0.5 — середина между ними.
 ```pascal
-uses Coords;
+var x := Lerp(10, 20, 0.5);     // x = 15 (середина между 10 и 20)
+var y := Lerp(0, 100, 0.25);    // y = 25 (четверть пути от 0 до 100)
+var z := Lerp(5, 15, 0.0);      // z = 5 (начало отрезка)
+```
 
-function RandomPoint: Point 
-  := Pnt(Random(-13,13),Random(-10,10));
+### Стандартная функция Remap
+Функция `Remap` преобразует x из диапазона [a1,b1] в диапазон [a2,b2] с сохранением относительной позиции.
+```pascal
+var a := Remap(0.5, 0, 1, 0, 100);  // a = 50 (0.5 → 50%)
+var b := Remap(75, 0, 100, 0, 1);   // b = 0.75 (75% → 0.75)
+var c := Remap(15, 10, 20, 0, 200); // c = 100 (15 посередине между 10 и 20 → 100 посередине между 0 и 200)
+```
 
+### Метод Elements для матриц
+Метод Elements для матриц является сининимом метода ElementsByRow и превращает матрицу в одномерный массив по строкам:
+```pascal
 begin
-  DrawPoints(ArrGen(10,i -> RandomPoint),PointRadius := 4);
-  DrawPoints(ArrGen(10,i -> RandomPoint),PointRadius := 6);
-  DrawPoint(2,3,Colors.Red);
-  DrawCircle(1,1,1,Colors.LightBlue);
-  DrawRectangle(3,2,2,1);
-  DrawText(3,2,'Hello');
-  DrawTextUnscaled(0,0,'Текст не масштабируется', Size := 20, Color := Colors.Red);
-  DrawText(-4,7,'Текст масштабируется', FontName := 'Courier New', Size := 34);
+  var m := MatrRandomInteger(3,4,1..10);
+  m.Println;
+  m.Elements.Println;
+  Println(m.Elements.Min,m.Elements.Max,m.Elements.Sum);
 end.
 ```
 
-### Новые стандартные методы последовательностей
-Реализованы новые стандартные методы расширения последовательностей `IndexMinBy`, `IndexMaxBy`, `DistinctBy`.
+Вывод:
+```
+  10   2   4   5
+   5  10   5   3
+   5   4   5   3
+10 2 4 5 5 10 5 3 5 4 5 3
+2 10 61
+```
 
-### Новые методы множеств
-Для новой реализации встроенных множеств реализованы методы `Add`, `AddRange`, `Remove` и `Contains`.
+### Метод None для последовательностей
+Метод None для последовательностей возвращает Terue если ни один из элементов последовательности не удовлетворяет условию
+```pascal
+begin
+  var a := Arr(1,2,3,4);
+  a.None(x -> x > 5).Print
+end.
+```
+
+
+### Стандартная функция SetRandomSeed
+Стандартная функция SetRandomSeed является синонимом Randomize с более понятным названием и инициализирует датчик псевдослучайных чисел, используя значение seed. 
+При одном и том же seed генерируются одинаковые псевдослучайные последовательности.
+```pascal
+begin
+  loop 10 do
+    Print(Random(100));
+  Println;
+  Println;
+
+  SetRandomSeed(122);
+  loop 10 do
+    Print(Random(100));
+  Println;
+  // Вторая последовательность с тем же самым seed совпадает с первой. Нужно для тестирования
+  SetRandomSeed(122);
+  loop 10 do
+    Print(Random(100));
+end.
+```
+
+Вывод:
+```
+44 7 94 96 68 97 43 25 7 5 
+
+46 61 4 59 28 17 56 64 7 26 
+46 61 4 59 28 17 56 64 7 26 
+```
+
+
+
+
+## Новые модули
+
+### Новый модуль TurtleABC
+Модуль `TurtleABC` является слабой но всё таки заменой модуля Turtle, но зато может использоваться под Linux
+
+```pascal
+uses TurtleABC;
+
+begin
+  Mark;
+  SetScale(4);
+  SetOrigin(5,-35);
+  Mark; 
+  SetColor(Color.Blue);
+  Down;
+  
+  loop 4 do
+  begin
+    Forw(20);
+    Turn(90);
+  end;
+  
+  Up;
+  MoveTo(-30, 30);
+  Down;
+  SetColor(Color.Red);
+  
+  Mark;
+  loop 3 do
+  begin
+    Forw(15);
+    Turn(120);
+  end;
+  
+  Up;
+  MoveTo(30, 40);
+  Down;
+  SetColor(Color.Green);
+  
+  Mark;
+  loop 20 do
+  begin
+    Forw(30);
+    Turn(100);
+  end;
+  
+  Up;
+  MoveTo(-30, 90);
+  Mark;
+  Down;
+  SetColor(Color.Orange);
+  
+  loop 5 do
+  begin
+    Forw(30);
+    Turn(144);
+  end;
+  
+  DrawCoordPoints;
+end.
+```
+
+<img width="1444" height="1152" alt="изображение" src="https://github.com/user-attachments/assets/6d2ecca8-7603-41ae-9211-2395e7fe9469" />
+
 
 ## Оптимизация производительности
 
 ### Ускорен CountOf
 Оптимизирован и ускорен метод CountOf для строк
 
-## Разное
-
-### Возможность трассировать программы с модулем PT4
-Программы для модуля PT4 теперь можно трассировать
-
-### Сборка с помощью dotnet
-Проект теперь собирается при помощи современной утилиты dotnet
 
 {% include links.html %}
 
