@@ -8,7 +8,9 @@ toc: false
 folder: mydoc
 ---
 
-## Установка под Linux
+## Установка под Linux - общий алгоритм
+
+0. Скачиваем <https://pascalabc.net/downloads/PascalABCNETLinux.zip>
 
 1. Файлы архива содержат папки PascalABCNETLinux и Samples. Для определенности будем считать, что мы распаковали их в /home/user
 
