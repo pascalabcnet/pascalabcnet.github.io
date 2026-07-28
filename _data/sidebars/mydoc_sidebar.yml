@@ -40,6 +40,14 @@ entries:
       url: /mydoc_progr_styles.html
       output: web, pdf
 
+  - title: Установка под Linux
+    output: web, pdf
+    folderitems:
+
+    - title: Установка под Linux
+      url: /mydoc_linux1.html
+      output: web, pdf
+  
   - title: Для учителей и школьников
     output: web, pdf
     folderitems:
@@ -68,7 +76,7 @@ entries:
       url: /school_files.html
       output: web, pdf
 
-    - title: PascalABC.NET и ЕГЭ 2024
+    - title: PascalABC.NET и ЕГЭ
       url: /mydoc_for_EGE.html
       output: web, pdf
 
