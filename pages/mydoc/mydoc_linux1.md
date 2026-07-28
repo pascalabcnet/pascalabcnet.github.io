@@ -64,6 +64,10 @@ mkdir -p /home/user/PascalABCLinux/registry/LocalMachine
 export MONO_REGISTRY_PATH=/home/user/PascalABCLinux/registry
 ```
 
+## Установка под WINE
+
+[Установка под WINE описана здесь](https://pascalabc.miraheze.org/wiki/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B2_Linux)
+
 ## Alt Linux Образование 10.1
 
 PascalABC.NET уже находится в репозитории Alt Linux Образование - устанавливаем его из репозитория
