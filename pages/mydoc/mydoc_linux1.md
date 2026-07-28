@@ -10,13 +10,15 @@ folder: mydoc
 
 ## Установка под Linux - общий алгоритм
 
-0. Скачиваем <https://pascalabc.net/downloads/PascalABCNETLinux.zip>
+0. [Скачиваем версию PascalABC.NET под Linux отсюда] (https://pascalabc.net/downloads/PascalABCNETLinux.zip). Это .zip-архив.
 
 1. Файлы архива содержат папки PascalABCNETLinux и Samples. Для определенности будем считать, что мы распаковали их в /home/user
 
-2. Перед запуском следует установить пакет Mono. Процесс установки описан здесь: Установка mono под Linux
+2. Перед запуском следует установить пакет Mono. Процесс установки описан здесь: [Установка mono под Linux](https://www.mono-project.com/download/stable/#download-lin). 
 
-Самое важное: следует выполнить команду
+Можно не читать официальный документ, а проделать следующее:
+
+Выполнить команду
 
 ```
 sudo apt-get install mono-complete
@@ -30,7 +32,7 @@ sudo apt-get install mono-locale-extras
 
 для установки пакета с кодировкой 1251.
 
-Возможно, в некоторых версиях Linux пакет mono-complete будет отсутствовать, тогда вместо него следует установить пакет mono-devel:
+Возможно, в некоторых версиях Linux пакет `mono-complete` будет отсутствовать, тогда вместо него следует установить пакет mono-devel:
 
 ```
 sudo apt-get install mono-devel
@@ -62,9 +64,9 @@ mkdir -p /home/user/PascalABCLinux/registry/LocalMachine
 export MONO_REGISTRY_PATH=/home/user/PascalABCLinux/registry
 ```
 
-### Alt Linux Образование» 10.1
+### Alt Linux Образование 10.1
 
-PascalABC.NET - в репозитории - устанавливаем его из репозитория
+PascalABC.NET уже находится в репозитории Alt Linux Образование - устанавливаем его из репозитория
 
 
 ### Alt Linux общий алгоритм
@@ -101,13 +103,13 @@ apt-get install mono-locale-extras
 apt-get install gnome-themes-standard
 ```
 
-4. При запуске проиcходит ошибка, связанная с отсутствием папок
+4. Если при запуске проиcходит ошибка, связанная с отсутствием папок
 
 ```
 /etc/mono/registry/LocalMachine
 ```
 
-В этом случае рекомендуется либо создать папки registry и registry/LocalMachine в /etc/mono/ вручную, либо выполнить команды
+В этом случае рекомендуется либо создать папки `registry` и `registry/LocalMachine` в `/etc/mono/` вручную, либо выполнить команды
 
 ```
 mkdir -p /home/user/PascalABCLinux/registry
@@ -115,17 +117,17 @@ mkdir -p /home/user/PascalABCLinux/registry/LocalMachine
 export MONO_REGISTRY_PATH=/home/user/PascalABCLinux/registry
 ```
 
-Astra Linux
+## Astra Linux
 
 Под Astra Linux установка пакета Mono выполняется по-другому:
 
-    Обновляем пакеты:
+Обновляем пакеты:
 
 ```
 sudo apt-get update
 ```
 
-    Инсталлируем mono-devel, выполняя команду в консоли:
+Инсталлируем mono-devel, выполняя команду в консоли:
 
 ```
 sudo apt-get install mono-complete
