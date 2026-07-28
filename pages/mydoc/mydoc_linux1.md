@@ -10,7 +10,7 @@ folder: mydoc
 
 ## Установка под Linux - общий алгоритм
 
-0. [Скачиваем версию PascalABC.NET под Linux отсюда] (https://pascalabc.net/downloads/PascalABCNETLinux.zip). Это .zip-архив.
+0. [Скачиваем версию PascalABC.NET под Linux отсюда](https://pascalabc.net/downloads/PascalABCNETLinux.zip). Это .zip-архив.
 
 1. Файлы архива содержат папки PascalABCNETLinux и Samples. Для определенности будем считать, что мы распаковали их в /home/user
 
@@ -64,12 +64,12 @@ mkdir -p /home/user/PascalABCLinux/registry/LocalMachine
 export MONO_REGISTRY_PATH=/home/user/PascalABCLinux/registry
 ```
 
-### Alt Linux Образование 10.1
+## Alt Linux Образование 10.1
 
 PascalABC.NET уже находится в репозитории Alt Linux Образование - устанавливаем его из репозитория
 
 
-### Alt Linux общий алгоритм
+## Alt Linux общий алгоритм
 
 Под Alt Linux установка пакета Mono выполняется по-другому:
 
