@@ -1,7 +1,7 @@
 ---
-title: PascalABC.NET и ЕГЭ по информатике 2024
+title: PascalABC.NET и ЕГЭ по информатике 
 keywords: styles
-last_updated: 03.10.2024
+last_updated: 06.02.2026
 sidebar: mydoc_sidebar
 permalink: mydoc_for_EGE.html
 toc: false
