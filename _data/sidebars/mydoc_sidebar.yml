@@ -84,6 +84,10 @@ entries:
     output: web, pdf
     folderitems:
 
+    - title: Версии начиная с 4.0
+      url: /mydoc_release_notes_4_0.html
+      output: web, pdf
+
     - title: Версия 3.11.1
       url: /mydoc_release_notes_3_11_1.html
       output: web, pdf
